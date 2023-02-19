@@ -1,11 +1,11 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
-  testMatch: ["tests/record.test.ts"],
+  testMatch: ["tests/CASHE/6.test.ts"],
   use: {
     headless: false,
     screenshot: "on",
-    video:"on"
+    video: "on"
   },
   reporter: [["dot"], ["json", {
     outputFile:"jsonReports/jsonReport.json"
