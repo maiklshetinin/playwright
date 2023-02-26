@@ -34,19 +34,39 @@ test("Проверка версии.(test 3)", async ({ page }) => {
   await CASHE_Page.click(UserMenu.BTN_USER_MENU)
   //2. Откроется меню пользователя для работы с интерфейсом и настройками входа.
   await expect(page.locator("//ul[contains(@class,'el-dropdown-menu el-popper')]")).toBeVisible()
-  await CASHE_Page.click(UserMenu.BTN_USER_MENU)
-
 
   //----------------------------------------------------------------------------test3
+
   //3. Убедиться, что версия в интерфейсе соответствует обновлениям.
 
   //?
 
   //3. Версия актуальна.
   //----------------------------------------------------------------------------test4
+
+
+
+  const v = await page.locator("//li[contains(@class,'el-dropdown-menu__item is-disabled')]").innerText()
+  await page.waitForTimeout(100)
   //4. Запустить Панель разработчика (F12) -> Консоль.
 
-  //?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  await CASHE_Page.click(UserMenu.BTN_USER_MENU)
 
   //4. Версия соответствует версии в интерфейсе.
 

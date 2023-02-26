@@ -7,6 +7,8 @@ export enum MainPage {
   BTN_REFRESH = "//button[@title='Обновить']",
   input_search = "//input[@placeholder='Поиск по ГРЗ']",
   input_sources = "//input[@placeholder='Выберите источники актуализации']",
+  table = "//div[@class='t-header']/following-sibling::div[1]",
+  item_line = "//div[contains(@class, 'item-line')]"
 }
 
 export enum UserMenu {
@@ -15,9 +17,20 @@ export enum UserMenu {
   theme_light = "//li[text()='Светлая тема ']",
   theme_default = "//li[text()='Исходная тема ']",
   change_password = "//li[text()='Сменить пароль']",
-
+  manual = "//li[text()='Руководство']"
 }
 
+export enum Card{
+  BTN_LOG = "//div[text()='Лог']",
+  BTN_EDIT ="//button[@title='Редактировать']//i[1]",
+  BTN_CLOSE_CARD = "//button[@title='Закрыть карточку']",
+  BTN_CANCEL = "//span[text()='Отмена']",
+  BTN_SAVE ="//button[contains(@class,'el-button el-button--success')]",
+  card = "//div[contains(@class,'fc-face-edit-panel obs')]",
+  table = "//table[@class='tab_act']",
+  owner = "(//div[@role='button']//h4)[2]",
+  address ="//h4[text()='Адрес регистрации']"
+}
 
 export enum GrzPage {
 }
@@ -51,7 +64,11 @@ export default class CASHE {
   }
 
   getNewDate(str: string) {
-    if (str.includes(" ")) {
+    if (str.includes(", ")) {
+      const arr = str.split(", ");
+      const date = arr[0].split(".").reverse().join("-");
+      return new Date([date, arr[1]].join("T"));
+    } else if (str.includes(" ")) {
       const arr = str.split(" ");
       const date = arr[0].split(".").reverse().join("-");
       return new Date([date, arr[1]].join("T"));
@@ -59,4 +76,5 @@ export default class CASHE {
       return new Date(str.split(".").reverse().join("-"))
     }
   }
+
 }
