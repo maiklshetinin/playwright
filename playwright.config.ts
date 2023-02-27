@@ -1,12 +1,13 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
+  workers: 1,
   testMatch: [
     // "tests/1.test.ts",
     // "tests/2.test.ts",
     // "tests/3.test.ts",
     // "tests/4.test.ts",
-    // "tests/5.test.ts",
+    "tests/5.test.ts",
     // "tests/6.test.ts",
     // "tests/7.test.ts",
     // "tests/8.test.ts",
@@ -23,14 +24,14 @@ const config: PlaywrightTestConfig = {
     // "tests/19.test.ts",
     // "tests/20.test.ts",
     // "tests/21.test.ts",
-    "tests/22.test.ts",
+    // "tests/22.test.ts",
 ],
   use: {
     headless: false,
     screenshot: "on",
     video: "on",
     launchOptions: {
-      slowMo: 300,
+      slowMo: 0,
     }
   },
   reporter: [["dot"], ["json", {
