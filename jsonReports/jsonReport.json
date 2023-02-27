@@ -12,15 +12,15 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright/test-results",
+        "outputDir": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
+        "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/CASHE/13.test.ts"
+          "tests/CASHE/18.test.ts"
         ],
         "timeout": 30000
       }
@@ -47,8 +47,8 @@
       "max": 5,
       "threshold": 15000
     },
-    "configFile": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
+    "configFile": "/home/shchetinin/Рабочий стол/projects/git/playwright/playwright.config.ts",
+    "rootDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -58,14 +58,14 @@
   },
   "suites": [
     {
-      "title": "tests\\CASHE\\13.test.ts",
-      "file": "tests/CASHE/13.test.ts",
+      "title": "tests/CASHE/18.test.ts",
+      "file": "tests/CASHE/18.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Проверка сохранения изменений в карточке. (test 13.2)",
-          "ok": false,
+          "title": "Изменение типа учетной записи с ФЛ / ИП на Юр. Лицо. (test 18)",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -77,52 +77,77 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30010,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - page.fill at tests\\CASHE\\13.test.ts:119:14\n"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\CASHE\\13.test.ts",
-                        "column": 14,
-                        "line": 119
-                      },
-                      "message": "page.fill: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=(//span[text()=\\'Регион\\']/following::input)[1]')\n  locator resolved to <input type=\"text\" autocomplete=\"off\" readonly=\"readonl…/>\nelementHandle.fill(\"\")\n  waiting for element to be visible, enabled and editable\n    element is not editable - waiting...\n============================================================\n\n\u001b[90m   at \u001b[39mtests\\CASHE\\13.test.ts:119\n\n\u001b[0m \u001b[90m 117 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 118 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"(//span[text()='Регион']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 120 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//span[text()='Регион']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[0m\n\u001b[0m \u001b[90m 121 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"(//span[text()='Улица']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 122 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"(//span[text()='Регион']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mREGION\u001b[39m)\u001b[0m\n\n\u001b[2m    at C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\CASHE\\13.test.ts:119:14\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 17999,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-26T12:58:38.466Z",
+                  "startTime": "2023-02-27T12:31:09.993Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-CASHE-13-Проверка-сохранения-изменений-в-карточке-test-13-2-\\video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-18-Изменение-типа-учетной-записи-с-ФЛ-ИП-на-Юр-Лицо-test-18-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-CASHE-13-Проверка-сохранения-изменений-в-карточке-test-13-2-\\test-failed-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-18-Изменение-типа-учетной-записи-с-ФЛ-ИП-на-Юр-Лицо-test-18-/test-finished-1.png"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "17ecc559a996b9c36a5f-93c1ddd592397d7b2619",
-          "file": "tests/CASHE/13.test.ts",
-          "line": 61,
-          "column": 6
+          "id": "9085827170af8f53410a-d51af664bb81d16caf9a",
+          "file": "tests/CASHE/18.test.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "Изменение типа учетной записи с ЮЛ на ФЛ. (test 19)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 17947,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T12:31:28.365Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-18-Изменение-типа-учетной-записи-с-ЮЛ-на-ФЛ-test-19-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-18-Изменение-типа-учетной-записи-с-ЮЛ-на-ФЛ-test-19-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9085827170af8f53410a-845c1ee6e0928198e579",
+          "file": "tests/CASHE/18.test.ts",
+          "line": 89,
+          "column": 5
         }
       ]
     }
