@@ -20,7 +20,7 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/CASHE/21.test.ts"
+          "tests/22.test.ts"
         ],
         "timeout": 30000
       }
@@ -58,13 +58,13 @@
   },
   "suites": [
     {
-      "title": "tests/CASHE/21.test.ts",
-      "file": "tests/CASHE/21.test.ts",
+      "title": "tests/22.test.ts",
+      "file": "tests/22.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "ФЛ Контроль при вводе значений СНИЛС (test 21.1)",
+          "title": "Assigning a Role to selected (group) users.",
           "ok": false,
           "tags": [],
           "tests": [
@@ -78,7 +78,7 @@
                 {
                   "workerIndex": 0,
                   "status": "timedOut",
-                  "duration": 30001,
+                  "duration": 29999,
                   "error": {
                     "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
                   },
@@ -87,31 +87,23 @@
                       "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
                     },
                     {
-                      "location": {
-                        "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/CASHE/21.test.ts",
-                        "column": 16,
-                        "line": 109
-                      },
-                      "message": "page.fill: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=(//span[text()=\\'СНИЛС\\']/following::input)[1]')\n============================================================\n\n\u001b[90m   at \u001b[39mtests/CASHE/21.test.ts:109\n\n\u001b[0m \u001b[90m 107 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 108 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m snils \u001b[36mof\u001b[39m \u001b[33mSNILS_ARR\u001b[39m) { \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"(//span[text()='СНИЛС']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtype(\u001b[32m\"(//span[text()='СНИЛС']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m snils)\u001b[0m\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m500\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mCASHE_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_SAVE\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/CASHE/21.test.ts:109:16\u001b[22m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - page.fill at tests/CASHE/21.test.ts:109:16\n"
+                      "message": "Pending operations:\n  - locator.click at tests/OIB.ts:159:82\n"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-27T15:01:03.634Z",
+                  "startTime": "2023-02-27T16:16:47.160Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-test-21-1-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-test-21-1-/test-failed-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-/test-failed-1.png"
                     }
                   ]
                 }
@@ -119,10 +111,10 @@
               "status": "unexpected"
             }
           ],
-          "id": "b1bb03855ef03ffe03d5-376bc937aa8d17861269",
-          "file": "tests/CASHE/21.test.ts",
-          "line": 66,
-          "column": 6
+          "id": "3a486cfb8e49aace3408-d3e2dc423deb971e4036",
+          "file": "tests/22.test.ts",
+          "line": 10,
+          "column": 5
         }
       ]
     }

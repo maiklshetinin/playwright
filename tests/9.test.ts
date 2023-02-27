@@ -178,7 +178,7 @@ test("Connection Log (test 9.5)", async ({ page }) => {
   await OIB_Page.shutDown()
 })
 
-test.only("Connection Log (test 9.6)", async ({ page }) => {
+test("Connection Log (test 9.6)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,

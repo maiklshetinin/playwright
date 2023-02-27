@@ -4,7 +4,7 @@ import OIB, { UserMenu } from "./OIB";
 const login = "SHETININM"
 const password = "Asdf123$"
 
-test("Change user password", async ({ page }) => {
+test("Change user password (test 4.1)", async ({ page }) => {
 
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
@@ -41,7 +41,7 @@ test("Change user password", async ({ page }) => {
 })
 
 
-test ("Login to chocolate",async()=>{
+test ("Login to chocolate (test 4.2)",async()=>{
 //3. Авторизоваться в шоколадке с новым паролем и перейти в модуль ОИБ.
   const browser2 = await chromium.launch()
   const context2 = await browser2.newContext()
@@ -68,7 +68,7 @@ test ("Login to chocolate",async()=>{
 })
 
 
-test("return old user password", async ({ page }) => {
+test("return old user password (test 4.3)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, `${password}$`)
 

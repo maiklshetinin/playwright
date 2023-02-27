@@ -4,7 +4,7 @@ const login = "SHETININM"
 const password = "Asdf123$"
 
 
-test("Login OIB valid user data 2", async () => {
+test("Login OIB valid user data (test 2)", async () => {
   const browser = await chromium.launch()
   const context = await browser.newContext()
   const page = await context.newPage()

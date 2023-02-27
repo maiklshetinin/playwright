@@ -20,10 +20,12 @@ test("Assigning a Role to selected (group) users.", async ({ page }) => {
   //1. Активировать чекбокс «Активные». В строке поиска найти требуемых пользователей,
   //если назначение ролей производится группе пользователей или выбрать одного пользователя.
   //TODO:не всегда срабатывает поиск
-  // await page.waitForTimeout(1000)
+  await page.waitForTimeout(1000)
   await page.waitForLoadState('networkidle')
 
   await page.fill(InputLocators.search_user, search)
+  await page.waitForLoadState('networkidle')
+
   //1. Отображаются пользователи, доступные для редактирования.
   expect(page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user1))).toContainText(user1)
   expect(page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user2))).toContainText(user2)
@@ -63,7 +65,7 @@ test("Assigning a Role to selected (group) users.", async ({ page }) => {
   await page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user2)).click()
   expect(await page.locator("//div[@class='list-input']//span[1]").innerText()).toBe(role)
 
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })

@@ -4,7 +4,7 @@ import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, 
 const login = "SHETININM"
 const organization = '8Б2ПДПС МО'
 const subdivision = "ИАЗ"
-const job_title = "Test1"
+const job_title = "321"
 
 test("Creating Employees for Selected Users", async ({ page }) => {
   await page.setViewportSize({
