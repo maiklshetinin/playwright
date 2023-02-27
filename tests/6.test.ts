@@ -1,9 +1,7 @@
 import { test, expect, chromium } from "@playwright/test";
-import OIB from "./OIB";
 
 const login = "SHETININM"
 const password = "Asdf123$"
-
 
 test("ShutDown", async () => {
   const browser = await chromium.launch({
@@ -32,12 +30,12 @@ test("ShutDown", async () => {
   await OIB_Page.click("//div[@class='el-dropdown']//div[1]") //user's menu
   await OIB_Page.click("//li[text()='Завершить работу']")
   await OIB_Page.click("(//button[contains(@class,'el-button el-button--default')])[2]")
+  await page.waitForTimeout(1000)
   console.log(context.pages().length)
 
   //Выход из модуля. Вкладка браузера закрывается.
-  expect(context.pages().length).toBe(1)
+   expect(context.pages().length).toBe(1)
 
-  await page.waitForTimeout(1000)
 })
 
 

@@ -12,15 +12,15 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results",
+        "outputDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
+        "testDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/22.test.ts"
+          "tests/6.test.ts"
         ],
         "timeout": 30000
       }
@@ -47,25 +47,25 @@
       "max": 5,
       "threshold": 15000
     },
-    "configFile": "/home/shchetinin/Рабочий стол/projects/git/playwright/playwright.config.ts",
-    "rootDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
+    "configFile": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\playwright.config.ts",
+    "rootDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.30.0",
-    "workers": 4,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests/22.test.ts",
-      "file": "tests/22.test.ts",
+      "title": "tests\\6.test.ts",
+      "file": "tests/6.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Assigning a Role to selected (group) users.",
-          "ok": false,
+          "title": "ShutDown",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -77,43 +77,38 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 29999,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 6408,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      "text": "\u001b[33m1\u001b[39m\n"
                     },
                     {
-                      "message": "Pending operations:\n  - locator.click at tests/OIB.ts:159:82\n"
+                      "text": "\u001b[33m2\u001b[39m\n"
+                    },
+                    {
+                      "text": "\u001b[33m1\u001b[39m\n"
                     }
                   ],
-                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-27T16:16:47.160Z",
+                  "startTime": "2023-02-27T18:07:27.661Z",
                   "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-/video.webm"
-                    },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-/test-failed-1.png"
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-6-ShutDown\\test-finished-1.png"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "3a486cfb8e49aace3408-d3e2dc423deb971e4036",
-          "file": "tests/22.test.ts",
-          "line": 10,
+          "id": "e5e5c002a697d9b75e10-a8fc62b23ffca77b7e96",
+          "file": "tests/6.test.ts",
+          "line": 6,
           "column": 5
         }
       ]
