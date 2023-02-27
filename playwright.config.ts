@@ -1,13 +1,13 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
-  testMatch: ["tests/CASHE/18.test.ts"],
+  testMatch: ["tests/CASHE/21.test.ts"],
   use: {
     headless: false,
     screenshot: "on",
     video: "on",
     launchOptions: {
-      slowMo: 100,
+      slowMo: 500,
     }
   },
   reporter: [["dot"], ["json", {
