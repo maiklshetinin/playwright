@@ -3,7 +3,7 @@ import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, 
 
 const login = "SHETININM"
 const search = "IV"
-const user1 = "IVANOV1"
+const user1 = "IVANOVI"
 const user2 = "IVANOVAO"
 const role = "newRole"
 
@@ -35,9 +35,9 @@ test("Assigning a Role to selected (group) users.", async ({ page }) => {
   //2. В таблице отображения пользователей, выделить несколько учетных записей, проставив на против них чекбокс.
   await OIB_Page.selectUserCheckbox(user1)
   await OIB_Page.selectUserCheckbox(user2)
- 
+
   //2. Соответствующие карточки с пользователей выделены, справа отображается последняя из них.
-  //находим строку по общему классу selected 
+  //находим строку по общему классу selected
   expect(await page.locator("//tr[contains(@class, 'selected')]").getByText(OIB_Page.getRegExp(user1)).innerText()).toBe(user1)
   expect(page.locator("//tr[contains(@class, 'selected')]").getByText(OIB_Page.getRegExp(user2))).toHaveText(user2)
   expect(await page.locator(SpanLocators.login).innerText()).toBe(user2)
@@ -53,7 +53,7 @@ test("Assigning a Role to selected (group) users.", async ({ page }) => {
   //----------------------------------------------------------------------------------------test4
   //4. Проставить чекбокс «Включая временные ограничения».
   await OIB_Page.click("//input[@placeholder='Выбрать']")
-  await page.locator("(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[3]").getByText(role).click()
+  await page.getByText(role).nth(0).click()
   await OIB_Page.click("(//span[@class='el-checkbox__input']//span)[3]")
   await OIB_Page.click(UserCard.BTN_SAVE)
 

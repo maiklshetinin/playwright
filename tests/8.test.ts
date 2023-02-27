@@ -8,12 +8,9 @@ const today = new Date()
 const fromDate = "01.01.2021"
 const beforeDate = "01.01.2027"
 const findUserBYLastName = "Иванов"
-const findUserByLogin = "IVANOV1"
+const findUserByLogin = "IVANOVI"
 const right = "Ввод грубых статей"
 const division = "Testtest"
-
-
-
 
 test("Search records, search filters (test 8.1, 8.2)", async ({ page }) => {
   await page.setViewportSize({
@@ -95,7 +92,7 @@ test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
   await OIB_Page.login(login, password)
 
   //----------------------------------------------------------------------------------------test3
-  //   3. В области ввода «Окончание доступа». Первое поле обозначает «От», второе поле даты – «До». 
+  //   3. В области ввода «Окончание доступа». Первое поле обозначает «От», второе поле даты – «До».
   // - Выбрать и проверить отображение ввода из календаря промежутка даты.
   // - Проверить ввод и отображение данных, при установки промежутка даты вручную.
   //TODO:уточнить как работает и что проверять
@@ -104,7 +101,7 @@ test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
   // await page.fill(InputLocators.end_of_access_before, beforeDate)
 
   // 3. Отображает записи за выбранный период времени, у которых ОКАНЧИВАЕТСЯ доступ к ресурсу.
-  // При этом, при отсутствии установленной даты в первом поле поиск осуществляется по маске «От текущей даты До установленной 
+  // При этом, при отсутствии установленной даты в первом поле поиск осуществляется по маске «От текущей даты До установленной
   // или От установленной, До текущей.
 
 
@@ -123,6 +120,8 @@ test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
   // - Логин
   await OIB_Page.findUser(findUserByLogin)
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
+
   await OIB_Page.getAllRowsInTable().getByText(OIB_Page.getRegExp(findUserByLogin)).highlight()
   await page.waitForTimeout(1000)
   //4. Отображает контекстный поиск по введенному значению.
@@ -144,7 +143,7 @@ test("Search records, search filters (test 8.5, 8.6)", async ({ page }) => {
   await OIB_Page.login(login, password)
 
  //----------------------------------------------------------------------------------------test5
-  // 5. В выпадающем списке поля «Список прав» прав доступа у пользователей в отображаемой таблице, 
+  // 5. В выпадающем списке поля «Список прав» прав доступа у пользователей в отображаемой таблице,
   //выбрать одно или несколько значений. Нажать Искать.
 
   await OIB_Page.click(InputLocators.list_of_rights)
@@ -155,13 +154,13 @@ test("Search records, search filters (test 8.5, 8.6)", async ({ page }) => {
   await OIB_Page.click(UserCard.BTN_RIGHTS)
   await page.locator("//div[contains(@class,'rights-list flex-child')]").getByText(right).highlight()
 
-  // 5. Пользователи будут отсортированы в соответствии с выбранным списком прав, соответственно, 
+  // 5. Пользователи будут отсортированы в соответствии с выбранным списком прав, соответственно,
   // будут отображаться только те пользователи, у которых эти (выбранные) права есть.
   expect(page.locator("//div[contains(@class,'rights-list flex-child')]").getByText(right)).toContainText(right)
   await page.locator(InputLocators.list_of_rights).locator("(//i[@class='el-tag__close el-icon-close'])[1]").click()
 
   //----------------------------------------------------------------------------------------test6
-  //6. В выпадающем списке поля «Список подразделений», выбрать одно или несколько значений (у известных пользователей). 
+  //6. В выпадающем списке поля «Список подразделений», выбрать одно или несколько значений (у известных пользователей).
   //Нажать Искать.
   await OIB_Page.click(InputLocators.list_of_divisions)
   // await page.waitForLoadState('networkidle')
@@ -220,12 +219,12 @@ test("Search records, search filters (test 8.7, 8.8)", async ({ page }) => {
 
   //----------------------------------------------------------------------------------------test8
 
-  // 8. В главном окне программы, при открытой таблице пользователей произвести сортировку записей, 
+  // 8. В главном окне программы, при открытой таблице пользователей произвести сортировку записей,
   // нажав на соответствующее название поля столбца таблицы.
 
 
 
-  // 8. При сортировки записей таблицы (по возрастанию или по убыванию), соответственно меняется значок в виде стрелочки, 
+  // 8. При сортировки записей таблицы (по возрастанию или по убыванию), соответственно меняется значок в виде стрелочки,
   // указывая направление вверх или вниз.
 
 

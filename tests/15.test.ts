@@ -2,8 +2,7 @@ import { test, expect } from "@playwright/test";
 import OIB, { DivLocators, InputLocators, Locators,  SpanLocators, UserCard } from "./OIB";
 
 const login="SHETININM"
-const userLogin="IVANOVAO"
-const userLastName="Ивановa"
+const userLogin ="SHETININM"
 const password = "Asdf123$"
 const inputLogin = "IVANOV111"
 const inputFirstName = "Ivan111"
@@ -35,7 +34,6 @@ test("Copying a user card", async ({ page }) => {
   const container_checkboxes = "(//div[@class='flex-parent'])[2]"
 
   await OIB_Page.click("//div[text()='Адм.практика']")
-
   for (const checkbox of await page.locator(container_checkboxes).getByRole("checkbox").all())
     expect(checkbox).toBeChecked()
 
@@ -93,11 +91,11 @@ test("Copying a user card", async ({ page }) => {
 
   await OIB_Page.click("//div[text()='Ситуационный центр']")
   for (const checkbox of await page.locator(container_checkboxes).getByRole("checkbox").all())
-    expect(checkbox).not.toBeChecked()
+    expect(checkbox).toBeChecked()
 
   await OIB_Page.click("//div[text()='Учет специальных ТС']")
   for (const checkbox of await page.locator(container_checkboxes).getByRole("checkbox").all())
-    expect(checkbox).not.toBeChecked()
+    expect(checkbox).toBeChecked()
 
   //3. Заполнить необходимые поля: ФИО, Логин.
   await page.fill(InputLocators.login, inputLogin)
@@ -110,7 +108,7 @@ test("Copying a user card", async ({ page }) => {
   expect(await page.locator(InputLocators.lastName).inputValue()).toBe(inputLastName)
 
 //4. Нажать Сохранить
-//TODO:как не дублировать аккаунты? 
+//TODO:как не дублировать аккаунты?
  await page.locator(UserCard.BTN_CREATE).highlight()
 //  await page.locator(UserCard.BTN_CREATE).click()
   // await page.waitForTimeout(3000)

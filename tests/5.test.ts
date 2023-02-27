@@ -1,40 +1,26 @@
-import { test, expect, chromium } from "@playwright/test";
+import { test, expect } from "@playwright/test";
+import OIB, { UserMenu } from "./OIB";
+
+const LOGIN = "SHETININM"
+const PASSWORD = "Asdf123$"
 
 
-test("user's manual", async () => {
-  const browser = await chromium.launch()
-  const context = await browser.newContext()
-  const page = await context.newPage()
 
-  //enter to OIB
-  await page.goto("http://172.20.255.251:8080/authWeb/")
-  await page.fill("input[placeholder='Логин']", "SHETININM")
-  await page.fill("input[type='password']", "Asdf123$")
-  await page.click("//button[@type='button']//span[1]")
+test("Руководство пользователя. (test 7)", async ({ page }) => {
+    const OIB_Page = new OIB(page)
+    await OIB_Page.login(LOGIN, PASSWORD)
 
-  const pagePromise = context.waitForEvent('page'); //ставим обработчик событий на открытие новой страницы
-  await page.click("div#container>main>div>div:nth-of-type(7)") //клик на вкладку ОИБ в шоколадке
-  const OIB_Page = await pagePromise;
-  await OIB_Page.waitForLoadState();
-  console.log(await OIB_Page.title());
-
-
-  await OIB_Page.click("//div[@class='el-dropdown']//div[1]") //user's menu
-
-  await OIB_Page.click("//li[text()='Руководство']") 
-  
-  const [multipage] = await Promise.all([
-    OIB_Page.waitForEvent("popup"),
-])
-await OIB_Page.waitForLoadState()
-
-const pages = multipage.context().pages()
-    console.log('No.of tabs' + pages.length);
-
-    pages.forEach(tab => {
-        console.log(tab.url());
-
-    })
-
- 
+    //----------------------------------------------------------------------------------------test1
+    //1. Кликнуть на изображение пользователя.
+    await OIB_Page.click(UserMenu.BTN_USER_MENU)
+    await OIB_Page.click(UserMenu.manual)
+    // await page.waitForLoadState("networkidle")
+    //Руководство пользователя открывается во всплывающем окне, формата PDF, с элементами управления режимами отображения / просмотра руководства.
+    //Версия Руководства является актуальной.
+    await page.waitForTimeout(1000)
+    await page.locator("//span[text()='×']").highlight()
+    await expect(page.locator("//span[text()='×']")).toBeVisible()
+    await page.click("//span[text()='×']")
+    //закрытие сессии
+    await OIB_Page.shutDown()
 })

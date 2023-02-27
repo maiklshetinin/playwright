@@ -20,7 +20,23 @@
         "testDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/6.test.ts"
+          "tests/1.test.ts",
+          "tests/2.test.ts",
+          "tests/3.test.ts",
+          "tests/5.test.ts",
+          "tests/6.test.ts",
+          "tests/7.test.ts",
+          "tests/8.test.ts",
+          "tests/9.test.ts",
+          "tests/11.test.ts",
+          "tests/12.test.ts",
+          "tests/13.test.ts",
+          "tests/14.test.ts",
+          "tests/16.test.ts",
+          "tests/18.test.ts",
+          "tests/19.test.ts",
+          "tests/21.test.ts",
+          "tests/22.test.ts"
         ],
         "timeout": 30000
       }
@@ -58,6 +74,812 @@
   },
   "suites": [
     {
+      "title": "tests\\1.test.ts",
+      "file": "tests/1.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login OIB 1 (test 1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 2693,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:45:33.535Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-1-Login-OIB-1-test-1-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-1-Login-OIB-1-test-1-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7da246eccb99980e5da-826302be6905610885da",
+          "file": "tests/1.test.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\11.test.ts",
+      "file": "tests/11.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Edit user account.",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 14716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:45:36.694Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-11-Edit-user-account-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-11-Edit-user-account-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43a67cb79170ac912707-0af40016772da2f4e5d3",
+          "file": "tests/11.test.ts",
+          "line": 11,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\12.test.ts",
+      "file": "tests/12.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Set a password for the created account.",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 434,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: not \u001b[32m\"I\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- expect.not.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   unexpected value \"undefined\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: not \u001b[32m\"I\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- expect.not.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   unexpected value \"undefined\"\u001b[22m\n\n    at C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\11.test.ts:46:53"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\11.test.ts",
+                        "column": 53,
+                        "line": 46
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: not \u001b[32m\"I\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- expect.not.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   unexpected value \"undefined\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtests\\11.test.ts:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mOIB_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mUserCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_CANCEL\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m    \u001b[90m//3. Изменения не будут Сохранены.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m    expect(page\u001b[33m.\u001b[39mlocator(\u001b[33mSpanLocators\u001b[39m\u001b[33m.\u001b[39mfirstName))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"I\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 48 |\u001b[39m  \u001b[90m//закрытие сессии\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m \u001b[33mOIB_Page\u001b[39m\u001b[33m.\u001b[39mshutDown()\u001b[0m\n\n\u001b[2m    at C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\11.test.ts:46:53\u001b[22m"
+                    },
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.fill at tests\\OIB.ts:144:21\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:45:51.423Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-12-Set-a-password-for-the-created-account-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-12-Set-a-password-for-the-created-account-\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\11.test.ts",
+                    "column": 53,
+                    "line": 46
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "810a42d79536fbf0b63b-32b8b3e1011303a8c715",
+          "file": "tests/12.test.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\13.test.ts",
+      "file": "tests/13.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Assigning access rights to an account.",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30013,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\13.test.ts",
+                        "column": 51,
+                        "line": 33
+                      },
+                      "message": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for locator('label[title=\\'БД Маршрут\\']')\n  locator resolved to <label role=\"checkbox\" title=\"БД Маршрут\" aria-disabled…>…</label>\nattempting click action\n  waiting for element to be visible, enabled and stable\n    element is not visible - waiting...\n============================================================\n\n\u001b[90m   at \u001b[39mtests\\13.test.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   \u001b[90m// 3. В меню Список прав: ЦБД (для работы с клиентом ЦБД) проставить чекбокс у необходимого значения (например: БД Маршрут).\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mOIB_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mUserCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_CBD\u001b[39m)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"label[title='БД Маршрут']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m   \u001b[90m// 3. Выбранное значение подсветится синим цветом и активным чекбоксом. Найти его можно будет в Клиенте ЕБД → пункт слева Маршрут.\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m   expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[value='RIGHT_PTRL']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeChecked()\u001b[0m\n\u001b[0m \u001b[90m 36 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\13.test.ts:33:51\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - locator.click at tests\\13.test.ts:33:51\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:45:53.879Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-13-Assigning-access-rights-to-an-account-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-13-Assigning-access-rights-to-an-account-\\test-failed-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "81b45832876cff86b9aa-2f7e6f6d07d5472e89b6",
+          "file": "tests/13.test.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\14.test.ts",
+      "file": "tests/14.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Setting User Time Limits (test 14.1, 14.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 13480,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:46:27.339Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-14-Setting-User-Time-Limits-test-14-1-14-2-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-14-Setting-User-Time-Limits-test-14-1-14-2-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0fda29c58e467e0bdabf-ca5e4c8695287d0c7c23",
+          "file": "tests/14.test.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Setting User Time Limits (test 14.3.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 19939,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:46:41.251Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-14-Setting-User-Time-Limits-test-14-3-1-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-14-Setting-User-Time-Limits-test-14-3-1-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0fda29c58e467e0bdabf-5318f989f05c3d5ed98a",
+          "file": "tests/14.test.ts",
+          "line": 50,
+          "column": 5
+        },
+        {
+          "title": "Setting User Time Limits (test 14.3.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 22729,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:47:01.191Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-14-Setting-User-Time-Limits-test-14-3-2-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-14-Setting-User-Time-Limits-test-14-3-2-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0fda29c58e467e0bdabf-50b02cdfdc315a7981c1",
+          "file": "tests/14.test.ts",
+          "line": 95,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\16.test.ts",
+      "file": "tests/16.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Creating Employees for Selected Users",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 19077,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:47:23.934Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-16-Creating-Employees-for-Selected-Users\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-16-Creating-Employees-for-Selected-Users\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "edd3bf348541e825e897-d419548ae089598ef4f9",
+          "file": "tests/16.test.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\18.test.ts",
+      "file": "tests/18.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "viewing logs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 15273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:47:43.034Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-18-viewing-logs\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-18-viewing-logs\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77cd461c5be90ccad6c-6bfd1252b2e698a78eea",
+          "file": "tests/18.test.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\19.test.ts",
+      "file": "tests/19.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Creation of a new Role.",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 13785,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:47:58.312Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-19-Creation-of-a-new-Role-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-19-Creation-of-a-new-Role-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e9320f57ac2b9a4da84-3734b25d99ed6fc07992",
+          "file": "tests/19.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\2.test.ts",
+      "file": "tests/2.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login OIB valid user data (test 2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 8619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:48:12.102Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-2-Login-OIB-valid-user-data-test-2-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cc0c460ea5071573a35-54ce5a68611c0c223c6d",
+          "file": "tests/2.test.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\21.test.ts",
+      "file": "tests/21.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Edit role.",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 26379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:48:20.726Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-21-Edit-role-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-21-Edit-role-\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-21-Edit-role-\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8c71f8e323280579be0b-d94112c715a484453218",
+          "file": "tests/21.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\22.test.ts",
+      "file": "tests/22.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Assigning a Role to selected (group) users.",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "timedOut",
+                  "duration": 30010,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - locator.click at tests\\22.test.ts:56:37\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:48:47.115Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-22-Assigning-a-Role-to-selected-group-users-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-22-Assigning-a-Role-to-selected-group-users-\\test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-22-Assigning-a-Role-to-selected-group-users-\\test-failed-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a486cfb8e49aace3408-2c0851b06096b6ad6973",
+          "file": "tests/22.test.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\3.test.ts",
+      "file": "tests/3.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Selecting an interface theme (test 3)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 11050,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:49:19.345Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-3-Selecting-an-interface-theme-test-3-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-3-Selecting-an-interface-theme-test-3-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d4c902b71617f9ac934-298c16b1a5f5ef450601",
+          "file": "tests/3.test.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\5.test.ts",
+      "file": "tests/5.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Руководство пользователя. (test 7)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 9843,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:49:30.834Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-5-Руководство-пользователя-test-7-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-5-Руководство-пользователя-test-7-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36cbcb644983d162420f-fb748bce2c234733c778",
+          "file": "tests/5.test.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
       "title": "tests\\6.test.ts",
       "file": "tests/6.test.ts",
       "column": 0,
@@ -76,9 +898,9 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 3,
                   "status": "passed",
-                  "duration": 6408,
+                  "duration": 9449,
                   "errors": [],
                   "stdout": [
                     {
@@ -93,7 +915,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-27T18:07:27.661Z",
+                  "startTime": "2023-02-27T19:49:40.689Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -109,6 +931,502 @@
           "id": "e5e5c002a697d9b75e10-a8fc62b23ffca77b7e96",
           "file": "tests/6.test.ts",
           "line": 6,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\7.test.ts",
+      "file": "tests/7.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Time display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 10321,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:49:50.143Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-7-Time-display\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-7-Time-display\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-7-Time-display\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c0b420353ff9c544dde3-b8d0b6627c49c21bebc8",
+          "file": "tests/7.test.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\8.test.ts",
+      "file": "tests/8.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Search records, search filters (test 8.1, 8.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 21185,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:50:00.478Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-1-8-2-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-1-8-2-\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-1-8-2-\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "74aa678c9300ed675f73-cf2b09fa5d053532c3b3",
+          "file": "tests/8.test.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Search records, search filters (test 8.3, 8.4)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 13944,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:50:21.665Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-3-8-4-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-3-8-4-\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-3-8-4-\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "74aa678c9300ed675f73-9b555e5eeff064af6d5d",
+          "file": "tests/8.test.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "Search records, search filters (test 8.5, 8.6)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 16344,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:50:35.610Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-5-8-6-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-5-8-6-\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-5-8-6-\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "74aa678c9300ed675f73-6da2e0b3d8d6f8b25865",
+          "file": "tests/8.test.ts",
+          "line": 137,
+          "column": 5
+        },
+        {
+          "title": "Search records, search filters (test 8.7, 8.8)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 10316,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:50:51.956Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-7-8-8-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-7-8-8-\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-8-Search-records-search-filters-test-8-7-8-8-\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "74aa678c9300ed675f73-53121e2ce84463cbe491",
+          "file": "tests/8.test.ts",
+          "line": 182,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\9.test.ts",
+      "file": "tests/9.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Connection Log (test 9.1, 9.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 16168,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:51:02.289Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-1-9-2-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-1-9-2-\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-1-9-2-\\test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "867a53f967c4e372f271-00f892360122eba36d65",
+          "file": "tests/9.test.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Connection Log (test 9.3)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "timedOut",
+                  "duration": 30003,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:51:18.459Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-3-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-3-\\test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-3-\\test-failed-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "867a53f967c4e372f271-d794c92bc367a227c9c1",
+          "file": "tests/9.test.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "Connection Log (test 9.4)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 14261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:51:51.085Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-4-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-4-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "867a53f967c4e372f271-4b135a4fb09600b5e522",
+          "file": "tests/9.test.ts",
+          "line": 96,
+          "column": 5
+        },
+        {
+          "title": "Connection Log (test 9.5)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 14816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:52:05.869Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-5-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-5-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "867a53f967c4e372f271-a23f1ad95f23b4575dd8",
+          "file": "tests/9.test.ts",
+          "line": 146,
+          "column": 5
+        },
+        {
+          "title": "Connection Log (test 9.6)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 21856,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-27T19:52:20.688Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-6-\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-9-Connection-Log-test-9-6-\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "867a53f967c4e372f271-bb5bed4237b3abe3e60e",
+          "file": "tests/9.test.ts",
+          "line": 181,
           "column": 5
         }
       ]

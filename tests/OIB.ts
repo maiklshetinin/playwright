@@ -48,7 +48,8 @@ export enum UserMenu {
   theme_dark = "//li[text()='Темная тема ']",
   theme_light = "//li[text()='Светлая тема ']",
   theme_default = "//li[text()='Исходная тема ']",
-  change_password = "//li[text()='Сменить пароль']"
+  change_password = "//li[text()='Сменить пароль']",
+  manual = "//li[text()='Руководство']"
 
 }
 

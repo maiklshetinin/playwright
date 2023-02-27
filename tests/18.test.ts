@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
+import OIB, { InputLocators, UserCard } from "./OIB";
 
 const login = "SHETININM"
 const password = "Asdf123$"
@@ -66,7 +66,7 @@ test("viewing logs", async ({ page }) => {
   //.6. Нажать «Журнал подключений». Общий «Журнал подключений» рассмотрен в пункте 9.
   await OIB_Page.click(UserCard.BTN_LOG_CONNECTION_LOG)
 
-  //6. Откроется журнал запросов, только для данного пользователя, где можно сделать выборку по различному периоду(За час, Сегодня, За сутки, За неделю, За месяц, За год, Все) 
+  //6. Откроется журнал запросов, только для данного пользователя, где можно сделать выборку по различному периоду(За час, Сегодня, За сутки, За неделю, За месяц, За год, Все)
   //и выгрузить эти данные в доступные форматы (csv, xlsx, pdf).
   expect(page.locator("(//div[@class='fc_table_results']//div)[1]")).toContainText("SHETININM")
 

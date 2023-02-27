@@ -44,8 +44,8 @@ test("Creation of a new Role.", async ({ page }) => {
   expect(page.locator(SpanLocators.role)).toContainText("test123")
   expect(await page.locator("//table[@role='grid']//tbody[1]").getByText("test123").all()).not.toHaveLength(0)
 
-  await page.waitForTimeout(2000)
-  
+  await page.waitForTimeout(1000)
+
   //закрытие сессии
   await OIB_Page.shutDown()
 })
