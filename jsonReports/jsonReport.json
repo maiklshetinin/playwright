@@ -20,7 +20,14 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/CASHE/21.test.ts"
+          "tests/1.test.ts",
+          "tests/2.test.ts",
+          "tests/3.test.ts",
+          "tests/4.test.ts",
+          "tests/5.test.ts",
+          "tests/7.test.ts",
+          "tests/8.test.ts",
+          "tests/9.test.ts"
         ],
         "timeout": 30000
       }
@@ -58,14 +65,14 @@
   },
   "suites": [
     {
-      "title": "tests/CASHE/21.test.ts",
-      "file": "tests/CASHE/21.test.ts",
+      "title": "tests/1.test.ts",
+      "file": "tests/1.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "ФЛ Контроль при вводе значений СНИЛС (test 21.1)",
-          "ok": false,
+          "title": "Перейти на страницу авторизации.(test 1)",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -77,52 +84,434 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30001,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/CASHE/21.test.ts",
-                        "column": 16,
-                        "line": 109
-                      },
-                      "message": "page.fill: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=(//span[text()=\\'СНИЛС\\']/following::input)[1]')\n============================================================\n\n\u001b[90m   at \u001b[39mtests/CASHE/21.test.ts:109\n\n\u001b[0m \u001b[90m 107 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 108 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m snils \u001b[36mof\u001b[39m \u001b[33mSNILS_ARR\u001b[39m) { \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"(//span[text()='СНИЛС']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtype(\u001b[32m\"(//span[text()='СНИЛС']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m snils)\u001b[0m\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m500\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mCASHE_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_SAVE\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/CASHE/21.test.ts:109:16\u001b[22m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - page.fill at tests/CASHE/21.test.ts:109:16\n"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 4513,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-27T15:01:03.634Z",
+                  "startTime": "2023-02-28T10:33:55.222Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-test-21-1-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Перейти-на-страницу-авторизации-test-1-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-CASHE-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-test-21-1-/test-failed-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Перейти-на-страницу-авторизации-test-1-/test-finished-1.png"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "b1bb03855ef03ffe03d5-376bc937aa8d17861269",
-          "file": "tests/CASHE/21.test.ts",
-          "line": 66,
-          "column": 6
+          "id": "a7da246eccb99980e5da-e0f1602a746268b16a69",
+          "file": "tests/1.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/2.test.ts",
+      "file": "tests/2.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Авторизоваться под валидными данными пользователя.(test 2.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 8306,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:33:55.268Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-валидными-данными-пользователя-test-2-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-валидными-данными-пользователя-test-2-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cc0c460ea5071573a35-8dc4b08250222a1533c8",
+          "file": "tests/2.test.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Авторизоваться под не валидными данными пользователя. (test2.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 4450,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:34:03.856Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-не-валидными-данными-пользователя-test2-2-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-не-валидными-данными-пользователя-test2-2-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cc0c460ea5071573a35-a96c8f0a65260fcd4041",
+          "file": "tests/2.test.ts",
+          "line": 24,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/3.test.ts",
+      "file": "tests/3.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Проверка версии.(test 3)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 11736,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:33:55.236Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Проверка-версии-test-3-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Проверка-версии-test-3-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d4c902b71617f9ac934-cd7f3bf713a89b45918b",
+          "file": "tests/3.test.ts",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/4.test.ts",
+      "file": "tests/4.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Завершение работы.(test 4)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 8243,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:33:55.280Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-4-Завершение-работы-test-4-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-4-Завершение-работы-test-4-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db79d97400be9559def8-07e7731de5fa319f1dc3",
+          "file": "tests/4.test.ts",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/5.test.ts",
+      "file": "tests/5.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Выбор темы оформления.",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 7513,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:34:00.005Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Выбор-темы-оформления-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Выбор-темы-оформления-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36cbcb644983d162420f-cc3542d31c96e101864c",
+          "file": "tests/5.test.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/7.test.ts",
+      "file": "tests/7.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Руководство пользователя. (test 7)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 8968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:34:03.789Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Руководство-пользователя-test-7-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Руководство-пользователя-test-7-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c0b420353ff9c544dde3-b3d716378d5d1efbcccb",
+          "file": "tests/7.test.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/8.test.ts",
+      "file": "tests/8.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Источники (на главном экране). (test 8)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 17171,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:34:07.259Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Источники-на-главном-экране-test-8-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Источники-на-главном-экране-test-8-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "74aa678c9300ed675f73-72f3396b77a1f4620712",
+          "file": "tests/8.test.ts",
+          "line": 17,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/9.test.ts",
+      "file": "tests/9.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Источники (в карточке). (test 9)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 22969,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T10:34:07.560Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Источники-в-карточке-test-9-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Источники-в-карточке-test-9-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "867a53f967c4e372f271-2c5de29e09e32314544c",
+          "file": "tests/9.test.ts",
+          "line": 17,
+          "column": 5
         }
       ]
     }

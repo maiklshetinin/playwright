@@ -15,10 +15,11 @@ test("Руководство пользователя. (test 7)", async ({ page 
   await CASHE_Page.click(UserMenu.BTN_USER_MENU)
   await CASHE_Page.click(UserMenu.manual)
   await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(2000)
   //Руководство пользователя открывается во всплывающем окне, формата PDF, с элементами управления режимами отображения / просмотра руководства.
   //Версия Руководства является актуальной.
   await page.locator("//span[text()='×']").highlight()
-  await page.waitForTimeout(2000)
+  await page.waitForTimeout(100)
   await expect(page.locator("//span[text()='×']")).toBeVisible()
   await page.click("//span[text()='×']")
   //закрытие сессии

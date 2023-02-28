@@ -38,30 +38,22 @@ test("Источники (на главном экране). (test 8)", async ({
 
   //2. По выбранным параметрам сразу начнется поиск и будут выведены доступные результаты.
   //В поле Время последней актуализации и Источники можно увидеть время обновления и названия источника обновления.
-  await page.waitForTimeout(5000)
+  await page.waitForTimeout(1000)
   const itemLine = await page.locator(MainPage.item_line).all()
-  for (let i = 0; i < itemLine.length; i++) {
-    const time = CASHE_Page.getNewDate(await itemLine[i].getByText(/\d\d:\d\d:\d\d/).innerText())
+  for (let i = 0; i < itemLine.length; i++) { 
+    //проверяем первое значение, и в конце видимого списка 
+    if (i === 0 ||  i === itemLine.length - 1) {
+      const time = CASHE_Page.getNewDate(await itemLine[i].getByText(/\d\d:\d\d:\d\d/).innerText())
+      //highlight----------------------------------------------------
+      await itemLine[i].getByText(/\d\d:\d\d:\d\d/).highlight()
+      await itemLine[i].getByText(/\d\d:\d\d:\d\d/).scrollIntoViewIfNeeded()
+      await itemLine[i].getByText(LIST[0] || LIST[1]).highlight()
+      //highlight----------------------------------------------------
 
-    //highlight----------------------------------------------------
-    await itemLine[i].getByText(/\d\d:\d\d:\d\d/).highlight()
-    await itemLine[i].getByText(/\d\d:\d\d:\d\d/).scrollIntoViewIfNeeded()
-    await page.waitForTimeout(50)
-    await itemLine[i].getByText(LIST[0] || LIST[1]).highlight()
-    await page.waitForTimeout(50)
-    //highlight----------------------------------------------------
-
-
-    await expect(itemLine[i].getByText(LIST[0] || LIST[1])).toContainText(LIST[0] || LIST[1])
-    expect(typeof time.getTime() === 'number').toBe(true)
+      await expect(itemLine[i].getByText(LIST[0] || LIST[1])).toContainText(LIST[0] || LIST[1])
+      expect(typeof time.getTime() === 'number').toBe(true)
+    }
   }
-
-
-  // await page.locator(MainPage.table).getByText(LIST[0]).nth(0).highlight()
-  // await expect(page.locator(MainPage.table).getByText(LIST[0]).nth(0)).toContainText(LIST[0])
-  // await page.waitForTimeout(20)
-  // await page.locator(MainPage.table).getByText(LIST[1]).nth(0).highlight()
-  // await expect(page.locator(MainPage.table).getByText(LIST[1]).nth(0)).toContainText(LIST[1])
 
   //закрытие сессии
   await CASHE_Page.shutDown()

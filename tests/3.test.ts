@@ -1,6 +1,5 @@
-import { UserMenu } from './../OIB/OIB';
 import { test, expect } from "@playwright/test";
-import CASHE, { MainPage } from "./CASHE";
+import CASHE, { MainPage, UserMenu } from "./CASHE";
 
 const login = "SHETININM"
 const password = "Asdf123$"

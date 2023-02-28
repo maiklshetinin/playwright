@@ -34,15 +34,13 @@ test("Источники (в карточке). (test 9)", async ({ page }) => {
   await page.getByText(LIST[1]).nth(0).click()
   await CASHE_Page.click("//i[contains(@class,'el-select__caret el-input__icon')]")
   await page.waitForLoadState("networkidle")
-  await page.waitForLoadState("domcontentloaded")
 
   //2. По выбранным параметрам сразу начнется поиск и будут выведены доступные результаты.
   //В поле Время последней актуализации и Источники можно увидеть время обновления и названия источника обновления.
-  await page.waitForTimeout(5000)
+  await page.waitForTimeout(3000)
 
   //highlight----------------------------------------------------
   await page.locator(MainPage.table).getByText(LIST[0]).nth(0).highlight()
-  await page.waitForTimeout(50)
   await page.locator(MainPage.table).getByText(LIST[1]).nth(0).highlight()
   //highlight----------------------------------------------------
 
@@ -53,8 +51,8 @@ test("Источники (в карточке). (test 9)", async ({ page }) => {
   //----------------------------------------------------------------------------------------test3
   //3. Выбрать одну из отобранных записей (открыть карточку).
   await page.locator(MainPage.item_line).nth(0).click()
-  await page.waitForLoadState("domcontentloaded")
-  await page.waitForTimeout(1000)
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(500)
 
 
   //3. В карточке будет выведена таблица с источником обновления и временем последней актуализации записи.
@@ -65,9 +63,7 @@ test("Источники (в карточке). (test 9)", async ({ page }) => {
 
     //highlight----------------------------------------------------
     await rows[i].getByText(/^\D/).highlight()
-    await page.waitForTimeout(200)
     await rows[i].getByText(/\d\d:\d\d:\d\d/).highlight()
-    await page.waitForTimeout(200)
     //highlight----------------------------------------------------
 
     const source = await rows[i].getByText(/^\D/).innerText()
