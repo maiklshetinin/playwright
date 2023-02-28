@@ -1,23 +1,26 @@
 import { test, expect } from "@playwright/test";
-import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
+import OIB, { InputLocators, SpanLocators, UserCard } from "./OIB";
 
-test("Edit role.", async ({ page }) => {
+export const LOGIN = "SHETININM"
+export const PASSWORD = "Asdf123$"
+
+test("Edit role. (test 21)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login("SHETININM", PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //1. Проставить чекбокс Активные и Роль, в графе поиска, вбить название роли, созданной в в пункте 19.
   await page.click("(//span[@class='el-checkbox__inner'])[3]")
-  await page.waitForTimeout(2000)
+  await page.waitForTimeout(1000)
   //1. Появится список всех созданных активных Ролей.
   expect(await page.locator("//table[@role='grid']//tbody[1]").getByRole("row").all()).not.toHaveLength(0)
 
   //2. Перейти в карточку роли. Нажать Редактировать.
   //TODO:сначала кликаем на строку чтобы добавить класс current, потом кликаем по чекбоксу
-  await page.locator("//table[@role='grid']//tbody[1]").getByText("test123").nth(0).click()
+  await page.locator("//table[@role='grid']//tbody[1]").getByText(OIB_Page.getRegExp("test123")).nth(0).click()
   await page.locator("//tr[contains(@class, 'current')]//td[1]").click()
   await OIB_Page.click(UserCard.BTN_EDIT)
 
@@ -58,7 +61,6 @@ test("Edit role.", async ({ page }) => {
   await page.locator("(//div[@aria-label='checkbox-group'])[1]").getByTitle("АРМ ВФ").click()
   await OIB_Page.click(UserCard.BTN_SAVE)
 
-  await page.waitForTimeout(3000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })

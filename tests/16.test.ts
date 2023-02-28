@@ -6,7 +6,7 @@ const organization = '8Б2ПДПС МО'
 const subdivision = "ИАЗ"
 const job_title = "321"
 
-test("Creating Employees for Selected Users", async ({ page }) => {
+test("Creating Employees for Selected Users (test 16)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 1080,

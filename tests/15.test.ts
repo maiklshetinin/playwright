@@ -9,7 +9,7 @@ const inputFirstName = "Ivan111"
 const inputLastName = "Ivanov111"
 
 
-test("Copying a user card", async ({ page }) => {
+test("Copying a user card (test 15)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 1080,

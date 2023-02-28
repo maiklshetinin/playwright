@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
-test("Creation of a new Role.", async ({ page }) => {
+test("Creation of a new Role. (test 19)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 1080,
@@ -34,9 +34,6 @@ await OIB_Page.click("//span[text()='Создать']")
 //4. Роль с заданным названием и параметрами создана и отображается в общем списке ролей.
 expect(page.locator(SpanLocators.role)).toContainText("Test")
 expect(page.locator("//div[contains(@class,'arm-list flex-child')]").getByText("ВФ").nth(0)).toHaveText("ВФ")
-
-await page.waitForTimeout(2000)
-
 
   //закрытие сессии
   await OIB_Page.shutDown()

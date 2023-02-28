@@ -4,7 +4,7 @@ import OIB, { InputLocators, UserCard } from "./OIB";
 const login = "SHETININM"
 const password = "Asdf123$"
 
-test("viewing logs", async ({ page }) => {
+test("viewing logs (test 18)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 1080,

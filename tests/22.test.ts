@@ -7,7 +7,7 @@ const user1 = "IVANOVI"
 const user2 = "IVANOVAO"
 const role = "newRole"
 
-test("Assigning a Role to selected (group) users.", async ({ page }) => {
+test("Assigning a Role to selected (group) users. (test 22)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
@@ -53,7 +53,9 @@ test("Assigning a Role to selected (group) users.", async ({ page }) => {
   //----------------------------------------------------------------------------------------test4
   //4. Проставить чекбокс «Включая временные ограничения».
   await OIB_Page.click("//input[@placeholder='Выбрать']")
-  await page.getByText(role).nth(0).click()
+  await page.locator("(//div[@x-placement='bottom-start']//div)[1]").getByRole('listitem').filter({hasText:role}).highlight()
+  await page.waitForTimeout(100)
+  await page.locator("(//div[@x-placement='bottom-start']//div)[1]").getByRole('listitem').filter({hasText:role}).click()
   await OIB_Page.click("(//span[@class='el-checkbox__input']//span)[3]")
   await OIB_Page.click(UserCard.BTN_SAVE)
 
@@ -65,7 +67,6 @@ test("Assigning a Role to selected (group) users.", async ({ page }) => {
   await page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user2)).click()
   expect(await page.locator("//div[@class='list-input']//span[1]").innerText()).toBe(role)
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })

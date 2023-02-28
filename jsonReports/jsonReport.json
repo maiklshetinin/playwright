@@ -20,7 +20,7 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/9.test.ts"
+          "tests/22.test.ts"
         ],
         "timeout": 30000
       }
@@ -58,13 +58,13 @@
   },
   "suites": [
     {
-      "title": "tests/9.test.ts",
-      "file": "tests/9.test.ts",
+      "title": "tests/22.test.ts",
+      "file": "tests/22.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Connection Log (test 9.1, 9.2)",
+          "title": "Assigning a Role to selected (group) users. (test 22)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -78,22 +78,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 16536,
+                  "duration": 21190,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T08:36:17.625Z",
+                  "startTime": "2023-02-28T09:34:56.907Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-1-9-2-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-test-22-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-1-9-2-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-test-22-/test-finished-1.png"
                     }
                   ]
                 }
@@ -101,187 +101,9 @@
               "status": "expected"
             }
           ],
-          "id": "867a53f967c4e372f271-498be9a5ce33d7700830",
-          "file": "tests/9.test.ts",
-          "line": 15,
-          "column": 5
-        },
-        {
-          "title": "Connection Log (test 9.3)",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 29999,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - page.click at tests/OIB.ts:183:21\n"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:36:34.517Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-3-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-3-/test-failed-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "867a53f967c4e372f271-052bee4aaea4dd41170f",
-          "file": "tests/9.test.ts",
-          "line": 59,
-          "column": 5
-        },
-        {
-          "title": "Connection Log (test 9.4)",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "timedOut",
-                  "duration": 30000,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded while tearing down \"context\".\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded while tearing down \"context\".\u001b[39m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:37:05.824Z",
-                  "attachments": []
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "867a53f967c4e372f271-4a0c8f78f68a13c6d4ec",
-          "file": "tests/9.test.ts",
-          "line": 94,
-          "column": 5
-        },
-        {
-          "title": "Connection Log (test 9.5)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 14736,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:37:37.929Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-5-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-5-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "867a53f967c4e372f271-982fc22a057eec59f495",
-          "file": "tests/9.test.ts",
-          "line": 143,
-          "column": 5
-        },
-        {
-          "title": "Connection Log (test 9.6)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 21351,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:37:53.003Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-6-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-6-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "867a53f967c4e372f271-cebb268264638906b7cb",
-          "file": "tests/9.test.ts",
-          "line": 177,
+          "id": "3a486cfb8e49aace3408-cd871e8db38e258cb8d7",
+          "file": "tests/22.test.ts",
+          "line": 10,
           "column": 5
         }
       ]
