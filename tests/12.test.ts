@@ -6,7 +6,7 @@ const password = "Asdf123$"
 const userLogin="IVANOVAO"
 const userLastName="Иванова"
 
-test("Set a password for the created account.", async ({page}) => {
+test("Set a password for the created account.(test 12)", async ({page}) => {
 
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
@@ -46,7 +46,6 @@ test("Set a password for the created account.", async ({page}) => {
     // сгенерировать системой.
     await GENERATE_BTN.click()
     const value = await inputGeneratedPassword.inputValue()
-    console.log(value);
     // Если пароль сгенерирован системой, он отображается в поле ниже поля «новый пароль». 
     expect(inputGeneratedPassword).toHaveValue(/[0-9][А-Я,а-я,A-Z, a-z]/)
     // Так же доступны 2 кнопки: сохранить в файл и использовать

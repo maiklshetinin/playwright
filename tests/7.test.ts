@@ -4,7 +4,7 @@ import OIB from "./OIB";
 const login = "SHETININM"
 const password = "Asdf123$"
 
-test("Time display", async ({ page }) => {
+test("Time display (test 7)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
   await page.waitForLoadState('networkidle')

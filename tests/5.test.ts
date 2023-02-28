@@ -6,7 +6,7 @@ const PASSWORD = "Asdf123$"
 
 
 
-test("Руководство пользователя. (test 7)", async ({ page }) => {
+test("Руководство пользователя. (test 5)", async ({ page }) => {
     const OIB_Page = new OIB(page)
     await OIB_Page.login(LOGIN, PASSWORD)
 

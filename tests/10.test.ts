@@ -3,11 +3,11 @@ import { test, expect, chromium } from "@playwright/test";
 
 const login = "SHETININM"
 const password = "Asdf123$"
-const newUserLogin = "IVANOVI6"
+const newUserLogin = "IVANOVI77"
 const newUserLastName = "Ivanov"
 
 
-test("Create a new user account.", async ({ page }) => {
+test("Create a new user account. (test 10)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login("SHETININM", password)
 
@@ -21,6 +21,9 @@ test("Create a new user account.", async ({ page }) => {
   //----------------------------------------------------------------------------------------test2
 
   // Заполнить (обязательные поля) Фамилию и Логин сотрудника.
+  await page.locator(InputLocators.lastName).highlight()
+  await page.waitForTimeout(1000)
+
   await page.fill(InputLocators.lastName, newUserLastName)
   await page.fill(InputLocators.login, newUserLogin)
   //Кнопка Создать подсвечена.
@@ -32,7 +35,7 @@ test("Create a new user account.", async ({ page }) => {
   //3. Пользователь создан.
   expect(OIB_Page.getFirstRow(DivLocators.table_body).getByText(newUserLastName).nth(0)).toHaveText(newUserLastName)
 
-  await page.waitForTimeout(3000)
+  // await page.waitForTimeout(3000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })

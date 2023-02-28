@@ -1,12 +1,44 @@
 import { test, expect, chromium } from "@playwright/test";
-import OIB, { SpanLocators, UserCard } from "./OIB";
+import OIB, { InputLocators, SpanLocators, UserCard } from "./OIB";
 
 const login1 = "SHETININM"
 const password = "Asdf123$"
 const userLogin = "IVANOVAO"
 const userLastName = "Иванова"
 
-test("Assigning access rights to an account.", async ({ page }) => {
+
+test("Удаление роли если она есть (test 13)", async ({ page }) => {
+  const OIB_Page = new OIB(page)
+  await OIB_Page.login(login1, password)
+
+  //----------------------------------------------------------------------------------------test1
+
+  // 1. Выделить нужную учетную запись.
+  await OIB_Page.getUserCard(userLogin)
+
+  //----------------------------------------------------------------------------------------test2
+
+  //2. В появившемся справа окне, нажать на изображение карандаша.
+  await OIB_Page.click(UserCard.BTN_EDIT)
+  //2. Появится возможность внесения данных в запись.
+  expect(page.locator("(//span[text()='Фамилия']/following::input)[1]")).toBeVisible()
+
+  //удаляем роль если она есть
+  if (await page.locator(InputLocators.role).inputValue() !== '') {
+    await page.locator("(//div[@class='el-select el-select--mini']//div)[1]").hover();
+    await page.locator("(//div[@class='el-select el-select--mini']//div)[1]").locator('i').nth(1).highlight();
+    await page.waitForTimeout(300)
+    await page.locator("(//div[@class='el-select el-select--mini']//div)[1]").locator('i').nth(1).click();
+    await OIB_Page.click(UserCard.BTN_SAVE)
+    await OIB_Page.click(UserCard.BTN_EDIT)
+  }
+
+  //закрытие сессии
+  await OIB_Page.shutDown()
+})
+
+
+test("Assigning access rights to an account. (test 13.1)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login1, password)
 

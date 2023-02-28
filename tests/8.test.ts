@@ -109,10 +109,15 @@ test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
 
   //4. Область «Поиск пользователей» начать вводить:
   // - ФИО
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   await OIB_Page.findUser(findUserBYLastName)
   await page.waitForLoadState('networkidle')
+  // await page.waitForTimeout(2000)
   //4. Отображает контекстный поиск по введенному значению.
-  expect(OIB_Page.getFirstRowInTable().getByText(findUserBYLastName)).toContainText(findUserBYLastName)
+  await page.getByText(OIB_Page.getRegExp(findUserBYLastName)).highlight()
+  await page.waitForTimeout(500)
+  await expect(page.getByText(OIB_Page.getRegExp(findUserBYLastName))).toContainText(findUserBYLastName)
 
   // - Дата начала доступа
   //TODO:уточнить как именно должно работать
@@ -120,15 +125,15 @@ test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
   // - Логин
   await OIB_Page.findUser(findUserByLogin)
   await page.waitForLoadState('networkidle')
-  await page.waitForTimeout(1000)
+  await page.waitForTimeout(500)
 
   await OIB_Page.getAllRowsInTable().getByText(OIB_Page.getRegExp(findUserByLogin)).highlight()
-  await page.waitForTimeout(1000)
+  await page.waitForTimeout(100)
   //4. Отображает контекстный поиск по введенному значению.
   expect(OIB_Page.getAllRowsInTable().getByText(OIB_Page.getRegExp(findUserByLogin))).toContainText(findUserByLogin)
-  await page.fill(InputLocators.search_user,'')
+  // await page.fill(InputLocators.search_user, '')
 
-  await page.waitForTimeout(1000)
+  // await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
@@ -142,7 +147,7 @@ test("Search records, search filters (test 8.5, 8.6)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
 
- //----------------------------------------------------------------------------------------test5
+  //----------------------------------------------------------------------------------------test5
   // 5. В выпадающем списке поля «Список прав» прав доступа у пользователей в отображаемой таблице,
   //выбрать одно или несколько значений. Нажать Искать.
 
@@ -187,8 +192,8 @@ test("Search records, search filters (test 8.7, 8.8)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
   await page.waitForLoadState('networkidle')
-
- //----------------------------------------------------------------------------------------test7
+  await page.waitForTimeout(1000)
+  //----------------------------------------------------------------------------------------test7
 
   // 7. Сформировав результат в таблице, требуется проверить выгрузку данных.
   // Нажать на кнопки (в левом верхнем углу):

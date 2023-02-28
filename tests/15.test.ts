@@ -26,6 +26,7 @@ test("Copying a user card", async ({ page }) => {
 
   //2. В правом верхнем углу, нажать кнопку Копировать выбранного пользователя/роль.
   await OIB_Page.click(Locators.BTN_COPY_SELECTED_USER)
+  await page.waitForTimeout(1000)
   //2. Появится окно для внесения данных для нового пользователя, с правами доступа от копируемого пользователя.
   expect(page.locator(DivLocators.userCard)).toBeVisible()
   expect(await page.locator(InputLocators.lastName).inputValue()).toBe('')
@@ -109,7 +110,7 @@ test("Copying a user card", async ({ page }) => {
 
 //4. Нажать Сохранить
 //TODO:как не дублировать аккаунты?
- await page.locator(UserCard.BTN_CREATE).highlight()
+//  await page.locator(UserCard.BTN_CREATE).highlight()
 //  await page.locator(UserCard.BTN_CREATE).click()
   // await page.waitForTimeout(3000)
   //закрытие сессии
