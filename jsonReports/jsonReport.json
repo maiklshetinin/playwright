@@ -20,7 +20,9 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/22.test.ts"
+          "tests/1.test.ts",
+          "tests/2.test.ts",
+          "tests/3.test.ts"
         ],
         "timeout": 30000
       }
@@ -53,18 +55,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.30.0",
-    "workers": 1,
+    "workers": 3,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests/22.test.ts",
-      "file": "tests/22.test.ts",
+      "title": "tests/1.test.ts",
+      "file": "tests/1.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Assigning a Role to selected (group) users. (test 22)",
+          "title": "Перейти на страницу авторизации. (test 1)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -78,22 +80,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 21190,
+                  "duration": 3646,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T09:34:56.907Z",
+                  "startTime": "2023-02-28T15:05:28.442Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-test-22-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Перейти-на-страницу-авторизации-test-1-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-Assigning-a-Role-to-selected-group-users-test-22-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Перейти-на-страницу-авторизации-test-1-/test-finished-1.png"
                     }
                   ]
                 }
@@ -101,9 +103,111 @@
               "status": "expected"
             }
           ],
-          "id": "3a486cfb8e49aace3408-cd871e8db38e258cb8d7",
-          "file": "tests/22.test.ts",
-          "line": 10,
+          "id": "a7da246eccb99980e5da-6cbeb95e042fca282703",
+          "file": "tests/1.test.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/2.test.ts",
+      "file": "tests/2.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Авторизоваться под валидными данными пользователя.(test 2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 10264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T15:05:28.439Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-валидными-данными-пользователя-test-2-/test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-валидными-данными-пользователя-test-2-/test-finished-2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cc0c460ea5071573a35-f869033be6216e447aa6",
+          "file": "tests/2.test.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/3.test.ts",
+      "file": "tests/3.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Выбор темы интерфейса. (test 3)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 8885,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T15:05:28.448Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Выбор-темы-интерфейса-test-3-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Выбор-темы-интерфейса-test-3-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d4c902b71617f9ac934-42dbcc780912af6f0751",
+          "file": "tests/3.test.ts",
+          "line": 7,
           "column": 5
         }
       ]

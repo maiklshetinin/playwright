@@ -1,21 +1,23 @@
 import { test, expect, chromium } from "@playwright/test";
 import OIB, { UserMenu } from "./OIB";
 
-const login = "SHETININM"
+const login = "SHETININMM"
 const password = "Asdf123$"
 
-test("Change user password (test 4.1)", async ({ page }) => {
-
+test("Смена пароля пользователя. (test 4.1)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
 
   //----------------------------------------------------------------------------------------test1
 
   //1. Открыть меню пользователя. Выбрать  пункт «Сменить пароль».
   await OIB_Page.click(UserMenu.BTN_USER_MENU)
+  await page.waitForTimeout(500)
   await OIB_Page.click(UserMenu.change_password)
   //1. Откроется окно для обновления текущего пароля
-  expect(page.getByText("Изменение пароля")).toBeVisible()
+  await expect(page.getByText("Изменение пароля")).toBeVisible()
 
   //----------------------------------------------------------------------------------------test2
 
@@ -34,14 +36,16 @@ test("Change user password (test 4.1)", async ({ page }) => {
   await OIB_Page.shutDown()
 
   await OIB_Page.login(login, `${password}$`)
-  expect(page.locator("//h4[text()='Пользователи']")).toBeVisible()
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
+  await expect(page.locator("//h4[text()='Пользователи']")).toBeVisible()
 
   //закрытие сессии
   await OIB_Page.shutDown()
 })
 
 
-test ("Login to chocolate (test 4.2)",async()=>{
+test("Смена пароля пользователя. (test 4.2)",async()=>{
 //3. Авторизоваться в шоколадке с новым паролем и перейти в модуль ОИБ.
   const browser2 = await chromium.launch()
   const context2 = await browser2.newContext()
@@ -54,12 +58,13 @@ test ("Login to chocolate (test 4.2)",async()=>{
   await page2.click("//button[@type='button']//span[1]")
 
   const pagePromise2 = context2.waitForEvent('page'); //ставим обработчик событий на открытие новой страницы
-  await page2.click("div#container>main>div>div:nth-of-type(7)") //клик на вкладку ОИБ в шоколадке
+  await page2.getByText("ОИБ").click() //клик на вкладку ОИБ в шоколадке
   const OIB_Page2 = await pagePromise2;
-  await OIB_Page2.waitForLoadState();
+  await OIB_Page2.waitForLoadState('networkidle');
+  await page2.waitForTimeout(1000)
 
   //3. Авторизация с новым паролем успешна.
-  expect(OIB_Page2.locator("//h4[text()='Пользователи']")).toBeVisible()
+  await expect(OIB_Page2.locator("//h4[text()='Пользователи']")).toBeVisible()
   //закрытие сессии
   await OIB_Page2.click("//div[@class='el-dropdown']//div[1]") //user's menu
   await OIB_Page2.click("//li[text()='Завершить работу']")

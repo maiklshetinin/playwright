@@ -4,7 +4,7 @@ import OIB, { UserMenu } from "./OIB";
 const login = "SHETININM"
 const password = "Asdf123$"
 
-test("Selecting an interface theme (test 3)", async ({ page }) => {
+test("Выбор темы интерфейса. (test 3)", async ({ page }) => {
 
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)

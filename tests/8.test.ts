@@ -12,7 +12,7 @@ const findUserByLogin = "IVANOVI"
 const right = "Ввод грубых статей"
 const division = "Testtest"
 
-test("Search records, search filters (test 8.1, 8.2)", async ({ page }) => {
+test("Поиск записей, фильтры поиска. (test 8.1, 8.2)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
@@ -27,21 +27,28 @@ test("Search records, search filters (test 8.1, 8.2)", async ({ page }) => {
 
   await page.locator(DivLocators.abc_search).getByText(abc_search[0]).click()
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(500)
   const lastName1 = await OIB_Page.getTdInnerText(OIB_Page.getFirstRowInTable(), abc_search[0])
   expect(lastName1[0]).toBe(abc_search[0])
 
   await page.locator(DivLocators.abc_search).getByText(abc_search[1]).click()
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(500)
+
   const lastName2 = await OIB_Page.getTdInnerText(OIB_Page.getFirstRowInTable(), abc_search[1])
   expect(lastName2[0]).toBe(abc_search[1])
 
   await page.locator(DivLocators.abc_search).getByText(abc_search[2]).click()
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(500)
+
   const lastName3 = await OIB_Page.getTdInnerText(OIB_Page.getFirstRowInTable(), abc_search[2])
   expect(lastName3[0]).toBe(abc_search[2])
 
   await page.locator(DivLocators.abc_search).getByText(abc_search[3]).click()
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(500)
+
   const lastName4 = await OIB_Page.getTdInnerText(OIB_Page.getFirstRowInTable(), abc_search[3])
   expect(lastName4[0]).toBe(abc_search[3])
 
@@ -49,16 +56,19 @@ test("Search records, search filters (test 8.1, 8.2)", async ({ page }) => {
   //2. Проставить чекбоксы в соответствующих значениях: Активные, Сотрудники, Роль.
   await page.locator(CheckboxLocators.employer).click()
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   await page.locator(CheckboxLocators.role).highlight()
 
   //2. Записи соответствующие чекбоксу сразу отображаются в области отображения записей.
   // Пользователи, у которых в карточке, заполнены данные сотрудника, в поле «СОТР» - имеют зеленную галочку.
   await page.locator(DivLocators.abc_search).getByText(abc_search[3]).click()
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
 
   await OIB_Page.getAllRowsInTable().locator("//td//div[contains(@class, 'common_icon_filter marked_circle_green')]").nth(0).click()
   await OIB_Page.click(UserCard.BTN_EMPLOYER)
   await OIB_Page.click(Locators.BTN_EMPLOYER_EDIT)
+  await page.waitForTimeout(1000)
   expect(await page.locator(InputLocators.EMPLOYER_firstName).inputValue()).not.toBe('')
   expect(await page.locator(InputLocators.EMPLOYER_lastName).inputValue()).not.toBe('')
   expect(new Date(await page.locator(InputLocators.EMPLOYER_date_of_dismissal).inputValue()) > today).toBe(true)
@@ -67,6 +77,7 @@ test("Search records, search filters (test 8.1, 8.2)", async ({ page }) => {
   await OIB_Page.getAllRowsInTable().locator("//td//div[contains(@class, 'common_icon_filter marked_circle_red')]").nth(0).click()
   await OIB_Page.click(UserCard.BTN_EMPLOYER)
   await OIB_Page.click(Locators.BTN_EMPLOYER_EDIT)
+  await page.waitForTimeout(500)
   expect(new Date(await page.locator(InputLocators.EMPLOYER_date_of_dismissal).inputValue()) > today).toBe(false)
 
   // Если сотрудник для данного пользователя вовсе не создавался, данное поле будет пустым.
@@ -77,13 +88,12 @@ test("Search records, search filters (test 8.1, 8.2)", async ({ page }) => {
   const countRowsInTable = await OIB_Page.getTableLength()
   expect(countRowsInDiv).toBe(countRowsInTable)
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
 
 
-test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
+test("Поиск записей, фильтры поиска. (test 8.3, 8.4)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
@@ -139,7 +149,7 @@ test("Search records, search filters (test 8.3, 8.4)", async ({ page }) => {
 })
 
 
-test("Search records, search filters (test 8.5, 8.6)", async ({ page }) => {
+test("Поиск записей, фильтры поиска. (test 8.5, 8.6)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
@@ -155,6 +165,7 @@ test("Search records, search filters (test 8.5, 8.6)", async ({ page }) => {
   await page.locator("(//div[@x-placement='bottom-start']//div)[1]").getByText(right).click()
   await OIB_Page.click(Locators.BTN_SEARCH)
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   await OIB_Page.getFirstRowInTable().click()
   await OIB_Page.click(UserCard.BTN_RIGHTS)
   await page.locator("//div[contains(@class,'rights-list flex-child')]").getByText(right).highlight()
@@ -178,13 +189,12 @@ test("Search records, search filters (test 8.5, 8.6)", async ({ page }) => {
   await page.locator(DivLocators.department_employee).highlight()
   expect(page.locator(DivLocators.department_employee)).toContainText(division)
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
 
 
-test("Search records, search filters (test 8.7, 8.8)", async ({ page }) => {
+test("Поиск записей, фильтры поиска. (test 8.7, 8.8)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,

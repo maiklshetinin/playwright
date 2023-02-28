@@ -6,7 +6,7 @@ const password = "Asdf123$"
 const userLogin="IVANOVAO"
 const userLastName="Иванова"
 
-test("Set a password for the created account.(test 12)", async ({page}) => {
+test("Установка пароля для созданной учетной записи. (test 12)", async ({page}) => {
 
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
@@ -25,16 +25,16 @@ test("Set a password for the created account.(test 12)", async ({page}) => {
   // 1. Выделить нужную учетную запись.
   await OIB_Page.getUserCard(userLogin)
   //1. Справа появится карточка выделенного пользователя.
-  expect(page.locator(UserCard.userCard)).toBeVisible()
-  expect(page.locator(SpanLocators.lastName)).toHaveText(userLastName)
-  expect(page.locator(SpanLocators.login)).toHaveText(userLogin)
+  await expect(page.locator(UserCard.userCard)).toBeVisible()
+  await expect(page.locator(SpanLocators.lastName)).toHaveText(userLastName)
+  await expect(page.locator(SpanLocators.login)).toHaveText(userLogin)
 
   //----------------------------------------------------------------------------------------test2
 
   // 2. В появившемся справа окне, нажать на изображение ключа.
   await OIB_Page.click(UserCard.BTN_KEY)
   // 2. Появится возможность внести новый пароль.
-  expect(page.locator("(//div[@class='modal-content pass']//span)[2]")).toBeVisible()
+  await expect(page.locator("(//div[@class='modal-content pass']//span)[2]")).toBeVisible()
 
   //----------------------------------------------------------------------------------------test3
   
@@ -42,21 +42,23 @@ test("Set a password for the created account.(test 12)", async ({page}) => {
     await inputPassword.fill("Asdf123$")
     await inputPassword2.fill("Asdf123$")
     // 3. Новый пароль отображается в соответствующем поле ввода.
-    expect(inputPassword).toHaveValue("Asdf123$")
+    await expect(inputPassword).toHaveValue("Asdf123$")
     // сгенерировать системой.
     await GENERATE_BTN.click()
+    await page.waitForTimeout(500)
     const value = await inputGeneratedPassword.inputValue()
     // Если пароль сгенерирован системой, он отображается в поле ниже поля «новый пароль». 
-    expect(inputGeneratedPassword).toHaveValue(/[0-9][А-Я,а-я,A-Z, a-z]/)
+    await expect(inputGeneratedPassword).toHaveValue(/[0-9][А-Я,а-я,A-Z, a-z]/)
     // Так же доступны 2 кнопки: сохранить в файл и использовать
-    expect(SAVE_BTN).toBeVisible()
-    expect(USE_BTN).toBeVisible()
+    await expect(SAVE_BTN).toBeVisible()
+    await expect(USE_BTN).toBeVisible()
     // Если пароль устраивает, нажать на кнопку «Использовать».
     await USE_BTN.click()
+    await page.waitForTimeout(500)
     // При нажатии кнопки «Использовать», новый пароль дублируется в поле «Повтора ввода нового пароля» 
     // и становится активной кнопка «Изменить», для сохранения измененного пароля.
-    expect(inputPassword).toHaveValue(value)
-    expect(CHANGE_BTN).not.toHaveAttribute("disabled", "disabled")
+    await expect(inputPassword).toHaveValue(value)
+    await expect(CHANGE_BTN).not.toHaveAttribute("disabled", "disabled")
     await CLOSE_BTN.click()
 
   //----------------------------------------------------------------------------------------test4
@@ -71,7 +73,6 @@ test("Set a password for the created account.(test 12)", async ({page}) => {
   //закрытие сессии
   await OIB_Page.shutDown()
   await OIB_Page.login("SHETININM", password)
-  await page.waitForTimeout(2000)
   await OIB_Page.shutDown()
 })
 

@@ -65,7 +65,7 @@ test("Connection Log (test 9.3)", async ({ page }) => {
   await OIB_Page.login(login, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
-//TODO: некорректный ввод в инпут
+  //TODO: некорректный ввод в инпут
   //1. На главном экране, в правом верхнем углу, нажать кнопку «Журнал подключений»
   await OIB_Page.click(Locators.BTN_CONNECTION_LOG)
   //1. Откроется окно, в текущей вкладке с выставленными подключениями за последний час.
@@ -98,11 +98,14 @@ test("Connection Log (test 9.4)", async ({ page }) => {
   });
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, PASSWORD)
+  await page.waitForLoadState('networkidle')
 
   //----------------------------------------------------------------------------------------test1
 
   //1. На главном экране, в правом верхнем углу, нажать кнопку «Журнал подключений»
   await OIB_Page.click(Locators.BTN_CONNECTION_LOG)
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   //1. Откроется окно, в текущей вкладке с выставленными подключениями за последний час.
   //Максимально допустимая выборка в таблице (в том числе и для выгрузки = 40.000 записей).
   expect(page.locator(ConnectionLog.modal)).toBeVisible()
@@ -147,7 +150,8 @@ test("Connection Log (test 9.5)", async ({ page }) => {
   });
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, PASSWORD)
-
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   //----------------------------------------------------------------------------------------test1
 
   //1. На главном экране, в правом верхнем углу, нажать кнопку «Журнал подключений»
@@ -160,10 +164,13 @@ test("Connection Log (test 9.5)", async ({ page }) => {
 
   // 5. В поле «Список подразделений», выбрать одно или несколько значение. Нажать Поиск.
   await OIB_Page.click(ConnectionLog.input_list_of_divisions)
+  await page.waitForTimeout(500)
   await page.locator(ConnectionLog.ul_list_of_divisions).getByText(division).nth(0).scrollIntoViewIfNeeded()
   await page.locator(ConnectionLog.ul_list_of_divisions).getByText(division).nth(0).click()
   await OIB_Page.click(ConnectionLog.BTN_SEARCH)
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
+
 
   await OIB_Page.getFirstRow(ConnectionLog.table).getByText(division).scrollIntoViewIfNeeded()
   await OIB_Page.getFirstRow(ConnectionLog.table).getByText(division).highlight()
@@ -174,18 +181,20 @@ test("Connection Log (test 9.5)", async ({ page }) => {
   await OIB_Page.shutDown()
 })
 
-test("Connection Log (test 9.6)", async ({ page }) => {
+test("Журнал подключений (test 9.6)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
   });
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, PASSWORD)
-
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   //----------------------------------------------------------------------------------------test1
 
   //1. На главном экране, в правом верхнем углу, нажать кнопку «Журнал подключений»
   await OIB_Page.click(Locators.BTN_CONNECTION_LOG)
+  await page.waitForTimeout(500)
   //1. Откроется окно, в текущей вкладке с выставленными подключениями за последний час.
   //Максимально допустимая выборка в таблице (в том числе и для выгрузки = 40.000 записей).
   expect(page.locator(ConnectionLog.modal)).toBeVisible()
@@ -199,7 +208,7 @@ test("Connection Log (test 9.6)", async ({ page }) => {
   await page.type(ConnectionLog.input_search, userName)
   await OIB_Page.click(ConnectionLog.BTN_SEARCH)
   await page.waitForLoadState('networkidle')
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(4000)
 
   //6. Будут показаны все совпадения, за выбранный промежуток времени.
 
@@ -207,7 +216,7 @@ test("Connection Log (test 9.6)", async ({ page }) => {
 
   const msFromDate = OIB_Page.getNewDate(fromDate)
   const msBeforeDate = OIB_Page.getNewDate(beforeDate)
-
+  await page.waitForTimeout(1000)
   const rows = await page.getByRole("row").filter({ hasText: userName }).all()
 
   await rows[0].getByText(userName).nth(0).highlight()
@@ -222,7 +231,7 @@ test("Connection Log (test 9.6)", async ({ page }) => {
 
   await rows[rows.length - 1].scrollIntoViewIfNeeded()
   await rows[rows.length - 1].getByText(userName).nth(0).highlight()
-  expect(rows[rows.length - 1].getByText(userName).nth(0)).toContainText(userName)
+  await expect(rows[rows.length - 1].getByText(userName).nth(0)).toContainText(userName)
 
   await page.waitForTimeout(10)
   const dateFirstRow2 = await rows[0].getByText(/\d\d\.\d\d\.\d\d\d\d/).nth(0).innerText()

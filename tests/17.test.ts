@@ -5,7 +5,7 @@ const login = "SHETININM"
 const password = "Asdf123$"
 const userLogin="IVANOVAO"
 
-test("Delegate to a new department (test 17)", async ({ page }) => {
+test("Откомандировать в новый отдел (test 17)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 1080,

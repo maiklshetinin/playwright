@@ -3,7 +3,7 @@ import { test, expect, chromium } from "@playwright/test";
 const login = "SHETININM"
 const password = "Asdf123$"
 
-test("ShutDown (test 6)", async () => {
+test("Завершение работы. (test 6)", async () => {
   const browser = await chromium.launch({
     headless: false//режим визуального отображения
   })

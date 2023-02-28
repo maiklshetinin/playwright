@@ -7,7 +7,7 @@ const newUserLogin = "IVANOVI77"
 const newUserLastName = "Ivanov"
 
 
-test("Create a new user account. (test 10)", async ({ page }) => {
+test("Создание новой учетной записи пользователя. (test 10)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login("SHETININM", password)
 

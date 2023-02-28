@@ -4,7 +4,7 @@ const login = "SHETININM"
 const password = "Asdf123$"
 
 
-test("Login OIB valid user data (test 2)", async () => {
+test("Авторизоваться под валидными данными пользователя.(test 2)", async () => {
   const browser = await chromium.launch()
   const context = await browser.newContext()
   const page = await context.newPage()
@@ -18,13 +18,13 @@ test("Login OIB valid user data (test 2)", async () => {
 
 
   const pagePromise = context.waitForEvent('page'); //ставим обработчик событий на открытие новой страницы
-  await page.click("div#container>main>div>div:nth-of-type(7)")
+  await page.getByText("ОИБ").click() //клик на вкладку ОИБ в шоколадке
   const OIB_Page = await pagePromise;
   await OIB_Page.waitForLoadState();
 
 
   const title = OIB_Page.locator("//h4[text()='Пользователи']")
-  expect(title).toHaveText("Пользователи")
+  await expect(title).toHaveText("Пользователи")
 
   //закрытие сессии
   await OIB_Page.click("//div[@class='el-dropdown']//div[1]") //user's menu

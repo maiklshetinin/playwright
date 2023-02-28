@@ -38,7 +38,7 @@ test("Удаление роли если она есть (test 13)", async ({ pa
 })
 
 
-test("Assigning access rights to an account. (test 13.1)", async ({ page }) => {
+test("Назначение прав доступа учетной записи. (test 13.1)", async ({ page }) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login1, password)
 
@@ -46,6 +46,8 @@ test("Assigning access rights to an account. (test 13.1)", async ({ page }) => {
 
   // 1. Выделить нужную учетную запись.
   await OIB_Page.getUserCard(userLogin)
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
   //1. Справа появится карточка выделенного пользователя.
   expect(page.locator(UserCard.userCard)).toBeVisible()
   expect(page.locator(SpanLocators.lastName)).toHaveText(userLastName)

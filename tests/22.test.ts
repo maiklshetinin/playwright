@@ -7,39 +7,43 @@ const user1 = "IVANOVI"
 const user2 = "IVANOVAO"
 const role = "newRole"
 
-test("Assigning a Role to selected (group) users. (test 22)", async ({ page }) => {
+test("Назначение Роли выбранным  (группе) пользователям. (test 22)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
   });
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, PASSWORD)
+  await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
 
   //----------------------------------------------------------------------------------------test1
 
   //1. Активировать чекбокс «Активные». В строке поиска найти требуемых пользователей,
   //если назначение ролей производится группе пользователей или выбрать одного пользователя.
   //TODO:не всегда срабатывает поиск
-  await page.waitForTimeout(1000)
-  await page.waitForLoadState('networkidle')
 
   await page.fill(InputLocators.search_user, search)
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(1000)
 
   //1. Отображаются пользователи, доступные для редактирования.
-  expect(page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user1))).toContainText(user1)
-  expect(page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user2))).toContainText(user2)
+  await expect(page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user1))).toContainText(user1)
+  await expect(page.locator(DivLocators.table_body).getByText(OIB_Page.getRegExp(user2))).toContainText(user2)
 
   //----------------------------------------------------------------------------------------test2
 
   //2. В таблице отображения пользователей, выделить несколько учетных записей, проставив на против них чекбокс.
   await OIB_Page.selectUserCheckbox(user1)
+  await page.waitForTimeout(1000)
   await OIB_Page.selectUserCheckbox(user2)
+  await page.waitForTimeout(1000)
+
 
   //2. Соответствующие карточки с пользователей выделены, справа отображается последняя из них.
   //находим строку по общему классу selected
   expect(await page.locator("//tr[contains(@class, 'selected')]").getByText(OIB_Page.getRegExp(user1)).innerText()).toBe(user1)
-  expect(page.locator("//tr[contains(@class, 'selected')]").getByText(OIB_Page.getRegExp(user2))).toHaveText(user2)
+  await expect(page.locator("//tr[contains(@class, 'selected')]").getByText(OIB_Page.getRegExp(user2))).toHaveText(user2)
   expect(await page.locator(SpanLocators.login).innerText()).toBe(user2)
 
   //----------------------------------------------------------------------------------------test3
