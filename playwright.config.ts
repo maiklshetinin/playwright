@@ -1,21 +1,28 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
-  workers: 4,
+  workers: 2,
   testMatch: [
-    "tests/1.test.ts",
-    "tests/2.test.ts",
-    "tests/3.test.ts",
-    "tests/4.test.ts",
-    "tests/5.test.ts",
+    // "tests/1.test.ts",
+    // "tests/2.test.ts",
+    // "tests/3.test.ts",
+    // "tests/4.test.ts",
+    // "tests/5.test.ts",
+
     // "tests/6.test.ts",
-    "tests/7.test.ts",
-    "tests/8.test.ts",
-    "tests/9.test.ts",
-    // "tests/10.test.ts",
-    // "tests/11.test.ts",
-    // "tests/12.test.ts",
-    // "tests/13.test.ts",
+
+    // "tests/7.test.ts",
+    // "tests/8.test.ts",
+    // "tests/9.test.ts",
+
+
+
+
+
+    "tests/10.test.ts",
+    "tests/11.test.ts",
+    "tests/12.test.ts",
+    "tests/13.test.ts",
     // "tests/17.test.ts",
     // "tests/18_19.test.ts",
     // "tests/20.test.ts",

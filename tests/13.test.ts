@@ -67,8 +67,10 @@ test("Проверка сохранения изменений в карточк
   await page.fill(MainPage.input_search, GRZ)
   await CASHE_Page.click(MainPage.BTN_SEARCH)
   await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
 
   await page.locator(MainPage.table).getByText(CASHE_Page.getRegExp(GRZ)).nth(0).click()
+  await page.waitForTimeout(1000)
   //1. Откроется карточка ГРЗ в правом углу.
   await expect(page.locator(Card.card)).toBeVisible()
   // await page.waitForTimeout(1000)
@@ -78,6 +80,7 @@ test("Проверка сохранения изменений в карточк
   //2. Нажать на кнопку Редактировать
   await CASHE_Page.click(Card.BTN_EDIT)
   await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
   // //3. Внести изменения в любые поля в группе АМТС / Владелец / Адрес регистрации.
   // //3. Введенные значения сохранились в соответствующих полях. 
   await page.type("(//span[text()='Марка']/following::input)[1]", BRAND)

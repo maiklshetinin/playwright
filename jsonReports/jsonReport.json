@@ -20,14 +20,10 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/1.test.ts",
-          "tests/2.test.ts",
-          "tests/3.test.ts",
-          "tests/4.test.ts",
-          "tests/5.test.ts",
-          "tests/7.test.ts",
-          "tests/8.test.ts",
-          "tests/9.test.ts"
+          "tests/10.test.ts",
+          "tests/11.test.ts",
+          "tests/12.test.ts",
+          "tests/13.test.ts"
         ],
         "timeout": 30000
       }
@@ -60,18 +56,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.30.0",
-    "workers": 4,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests/1.test.ts",
-      "file": "tests/1.test.ts",
+      "title": "tests/10.test.ts",
+      "file": "tests/10.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Перейти на страницу авторизации.(test 1)",
+          "title": "Источники (в логах). (test 10)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -85,22 +81,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4513,
+                  "duration": 22153,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T10:33:55.222Z",
+                  "startTime": "2023-02-28T15:44:55.051Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Перейти-на-страницу-авторизации-test-1-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Источники-в-логах-test-10-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Перейти-на-страницу-авторизации-test-1-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Источники-в-логах-test-10-/test-finished-1.png"
                     }
                   ]
                 }
@@ -108,21 +104,21 @@
               "status": "expected"
             }
           ],
-          "id": "a7da246eccb99980e5da-e0f1602a746268b16a69",
-          "file": "tests/1.test.ts",
-          "line": 4,
+          "id": "ea99b3a3ac3414699dea-423bd42cb2ebc49676c2",
+          "file": "tests/10.test.ts",
+          "line": 17,
           "column": 5
         }
       ]
     },
     {
-      "title": "tests/2.test.ts",
-      "file": "tests/2.test.ts",
+      "title": "tests/11.test.ts",
+      "file": "tests/11.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Авторизоваться под валидными данными пользователя.(test 2.1)",
+          "title": "Проверка поиска по ГРЗ ТС. (test 11.1)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -136,22 +132,22 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 8306,
+                  "duration": 18354,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T10:33:55.268Z",
+                  "startTime": "2023-02-28T15:44:55.055Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-валидными-данными-пользователя-test-2-1-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-test-11-1-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-валидными-данными-пользователя-test-2-1-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-test-11-1-/test-finished-1.png"
                     }
                   ]
                 }
@@ -159,13 +155,13 @@
               "status": "expected"
             }
           ],
-          "id": "0cc0c460ea5071573a35-8dc4b08250222a1533c8",
-          "file": "tests/2.test.ts",
-          "line": 8,
+          "id": "43a67cb79170ac912707-a9c89a8f5a10efb02400",
+          "file": "tests/11.test.ts",
+          "line": 9,
           "column": 5
         },
         {
-          "title": "Авторизоваться под не валидными данными пользователя. (test2.2)",
+          "title": "Проверка поиска по ГРЗ ТС (при вводе некорректных данных). (test 11.2)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -179,22 +175,22 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4450,
+                  "duration": 10002,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T10:34:03.856Z",
+                  "startTime": "2023-02-28T15:45:13.595Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-не-валидными-данными-пользователя-test2-2-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-при-вводе-некорректных-данных-test-11-2-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Авторизоваться-под-не-валидными-данными-пользователя-test2-2-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-при-вводе-некорректных-данных-test-11-2-/test-finished-1.png"
                     }
                   ]
                 }
@@ -202,123 +198,21 @@
               "status": "expected"
             }
           ],
-          "id": "0cc0c460ea5071573a35-a96c8f0a65260fcd4041",
-          "file": "tests/2.test.ts",
-          "line": 24,
+          "id": "43a67cb79170ac912707-92b5061351421f329b75",
+          "file": "tests/11.test.ts",
+          "line": 124,
           "column": 5
         }
       ]
     },
     {
-      "title": "tests/3.test.ts",
-      "file": "tests/3.test.ts",
+      "title": "tests/12.test.ts",
+      "file": "tests/12.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Проверка версии.(test 3)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 11736,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T10:33:55.236Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Проверка-версии-test-3-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Проверка-версии-test-3-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "1d4c902b71617f9ac934-cd7f3bf713a89b45918b",
-          "file": "tests/3.test.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/4.test.ts",
-      "file": "tests/4.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Завершение работы.(test 4)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 8243,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T10:33:55.280Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-4-Завершение-работы-test-4-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-4-Завершение-работы-test-4-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "db79d97400be9559def8-07e7731de5fa319f1dc3",
-          "file": "tests/4.test.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/5.test.ts",
-      "file": "tests/5.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Выбор темы оформления.",
+          "title": "Проверка поиска по ГРЗ с латинским и кириллическим написанием. (test 12.1)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -332,22 +226,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 7513,
+                  "duration": 6123,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T10:34:00.005Z",
+                  "startTime": "2023-02-28T15:45:17.379Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Выбор-темы-оформления-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-1-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Выбор-темы-оформления-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-1-/test-finished-1.png"
                     }
                   ]
                 }
@@ -355,123 +249,13 @@
               "status": "expected"
             }
           ],
-          "id": "36cbcb644983d162420f-cc3542d31c96e101864c",
-          "file": "tests/5.test.ts",
-          "line": 7,
+          "id": "810a42d79536fbf0b63b-a0d023c2617024b1b87c",
+          "file": "tests/12.test.ts",
+          "line": 12,
           "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/7.test.ts",
-      "file": "tests/7.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+        },
         {
-          "title": "Руководство пользователя. (test 7)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 8968,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T10:34:03.789Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Руководство-пользователя-test-7-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Руководство-пользователя-test-7-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c0b420353ff9c544dde3-b3d716378d5d1efbcccb",
-          "file": "tests/7.test.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/8.test.ts",
-      "file": "tests/8.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Источники (на главном экране). (test 8)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 17171,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T10:34:07.259Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Источники-на-главном-экране-test-8-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Источники-на-главном-экране-test-8-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "74aa678c9300ed675f73-72f3396b77a1f4620712",
-          "file": "tests/8.test.ts",
-          "line": 17,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/9.test.ts",
-      "file": "tests/9.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Источники (в карточке). (test 9)",
+          "title": "Проверка поиска по ГРЗ с латинским и кириллическим написанием. (test 12.2)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -485,22 +269,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 22969,
+                  "duration": 14985,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T10:34:07.560Z",
+                  "startTime": "2023-02-28T15:45:23.504Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Источники-в-карточке-test-9-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-2-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Источники-в-карточке-test-9-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-2-/test-finished-1.png"
                     }
                   ]
                 }
@@ -508,9 +292,164 @@
               "status": "expected"
             }
           ],
-          "id": "867a53f967c4e372f271-2c5de29e09e32314544c",
-          "file": "tests/9.test.ts",
-          "line": 17,
+          "id": "810a42d79536fbf0b63b-a83be57c8ceec58aef7e",
+          "file": "tests/12.test.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "Проверка поиска по ГРЗ с латинским и кириллическим написанием. (test 12.3)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12533,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T15:45:38.490Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-3-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-3-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "810a42d79536fbf0b63b-2f065771b21e25ee26fc",
+          "file": "tests/12.test.ts",
+          "line": 66,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/13.test.ts",
+      "file": "tests/13.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Проверка сохранения изменений в карточке. (test 13.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 8710,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T15:45:23.610Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81b45832876cff86b9aa-233dc3e1a2c9fa2c01de",
+          "file": "tests/13.test.ts",
+          "line": 14,
+          "column": 5
+        },
+        {
+          "title": "Проверка сохранения изменений в карточке. (test 13.2)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 29999,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/13.test.ts",
+                        "column": 88,
+                        "line": 111
+                      },
+                      "message": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=(//div[@x-placement=\\'bottom-start\\']//div)[1]').getByText('АЛТАЙСКИЙ КРАЙ')\n============================================================\n\n\u001b[90m   at \u001b[39mtests/13.test.ts:111\n\n\u001b[0m \u001b[90m 109 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 110 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtype(\u001b[32m\"(//span[text()='Регион']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mREGION\u001b[39m)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 111 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//div[@x-placement='bottom-start']//div)[1]\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[33mREGION\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 112 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 113 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 114 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtype(\u001b[32m\"(//span[text()='Район']/following::input)[1]\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mAREA\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/13.test.ts:111:88\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - locator.click at tests/13.test.ts:111:88\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-28T15:45:32.321Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-2-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-2-/test-failed-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "81b45832876cff86b9aa-9b333d1bf7ae2756b041",
+          "file": "tests/13.test.ts",
+          "line": 61,
           "column": 5
         }
       ]

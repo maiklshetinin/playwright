@@ -6,7 +6,7 @@ const PASSWORD = "Asdf123$"
 const GRZ = ['Е928СР36', 'М089ХК750', 'Н321ОК777']
 
 
-test.only("Проверка поиска по ГРЗ ТС. (test 11.1)", async ({ page }) => {
+test("Проверка поиска по ГРЗ ТС. (test 11.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
 
@@ -112,7 +112,7 @@ test.only("Проверка поиска по ГРЗ ТС. (test 11.1)", async (
   //7. Не вводя ГРЗ в строку поиска, нажать на кнопку Искать.
   await CASHE_Page.click(MainPage.BTN_SEARCH)
   await page.waitForLoadState("networkidle")
-  await page.waitForTimeout(1000)
+  await page.waitForTimeout(3000)
   //7. Произойдет поиск и вывод всех доступных результатов в Редакторе КЕШа.
   expect(page.locator("//div[@class='flex-child txt-bold']")).toContainText("Найдено: 10000 записей")
 

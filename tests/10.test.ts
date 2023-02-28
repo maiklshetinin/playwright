@@ -23,6 +23,8 @@ test("Источники (в логах). (test 10)", async ({ page }) => {
   //1. На главном экране, в поле Источники кликнуть в поле "Выберите источник актуализации".
   await CASHE_Page.click(MainPage.input_sources)
   await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
+
   //1. Откроется выпадающий список, в котором можно выбрать следующие параметры: LIST
   const arr = await page.locator("//ul[@class='el-scrollbar__view el-select-dropdown__list']").getByRole("listitem").all()
   arr.forEach(async (li, i) => await expect(li).toHaveText(LIST[i]))
@@ -34,7 +36,8 @@ test("Источники (в логах). (test 10)", async ({ page }) => {
   await page.getByText(LIST[1]).nth(0).click()
   await CASHE_Page.click("//i[contains(@class,'el-select__caret el-input__icon')]")
   await page.waitForLoadState("networkidle")
-  await page.waitForLoadState("domcontentloaded")
+  await page.waitForTimeout(1000)
+
 
   //2. По выбранным параметрам сразу начнется поиск и будут выведены доступные результаты.
   //В поле Время последней актуализации и Источники можно увидеть время обновления и названия источника обновления.
@@ -53,7 +56,7 @@ test("Источники (в логах). (test 10)", async ({ page }) => {
   //----------------------------------------------------------------------------------------test3
   //3. Выбрать одну из отобранных записей (открыть карточку) и перейти в блок ЛОГ.
   await page.locator(MainPage.item_line).nth(0).click()
-  await page.waitForLoadState("domcontentloaded")
+  await page.waitForLoadState("networkidle")
   await page.waitForTimeout(1000)
   await CASHE_Page.click(Card.BTN_LOG)
   //3. Отобразится окно Логов, записанных в процессе работы с карточкой или актуализации данных где будут указаны более
@@ -70,7 +73,6 @@ test("Источники (в логах). (test 10)", async ({ page }) => {
 
 
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await CASHE_Page.shutDown()
 })
