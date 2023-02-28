@@ -20,18 +20,7 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/1.test.ts",
-          "tests/2.test.ts",
-          "tests/3.test.ts",
-          "tests/5.test.ts",
-          "tests/6.test.ts",
-          "tests/7.test.ts",
-          "tests/8.test.ts",
-          "tests/9.test.ts",
-          "tests/12.test.ts",
-          "tests/13.test.ts",
-          "tests/14.test.ts",
-          "tests/15.test.ts"
+          "tests/9.test.ts"
         ],
         "timeout": 30000
       }
@@ -69,880 +58,6 @@
   },
   "suites": [
     {
-      "title": "tests/1.test.ts",
-      "file": "tests/1.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Login OIB 1 (test 1)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 2620,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:04:45.711Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Login-OIB-1-test-1-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-1-Login-OIB-1-test-1-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a7da246eccb99980e5da-2048a9383a089f865df5",
-          "file": "tests/1.test.ts",
-          "line": 3,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/12.test.ts",
-      "file": "tests/12.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Set a password for the created account.(test 12)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 22037,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:04:48.518Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Set-a-password-for-the-created-account-test-12-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Set-a-password-for-the-created-account-test-12-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "810a42d79536fbf0b63b-2a6bd261ee46c68a77b5",
-          "file": "tests/12.test.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/13.test.ts",
-      "file": "tests/13.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Удаление роли если она есть (test 13)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 9970,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:05:10.565Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Удаление-роли-если-она-есть-test-13-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Удаление-роли-если-она-есть-test-13-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "81b45832876cff86b9aa-15a0e9e32041e082c731",
-          "file": "tests/13.test.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "Assigning access rights to an account. (test 13.1)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 21920,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:05:20.537Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Assigning-access-rights-to-an-account-test-13-1-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Assigning-access-rights-to-an-account-test-13-1-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "81b45832876cff86b9aa-5853e88055cb8f05d024",
-          "file": "tests/13.test.ts",
-          "line": 41,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/14.test.ts",
-      "file": "tests/14.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Setting User Time Limits (test 14.1, 14.2)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 13420,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:05:42.468Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-14-Setting-User-Time-Limits-test-14-1-14-2-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-14-Setting-User-Time-Limits-test-14-1-14-2-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0fda29c58e467e0bdabf-a58df2ac81cdd653897a",
-          "file": "tests/14.test.ts",
-          "line": 8,
-          "column": 5
-        },
-        {
-          "title": "Setting User Time Limits (test 14.3.1)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 20137,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:05:55.890Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-14-Setting-User-Time-Limits-test-14-3-1-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-14-Setting-User-Time-Limits-test-14-3-1-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0fda29c58e467e0bdabf-798b9e6c0e57a93828fb",
-          "file": "tests/14.test.ts",
-          "line": 50,
-          "column": 5
-        },
-        {
-          "title": "Setting User Time Limits (test 14.3.2)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 23034,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:06:16.028Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-14-Setting-User-Time-Limits-test-14-3-2-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-14-Setting-User-Time-Limits-test-14-3-2-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0fda29c58e467e0bdabf-417fb94aba5cdc8044c9",
-          "file": "tests/14.test.ts",
-          "line": 95,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/15.test.ts",
-      "file": "tests/15.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Copying a user card",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 27442,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:06:39.072Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-15-Copying-a-user-card/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-15-Copying-a-user-card/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f931fac93cc007fbd493-8d11e7ba027ca783eaf3",
-          "file": "tests/15.test.ts",
-          "line": 12,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/2.test.ts",
-      "file": "tests/2.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Login OIB valid user data (test 2)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 9395,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:07:06.518Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-2-Login-OIB-valid-user-data-test-2-/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0cc0c460ea5071573a35-f4a0d4dd54207a2678dd",
-          "file": "tests/2.test.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/3.test.ts",
-      "file": "tests/3.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Selecting an interface theme (test 3)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12924,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:07:15.921Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Selecting-an-interface-theme-test-3-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Selecting-an-interface-theme-test-3-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-3-Selecting-an-interface-theme-test-3-/test-finished-2.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "1d4c902b71617f9ac934-f84dd984984baae81424",
-          "file": "tests/3.test.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/5.test.ts",
-      "file": "tests/5.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Руководство пользователя. (test 5)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 11199,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:07:28.854Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Руководство-пользователя-test-5-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Руководство-пользователя-test-5-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-5-Руководство-пользователя-test-5-/test-finished-2.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "36cbcb644983d162420f-45feec2b8b3f5879920e",
-          "file": "tests/5.test.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/6.test.ts",
-      "file": "tests/6.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "ShutDown (test 6)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12197,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:07:40.058Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-6-ShutDown-test-6-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-6-ShutDown-test-6-/test-finished-2.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5e5c002a697d9b75e10-472a74eed2a78559520e",
-          "file": "tests/6.test.ts",
-          "line": 6,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/7.test.ts",
-      "file": "tests/7.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Time display (test 7)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 16267,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:07:52.268Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Time-display-test-7-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Time-display-test-7-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Time-display-test-7-/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-7-Time-display-test-7-/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c0b420353ff9c544dde3-1cb1b0accec94af5b8f9",
-          "file": "tests/7.test.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "tests/8.test.ts",
-      "file": "tests/8.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Search records, search filters (test 8.1, 8.2)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 27642,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:08:08.560Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-1-8-2-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-1-8-2-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-1-8-2-/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-1-8-2-/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "74aa678c9300ed675f73-0c55629e46c8d8311597",
-          "file": "tests/8.test.ts",
-          "line": 15,
-          "column": 5
-        },
-        {
-          "title": "Search records, search filters (test 8.3, 8.4)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 18596,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:08:36.205Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-3-8-4-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-3-8-4-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-3-8-4-/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-3-8-4-/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "74aa678c9300ed675f73-73a07bede5e34f6164db",
-          "file": "tests/8.test.ts",
-          "line": 86,
-          "column": 5
-        },
-        {
-          "title": "Search records, search filters (test 8.5, 8.6)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 23078,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:08:54.803Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-5-8-6-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-5-8-6-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-5-8-6-/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-5-8-6-/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "74aa678c9300ed675f73-2c3fba9de4803d5537bd",
-          "file": "tests/8.test.ts",
-          "line": 142,
-          "column": 5
-        },
-        {
-          "title": "Search records, search filters (test 8.7, 8.8)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 17578,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-28T08:09:17.884Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-7-8-8-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-7-8-8-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-7-8-8-/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Search-records-search-filters-test-8-7-8-8-/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "74aa678c9300ed675f73-9d961971716efbf17886",
-          "file": "tests/8.test.ts",
-          "line": 187,
-          "column": 5
-        }
-      ]
-    },
-    {
       "title": "tests/9.test.ts",
       "file": "tests/9.test.ts",
       "column": 0,
@@ -963,12 +78,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 21552,
+                  "duration": 16536,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T08:09:35.484Z",
+                  "startTime": "2023-02-28T08:36:17.625Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -979,16 +94,6 @@
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-1-9-2-/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-1-9-2-/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-1-9-2-/test-finished-3.png"
                     }
                   ]
                 }
@@ -1023,12 +128,15 @@
                   "errors": [
                     {
                       "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.click at tests/OIB.ts:183:21\n"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T08:09:57.037Z",
+                  "startTime": "2023-02-28T08:36:34.517Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -1039,16 +147,6 @@
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-3-/test-failed-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-3-/test-failed-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-3-/test-failed-3.png"
                     }
                   ]
                 }
@@ -1058,12 +156,12 @@
           ],
           "id": "867a53f967c4e372f271-052bee4aaea4dd41170f",
           "file": "tests/9.test.ts",
-          "line": 60,
+          "line": 59,
           "column": 5
         },
         {
           "title": "Connection Log (test 9.4)",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -1075,33 +173,29 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 15754,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 30000,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded while tearing down \"context\".\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded while tearing down \"context\".\u001b[39m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T08:10:33.410Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-4-/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-9-Connection-Log-test-9-4-/test-finished-1.png"
-                    }
-                  ]
+                  "startTime": "2023-02-28T08:37:05.824Z",
+                  "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "867a53f967c4e372f271-4a0c8f78f68a13c6d4ec",
           "file": "tests/9.test.ts",
-          "line": 96,
+          "line": 94,
           "column": 5
         },
         {
@@ -1117,14 +211,14 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 15539,
+                  "duration": 14736,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T08:10:49.322Z",
+                  "startTime": "2023-02-28T08:37:37.929Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -1144,7 +238,7 @@
           ],
           "id": "867a53f967c4e372f271-982fc22a057eec59f495",
           "file": "tests/9.test.ts",
-          "line": 146,
+          "line": 143,
           "column": 5
         },
         {
@@ -1160,14 +254,14 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 23224,
+                  "duration": 21351,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-28T08:11:04.862Z",
+                  "startTime": "2023-02-28T08:37:53.003Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -1187,7 +281,7 @@
           ],
           "id": "867a53f967c4e372f271-cebb268264638906b7cb",
           "file": "tests/9.test.ts",
-          "line": 181,
+          "line": 177,
           "column": 5
         }
       ]

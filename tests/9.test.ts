@@ -52,7 +52,6 @@ test("Connection Log (test 9.1, 9.2)", async ({ page }) => {
   // - За год
   // - Все
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
@@ -88,7 +87,6 @@ test("Connection Log (test 9.3)", async ({ page }) => {
   // await page.type(ConnectionLog.inputBeforeDate, '')
 
 
-  await page.waitForTimeout(3000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
@@ -138,7 +136,6 @@ test("Connection Log (test 9.4)", async ({ page }) => {
   expect(OIB_Page.getExtension(xlsx[0].suggestedFilename())).toBe("xlsx")
   expect(OIB_Page.getExtension(pdf[0].suggestedFilename())).toBe("pdf")
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
@@ -173,7 +170,6 @@ test("Connection Log (test 9.5)", async ({ page }) => {
   // 5. Будут отображены сеансы пользователей, которые являются сотрудниками соответствующего подразделения.
   expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(division)).toContainText(division)
 
-  await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
@@ -251,7 +247,6 @@ test("Connection Log (test 9.6)", async ({ page }) => {
 
   //----------------------------------------------------------------------------------
 
-  await page.waitForTimeout(2000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })
