@@ -74,7 +74,6 @@ test("Проверка сохранения изменений в карточк
   //1. Откроется карточка ГРЗ в правом углу.
   await expect(page.locator(Card.card)).toBeVisible()
   // await page.waitForTimeout(1000)
-
   //----------------------------------------------------------------------------------------test2
 
   //2. Нажать на кнопку Редактировать
@@ -83,14 +82,17 @@ test("Проверка сохранения изменений в карточк
   await page.waitForTimeout(1000)
   // //3. Внести изменения в любые поля в группе АМТС / Владелец / Адрес регистрации.
   // //3. Введенные значения сохранились в соответствующих полях. 
+  await page.click("(//span[text()='Марка']/following::input)[1]")
+  await page.waitForTimeout(1000)
   await page.type("(//span[text()='Марка']/following::input)[1]", BRAND)
-  await page.waitForLoadState("networkidle")
-  // await page.waitForTimeout(1000)
+  // await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
   await page.getByText(CASHE_Page.getRegExp(BRAND)).click()
+  await page.waitForTimeout(1000)
   await expect(page.locator("(//span[text()='Марка']/following::input)[1]")).toHaveValue(BRAND)
 
-  await page.waitForLoadState("networkidle")
   await page.type("(//span[text()='Модель']/following::input)[1]", MODEL)
+  await page.waitForTimeout(1000)
   await page.getByText(CASHE_Page.getRegExp(MODEL)).click()
   await expect(page.locator("(//span[text()='Модель']/following::input)[1]")).toHaveValue(MODEL)
 
@@ -102,16 +104,20 @@ test("Проверка сохранения изменений в карточк
   await expect(page.locator("(//span[text()='Фамилия']/following::input)[1]")).toHaveValue(LAST_NAME)
   await expect(page.locator("(//span[text()='Имя']/following::input)[1]")).toHaveValue(FIRST_NAME)
 
-  await page.locator(Card.address).scrollIntoViewIfNeeded()
   await CASHE_Page.click(Card.address)
+  await page.locator(Card.BTN_SAVE).scrollIntoViewIfNeeded()
+  await page.waitForTimeout(1000)
 
-  await page.locator("(//span[text()='Регион']/following::input)[1]").scrollIntoViewIfNeeded()
-  await page.waitForLoadState("networkidle")
   await page.type("(//span[text()='Регион']/following::input)[1]", REGION)
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
   await page.locator("(//div[@x-placement='bottom-start']//div)[1]").getByText(REGION).click()
 
-  await page.waitForLoadState("networkidle")
+  await page.click("(//span[text()='Район']/following::input)[1]")
+  await page.waitForTimeout(1000)
   await page.type("(//span[text()='Район']/following::input)[1]", AREA)
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
   await page.getByText(CASHE_Page.getRegExp(AREA)).click()
 
   expect(await page.locator("(//span[text()='Регион']/following::input)[1]").inputValue()).toContain(REGION)

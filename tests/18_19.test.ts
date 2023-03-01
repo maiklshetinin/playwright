@@ -153,9 +153,6 @@ test("Изменение типа учетной записи с ЮЛ на ФЛ.
   //6. Изменения были сохранены. Тип лица изменен на ФЛ.
   await expect(page.locator("//h4[text()='Владелец ФЛ']")).toBeVisible()
 
-
-  await page.waitForTimeout(1000)
-
   //закрытие сессии
   await CASHE_Page.shutDown()
 })

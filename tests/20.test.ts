@@ -3,12 +3,12 @@ import CASHE, { Card, MainPage } from "./CASHE";
 
 const LOGIN = "SHETININM"
 const PASSWORD = "Asdf123$"
-const GRZ = 'Р332СТ71'
+const GRZ = 'Т340ВХ777'
 const INN = '526317984689'
 const INN_ARR = [
   '000000000000',    //3.1. Все нули (12 символов)
   '000000000000000', //3.2. Все нули (15 символов)
-  '000000000000',    //3.3. Все нули (10 символов)
+  '0000000000',    //3.3. Все нули (10 символов)
   '1234567890',      //3.4. произвольные цифры (10 символов)
   '123456789012',    //3.5. Произвольные цифры (12 символов)
   '123456789012345', //3.6. Произвольные цифры (15 символов)
@@ -61,15 +61,17 @@ test("ФЛ Контроль при вводе значений ИНН (test 20)"
   //очистка ИНН
   await CASHE_Page.click(Card.BTN_EDIT)
   await page.locator(Card.owner).scrollIntoViewIfNeeded()
-  await CASHE_Page.click(Card.owner)
+  // await CASHE_Page.click(Card.owner)
   await page.fill("(//span[text()='ИНН']/following::input)[1]", '')
   await CASHE_Page.click(Card.BTN_SAVE)
+  //проверка очистки
+  await expect(page.locator("//div[@class='el-notification right']")).toContainText('Данные сохранили успешно')
 
   //закрытие сессии
   await CASHE_Page.shutDown()
 })
 
-test("ФЛ Контроль при вводе значений ИНН (test 20.1)", async ({ page }) => {
+test("ФЛ Контроль при вводе значений ИНН (валидация) (test 20.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState("networkidle")
@@ -114,9 +116,21 @@ test("ФЛ Контроль при вводе значений ИНН (test 20.1
   await CASHE_Page.click(Card.owner)
 
   for (const inn of INN_ARR) {
-    await page.fill("(//span[text()='ИНН']/following::input)[1]", inn)
+    await page.click("(//span[text()='ИНН']/following::input)[1]")
+    await page.type("(//span[text()='ИНН']/following::input)[1]", inn)
+    await page.click("(//span[text()='ИНН выдан']/following::input)[1]")
+    await page.waitForTimeout(1000)
+    await expect(page.locator("//div[text()='Значение поля введено неверно.']")).toBeVisible()
     await CASHE_Page.click(Card.BTN_SAVE)
+
+    await page.locator("//div[@class='el-notification right']").last().highlight()
+
+    await expect(page.locator("//div[@class='el-notification right']").last()).toContainText("Неверно заполненные поля!")
+
+    await page.fill("(//span[text()='ИНН']/following::input)[1]", '')
   }
+
+  await expect(page.locator(Card.BTN_SAVE)).toBeVisible()
 
 
   //закрытие сессии

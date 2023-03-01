@@ -3,6 +3,7 @@ import type { PlaywrightTestConfig } from '@playwright/test'
 const config: PlaywrightTestConfig = {
   workers: 2,
   testMatch: [
+    //стабильные тесты при 3х воркерах
     // "tests/1.test.ts",
     // "tests/2.test.ts",
     // "tests/3.test.ts",
@@ -13,25 +14,26 @@ const config: PlaywrightTestConfig = {
 
     // "tests/7.test.ts",
     // "tests/8.test.ts",
+   
+   //стабильные тесты при 2х воркерах
     // "tests/9.test.ts",
-
-
-
-
-
-    "tests/10.test.ts",
-    "tests/11.test.ts",
-    "tests/12.test.ts",
-    "tests/13.test.ts",
+    // "tests/10.test.ts",
+    // "tests/11.test.ts",
+    // "tests/12.test.ts",
+    // "tests/13.test.ts",
     // "tests/17.test.ts",
     // "tests/18_19.test.ts",
     // "tests/20.test.ts",
     // "tests/21.test.ts",
     // "tests/22.test.ts",
+    // "tests/23.test.ts",
+    // "tests/24.test.ts",
+    // "tests/25.test.ts",
+    "tests/26.test.ts",
 
   ],
   use: {
-    headless: true,
+    headless: false,
     screenshot: "on",
     video: "on",
     launchOptions: {
