@@ -233,7 +233,7 @@ const SNILS_ARR = [
 //   await CASHE_Page.shutDown()
 // })
 
-test.only("ИП Контроль при вводе значений СНИЛС (test 24)", async ({ page }) => {
+test("ИП Контроль при вводе значений СНИЛС (test 24)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState("networkidle")

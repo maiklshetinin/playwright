@@ -5,7 +5,7 @@ const LOGIN = "SHETININM"
 const PASSWORD = "Asdf123$"
 const GRZ = 'Е662НР750'
 const INN = "7729754577"
-const INN_FOR_UL = '7892088124'                  
+const INN_FOR_UL = '7892088124'
 const OGRN = "1137746980051"
 const OGRN_FOR_IP = '320385000018418'//ОГРН[ОГРНИП] (320385000018418 - для ИП)
 const SNILS = "55555555555"
@@ -128,12 +128,12 @@ test("ЮЛ Контроль при вводе значений ИНН (test 25)"
   await page.locator(Card.owner).scrollIntoViewIfNeeded()
   await CASHE_Page.click(Card.owner)
 
-  //сброс значений
-  await page.fill("(//span[text()='ИНН']/following::input)[1]", '')
-  await CASHE_Page.click(Card.BTN_SAVE)
-  await CASHE_Page.click(Card.BTN_EDIT)
-  //проверка сброса
-  await expect(page.locator("//div[@class='el-notification right']")).toContainText('Данные сохранили успешно')
+  // //сброс значений
+  // await page.fill("(//span[text()='ИНН']/following::input)[1]", '0')
+  // await CASHE_Page.click(Card.BTN_SAVE)
+  // await CASHE_Page.click(Card.BTN_EDIT)
+  // //проверка сброса
+  // await expect(page.locator("//div[@class='el-notification right']")).toContainText('Данные сохранили успешно')
 
   await page.fill("(//span[text()='ИНН']/following::input)[1]", INN_FOR_UL)
   //3. ИНН введен в поле, кнопка Сохранить стала доступна (подсвечена желтым).
@@ -143,6 +143,15 @@ test("ЮЛ Контроль при вводе значений ИНН (test 25)"
   //4. Нажать Сохранить.
   await CASHE_Page.click(Card.BTN_SAVE)
   //4. Внесенный ИНН успешно сохранен. О чем сигнализирует сообщение в правом верхнем углу: "Данные сохранили успешно".
+  await expect(page.locator("//div[@class='el-notification right']")).toContainText('Данные сохранили успешно')
+
+  //очистка ИНН
+  await CASHE_Page.click(Card.BTN_EDIT)
+  await page.locator(Card.owner).scrollIntoViewIfNeeded()
+  // await CASHE_Page.click(Card.owner)
+  await page.fill("(//span[text()='ИНН']/following::input)[1]", '')
+  await CASHE_Page.click(Card.BTN_SAVE)
+  //проверка очистки
   await expect(page.locator("//div[@class='el-notification right']")).toContainText('Данные сохранили успешно')
 
   //закрытие сессии
@@ -192,7 +201,7 @@ test("ЮЛ Контроль при вводе значений ИНН  (вали
   //Режим редактирования активен.
   await page.locator(Card.owner).scrollIntoViewIfNeeded()
   await CASHE_Page.click(Card.owner)
-    await page.locator(Card.BTN_SAVE).scrollIntoViewIfNeeded()
+  await page.locator(Card.BTN_SAVE).scrollIntoViewIfNeeded()
 
   for (const inn of INN_ARR) {
     await page.click("(//span[text()='ИНН']/following::input)[1]")

@@ -37,7 +37,7 @@ test("Источники (в карточке). (test 9)", async ({ page }) => {
 
   //2. По выбранным параметрам сразу начнется поиск и будут выведены доступные результаты.
   //В поле Время последней актуализации и Источники можно увидеть время обновления и названия источника обновления.
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(5000)
 
   //highlight----------------------------------------------------
   await page.locator(MainPage.table).getByText(LIST[0]).nth(0).highlight()
@@ -52,7 +52,7 @@ test("Источники (в карточке). (test 9)", async ({ page }) => {
   //3. Выбрать одну из отобранных записей (открыть карточку).
   await page.locator(MainPage.item_line).nth(0).click()
   await page.waitForLoadState("networkidle")
-  await page.waitForTimeout(500)
+  // await page.waitForTimeout(1000)
 
 
   //3. В карточке будет выведена таблица с источником обновления и временем последней актуализации записи.

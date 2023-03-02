@@ -20,6 +20,17 @@
         "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
+          "tests/11.test.ts",
+          "tests/12.test.ts",
+          "tests/13.test.ts",
+          "tests/17.test.ts",
+          "tests/18_19.test.ts",
+          "tests/20.test.ts",
+          "tests/21.test.ts",
+          "tests/22.test.ts",
+          "tests/23.test.ts",
+          "tests/24.test.ts",
+          "tests/25.test.ts",
           "tests/26.test.ts"
         ],
         "timeout": 30000
@@ -53,18 +64,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.30.0",
-    "workers": 2,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests/26.test.ts",
-      "file": "tests/26.test.ts",
+      "title": "tests/11.test.ts",
+      "file": "tests/11.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "ЮЛ Контроль при вводе значений ОГРН  (валидация) (test 26.1)",
+          "title": "Проверка поиска по ГРЗ ТС. (test 11.1)",
           "ok": true,
           "tags": [],
           "tests": [
@@ -78,12 +89,1297 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 16222,
+                  "duration": 15122,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-03-01T16:54:04.852Z",
+                  "startTime": "2023-03-02T09:18:16.396Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-test-11-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-test-11-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43a67cb79170ac912707-a9c89a8f5a10efb02400",
+          "file": "tests/11.test.ts",
+          "line": 9,
+          "column": 5
+        },
+        {
+          "title": "Проверка поиска по ГРЗ ТС (часть2). (test 11.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 18406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:31.835Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-часть2-test-11-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-часть2-test-11-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43a67cb79170ac912707-1b307b83877e2aab50b3",
+          "file": "tests/11.test.ts",
+          "line": 114,
+          "column": 5
+        },
+        {
+          "title": "Проверка поиска по ГРЗ ТС (при вводе некорректных данных). (test 11.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 13192,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:50.246Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-при-вводе-некорректных-данных-test-11-2-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Проверка-поиска-по-ГРЗ-ТС-при-вводе-некорректных-данных-test-11-2-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43a67cb79170ac912707-92b5061351421f329b75",
+          "file": "tests/11.test.ts",
+          "line": 132,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/12.test.ts",
+      "file": "tests/12.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Проверка поиска по ГРЗ с латинским и кириллическим написанием. (test 12.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 8270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:16.332Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "810a42d79536fbf0b63b-a0d023c2617024b1b87c",
+          "file": "tests/12.test.ts",
+          "line": 12,
+          "column": 5
+        },
+        {
+          "title": "Проверка поиска по ГРЗ с латинским и кириллическим написанием. (test 12.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 21357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:24.855Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-2-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-2-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "810a42d79536fbf0b63b-a83be57c8ceec58aef7e",
+          "file": "tests/12.test.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "Проверка поиска по ГРЗ с латинским и кириллическим написанием. (test 12.3)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 22533,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:46.218Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-3-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-12-Проверка-поиска-по-ГРЗ-с-латинским-и-кириллическим-написанием-test-12-3-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "810a42d79536fbf0b63b-2f065771b21e25ee26fc",
+          "file": "tests/12.test.ts",
+          "line": 66,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/13.test.ts",
+      "file": "tests/13.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Проверка сохранения изменений в карточке. (test 13.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 11051,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:16.459Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81b45832876cff86b9aa-233dc3e1a2c9fa2c01de",
+          "file": "tests/13.test.ts",
+          "line": 14,
+          "column": 5
+        },
+        {
+          "title": "Проверка сохранения изменений в карточке. (test 13.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 27393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:27.823Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-2-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-13-Проверка-сохранения-изменений-в-карточке-test-13-2-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81b45832876cff86b9aa-9b333d1bf7ae2756b041",
+          "file": "tests/13.test.ts",
+          "line": 61,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/17.test.ts",
+      "file": "tests/17.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Изменение типа учетной записи с ФЛ / ИП на Юр. Лицо. (test 18)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 16682,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:16.381Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменение-типа-учетной-записи-с-ФЛ-ИП-на-Юр-Лицо-test-18-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменение-типа-учетной-записи-с-ФЛ-ИП-на-Юр-Лицо-test-18-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ded26bf0d43af33fa35-a29681d37071aa7b075b",
+          "file": "tests/17.test.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Изменение типа учетной записи с ЮЛ на ФЛ. (test 19)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 13655,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:33.370Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменение-типа-учетной-записи-с-ЮЛ-на-ФЛ-test-19-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменение-типа-учетной-записи-с-ЮЛ-на-ФЛ-test-19-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ded26bf0d43af33fa35-0ade0908498294304c26",
+          "file": "tests/17.test.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "Изменения типа учетной записи с ФЛ на ИП. (test 17.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 14460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:47.029Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменения-типа-учетной-записи-с-ФЛ-на-ИП-test-17-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменения-типа-учетной-записи-с-ФЛ-на-ИП-test-17-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ded26bf0d43af33fa35-1d1224c80c371a16ee50",
+          "file": "tests/17.test.ts",
+          "line": 164,
+          "column": 5
+        },
+        {
+          "title": "Изменения типа учетной записи с ФЛ на ИП(проверка валидации). (test 17.2)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 15850,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:01.494Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменения-типа-учетной-записи-с-ФЛ-на-ИП-проверка-валидации-test-17-2-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-17-Изменения-типа-учетной-записи-с-ФЛ-на-ИП-проверка-валидации-test-17-2-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ded26bf0d43af33fa35-ea859b2a568bd07a3b29",
+          "file": "tests/17.test.ts",
+          "line": 236,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/18_19.test.ts",
+      "file": "tests/18_19.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Изменение типа учетной записи с ФЛ / ИП на Юр. Лицо. (test 18)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 17007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:18:55.272Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-18_19-Изменение-типа-учетной-записи-с-ФЛ-ИП-на-Юр-Лицо-test-18-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-18_19-Изменение-типа-учетной-записи-с-ФЛ-ИП-на-Юр-Лицо-test-18-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf648e1cf378b53b892b-d17d36ddc04406df0091",
+          "file": "tests/18_19.test.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "Изменение типа учетной записи с ЮЛ на ФЛ. (test 19)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 15101,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:12.285Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-18_19-Изменение-типа-учетной-записи-с-ЮЛ-на-ФЛ-test-19-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-18_19-Изменение-типа-учетной-записи-с-ЮЛ-на-ФЛ-test-19-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf648e1cf378b53b892b-03e407902e8224101a67",
+          "file": "tests/18_19.test.ts",
+          "line": 90,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/20.test.ts",
+      "file": "tests/20.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ФЛ Контроль при вводе значений ИНН (test 20)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 18098,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:03.466Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-20-ФЛ-Контроль-при-вводе-значений-ИНН-test-20-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-20-ФЛ-Контроль-при-вводе-значений-ИНН-test-20-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4eadd9db873d646c88f3-59ea86a0479689411410",
+          "file": "tests/20.test.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "ФЛ Контроль при вводе значений ИНН (валидация) (test 20.1)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 17630,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\n    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/20.test.ts:123:82"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/20.test.ts",
+                        "column": 82,
+                        "line": 123
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtests/20.test.ts:123\n\n\u001b[0m \u001b[90m 121 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m\"(//span[text()='ИНН выдан']/following::input)[1]\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 122 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1000\u001b[39m)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 123 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//div[text()='Значение поля введено неверно.']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 124 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mCASHE_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_SAVE\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 125 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//div[@class='el-notification right']\"\u001b[39m)\u001b[33m.\u001b[39mlast()\u001b[33m.\u001b[39mhighlight()\u001b[0m\n\n\u001b[2m    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/20.test.ts:123:82\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:21.566Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-20-ФЛ-Контроль-при-вводе-значений-ИНН-валидация-test-20-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-20-ФЛ-Контроль-при-вводе-значений-ИНН-валидация-test-20-1-/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/20.test.ts",
+                    "column": 82,
+                    "line": 123
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4eadd9db873d646c88f3-9d03e7df6b05eafb3e99",
+          "file": "tests/20.test.ts",
+          "line": 74,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/21.test.ts",
+      "file": "tests/21.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ФЛ Контроль при вводе значений СНИЛС (test 21)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 12401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:08.808Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-test-21-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-test-21-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8c71f8e323280579be0b-96abea8479fbe0a0aeb7",
+          "file": "tests/21.test.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "ФЛ Контроль при вводе значений СНИЛС (валидация) (test 21.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 19838,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:21.223Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-валидация-test-21-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-21-ФЛ-Контроль-при-вводе-значений-СНИЛС-валидация-test-21-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8c71f8e323280579be0b-99183fa3470fe5255f9b",
+          "file": "tests/21.test.ts",
+          "line": 65,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/22.test.ts",
+      "file": "tests/22.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ИП Контроль при вводе значений ИНН (test 22)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 16996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:17.381Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-ИП-Контроль-при-вводе-значений-ИНН-test-22-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-ИП-Контроль-при-вводе-значений-ИНН-test-22-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a486cfb8e49aace3408-d1b70864ef40ae4da62c",
+          "file": "tests/22.test.ts",
+          "line": 239,
+          "column": 5
+        },
+        {
+          "title": "ИП Контроль при вводе значений ИНН (валидация) (test 22.1)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 14257,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\n    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/22.test.ts:339:82"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/22.test.ts",
+                        "column": 82,
+                        "line": 339
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//div[text()=\\'Значение поля введено неверно.\\']')\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\u001b[2m  -   unexpected value \"hidden\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtests/22.test.ts:339\n\n\u001b[0m \u001b[90m 337 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m\"(//span[text()='ИНН выдан']/following::input)[1]\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 338 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1000\u001b[39m)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 339 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//div[text()='Значение поля введено неверно.']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 340 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mCASHE_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_SAVE\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 341 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 342 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//div[@class='el-notification right']\"\u001b[39m)\u001b[33m.\u001b[39mlast()\u001b[33m.\u001b[39mhighlight()\u001b[0m\n\n\u001b[2m    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/22.test.ts:339:82\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:34.379Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-ИП-Контроль-при-вводе-значений-ИНН-валидация-test-22-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-22-ИП-Контроль-при-вводе-значений-ИНН-валидация-test-22-1-/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/22.test.ts",
+                    "column": 82,
+                    "line": 339
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a486cfb8e49aace3408-ae6d23a8fea45a437673",
+          "file": "tests/22.test.ts",
+          "line": 291,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/23.test.ts",
+      "file": "tests/23.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ИП Контроль при вводе значений ОГРН (test 23)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 15460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:27.418Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-23-ИП-Контроль-при-вводе-значений-ОГРН-test-23-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-23-ИП-Контроль-при-вводе-значений-ОГРН-test-23-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "64bfa90df4085e42c9c4-2d5a6a610ce13f2ecfb0",
+          "file": "tests/23.test.ts",
+          "line": 234,
+          "column": 5
+        },
+        {
+          "title": "ИП Контроль при вводе значений ОГРН (валидация) (test 23.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 24897,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:42.881Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-23-ИП-Контроль-при-вводе-значений-ОГРН-валидация-test-23-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-23-ИП-Контроль-при-вводе-значений-ОГРН-валидация-test-23-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "64bfa90df4085e42c9c4-8969cc0cbe3b9bd3d685",
+          "file": "tests/23.test.ts",
+          "line": 290,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/24.test.ts",
+      "file": "tests/24.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ИП Контроль при вводе значений СНИЛС (test 24)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 13650,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:40.886Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-24-ИП-Контроль-при-вводе-значений-СНИЛС-test-24-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-24-ИП-Контроль-при-вводе-значений-СНИЛС-test-24-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4189d27aaf4730f38965-a6ec230b0a1c738b1726",
+          "file": "tests/24.test.ts",
+          "line": 236,
+          "column": 5
+        },
+        {
+          "title": "ИП Контроль при вводе значений СНИЛС (валидация) (test 24.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 18649,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:55.108Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-24-ИП-Контроль-при-вводе-значений-СНИЛС-валидация-test-24-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-24-ИП-Контроль-при-вводе-значений-СНИЛС-валидация-test-24-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4189d27aaf4730f38965-1c5d1385a168394817c3",
+          "file": "tests/24.test.ts",
+          "line": 282,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/25.test.ts",
+      "file": "tests/25.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ЮЛ Контроль при вводе значений ИНН (test 25)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 15762,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:41.094Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-25-ЮЛ-Контроль-при-вводе-значений-ИНН-test-25-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-25-ЮЛ-Контроль-при-вводе-значений-ИНН-test-25-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba6ad80f0243d6292b32-992d461c8946805ef497",
+          "file": "tests/25.test.ts",
+          "line": 100,
+          "column": 5
+        },
+        {
+          "title": "ЮЛ Контроль при вводе значений ИНН  (валидация) (test 25.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 21427,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:56.861Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-25-ЮЛ-Контроль-при-вводе-значений-ИНН-валидация-test-25-1-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-25-ЮЛ-Контроль-при-вводе-значений-ИНН-валидация-test-25-1-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba6ad80f0243d6292b32-5438f7af0347a75f0d78",
+          "file": "tests/25.test.ts",
+          "line": 161,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests/26.test.ts",
+      "file": "tests/26.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ЮЛ Контроль при вводе значений ОГРН (test 26)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 17723,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:19:50.249Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-26-ЮЛ-Контроль-при-вводе-значений-ОГРН-test-26-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-26-ЮЛ-Контроль-при-вводе-значений-ОГРН-test-26-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2b92728b203e847adeb8-d5e4cfdda4e2f1be7bca",
+          "file": "tests/26.test.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "ЮЛ Контроль при вводе значений ОГРН  (валидация) (test 26.1)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 16060,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-02T09:20:08.405Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -103,8 +1399,8 @@
           ],
           "id": "2b92728b203e847adeb8-3bc8407f2e79d041c3b8",
           "file": "tests/26.test.ts",
-          "line": 157,
-          "column": 6
+          "line": 156,
+          "column": 5
         }
       ]
     }

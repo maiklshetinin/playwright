@@ -107,12 +107,20 @@ test("Проверка поиска по ГРЗ ТС. (test 11.1)", async ({ pag
   //6. Карточка ГРЗ будет закрыта.
   await expect(page.locator(Card.card)).not.toBeVisible()
 
+  //закрытие сессии
+  await CASHE_Page.shutDown()
+})
+
+test("Проверка поиска по ГРЗ ТС (часть2). (test 11.1)", async ({ page }) => {
+  const CASHE_Page = new CASHE(page)
+  await CASHE_Page.login(LOGIN, PASSWORD)
+  await page.waitForLoadState("networkidle")
   //----------------------------------------------------------------------------------------test7
 
   //7. Не вводя ГРЗ в строку поиска, нажать на кнопку Искать.
   await CASHE_Page.click(MainPage.BTN_SEARCH)
   await page.waitForLoadState("networkidle")
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(5000)
   //7. Произойдет поиск и вывод всех доступных результатов в Редакторе КЕШа.
   expect(page.locator("//div[@class='flex-child txt-bold']")).toContainText("Найдено: 10000 записей")
 
@@ -134,7 +142,6 @@ test("Проверка поиска по ГРЗ ТС (при вводе неко
 
   await page.fill(MainPage.input_search, `!")(*?:%;№`)
   //1. Результатом такого запроса должно быть сообщение на месте результирующей таблицы: "В таблице отсутствуют данные".
-
 
   //----------------------------------------------------------------------------------------test2
 

@@ -17,7 +17,8 @@ const LIST = [
 test("Источники (в логах). (test 10)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
   //----------------------------------------------------------------------------------------test1
 
   //1. На главном экране, в поле Источники кликнуть в поле "Выберите источник актуализации".
@@ -36,12 +37,12 @@ test("Источники (в логах). (test 10)", async ({ page }) => {
   await page.getByText(LIST[1]).nth(0).click()
   await CASHE_Page.click("//i[contains(@class,'el-select__caret el-input__icon')]")
   await page.waitForLoadState("networkidle")
-  await page.waitForTimeout(1000)
+  await page.waitForTimeout(5000)
 
 
   //2. По выбранным параметрам сразу начнется поиск и будут выведены доступные результаты.
   //В поле Время последней актуализации и Источники можно увидеть время обновления и названия источника обновления.
-  await page.waitForTimeout(5000)
+
 
   //highlight----------------------------------------------------
   await page.locator(MainPage.table).getByText(LIST[0]).nth(0).highlight()

@@ -239,7 +239,6 @@ const INN_ARR = [
 test("ИП Контроль при вводе значений ИНН (test 22)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.
@@ -292,7 +291,6 @@ test("ИП Контроль при вводе значений ИНН (test 22)"
 test("ИП Контроль при вводе значений ИНН (валидация) (test 22.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.

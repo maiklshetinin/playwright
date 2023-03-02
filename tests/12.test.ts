@@ -55,9 +55,9 @@ test("Проверка поиска по ГРЗ с латинским и кир�
   await page.locator('.el-input__suffix-inner > .el-input__icon').first().click();
   await CASHE_Page.click(MainPage.BTN_SEARCH)
   await page.waitForLoadState("networkidle")
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(10000)
   //Подтянулись все карточки(10 000).
-  expect(page.locator("//div[@class='flex-child txt-bold']")).toContainText("Найдено: 10000 записей")
+  await expect(page.locator("//div[@class='flex-child txt-bold']")).toContainText("Найдено: 10000 записей")
 
   //закрытие сессии
   await CASHE_Page.shutDown()
@@ -85,7 +85,7 @@ test("Проверка поиска по ГРЗ с латинским и кир�
   await page.locator('.el-input__suffix-inner > .el-input__icon').first().click();
   await CASHE_Page.click(MainPage.BTN_SEARCH)
   await page.waitForLoadState("networkidle")
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(10000)
   //Подтянулись все карточки(10 000).
   expect(page.locator("//div[@class='flex-child txt-bold']")).toContainText("Найдено: 10000 записей")
 

@@ -101,7 +101,6 @@ const OGRN_ARR = [
 test("ЮЛ Контроль при вводе значений ОГРН (test 26)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.

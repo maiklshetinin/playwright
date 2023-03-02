@@ -37,8 +37,8 @@ test("Изменение типа учетной записи с ФЛ / ИП н�
   //2. Появится возможность редактирования данных, выбранного ГРЗ.
   await page.locator(Card.owner).scrollIntoViewIfNeeded()
   await CASHE_Page.click(Card.owner)
-  await page.locator("(//span[text()='ИНН']/following::input)[1]").scrollIntoViewIfNeeded()
-  await page.locator("(//span[text()='ИНН']/following::input)[1]").highlight()
+  await page.locator(Card.BTN_SAVE).scrollIntoViewIfNeeded()
+  await page.locator("(//span[text()='ОГРН']/following::input)[1]").scrollIntoViewIfNeeded()
   await expect(page.locator("(//span[text()='ИНН']/following::input)[1]")).toBeVisible()
 
   //----------------------------------------------------------------------------------------test3
@@ -50,6 +50,7 @@ test("Изменение типа учетной записи с ФЛ / ИП н�
   //-СНИЛС ()
 
   await page.fill("(//span[text()='ИНН']/following::input)[1]", INN)
+  await page.click("(//span[text()='ИНН выдан']/following::input)[1]")
   await page.fill("(//span[text()='ИНН выдан']/following::input)[1]", 'ВЫДАН')
   await page.fill("(//span[text()='ОГРН']/following::input)[1]", OGRN)
   await page.fill("(//span[text()='СНИЛС']/following::input)[1]", SNILS)
@@ -64,11 +65,11 @@ test("Изменение типа учетной записи с ФЛ / ИП н�
 
   //4. Нажать кнопку «Изменить владельца на юридическое лицо».
   await CASHE_Page.click("(//button[contains(@class,'el-button btnChange')])[1]")
-
-  //5. Во всплывающем окне нажать "Да". (актуально только при смене владельца на ЮЛ)
-  await CASHE_Page.click("(//button[contains(@class,'el-button el-button--default')])[2]")
+  await page.waitForTimeout(1000)
   //5. Появится предупреждение, что при смене типа владельца на ЮЛ будут очищены все поля блока Владелец и Адрес регистрации.
   await expect(page.locator("//p[text()='Изменение типа собственника очистит все ранее введенные значения. Удалить введенные значения?']")).toBeVisible()
+  //5. Во всплывающем окне нажать "Да". (актуально только при смене владельца на ЮЛ)
+  await CASHE_Page.click("(//button[contains(@class,'el-button el-button--default')])[2]")
 
   //4. Все данные ФЛ / ИП будут удалены, при этом появятся новые поля, необходимые для ЮЛ.
   await expect(page.locator("(//span[text()='ОКПО']/following::input)[1]")).toBeVisible()
@@ -112,7 +113,7 @@ test("Изменение типа учетной записи с ЮЛ на ФЛ.
   //2. Появится возможность редактирования данных, выбранного ГРЗ.
   await page.locator(Card.owner).scrollIntoViewIfNeeded()
   await CASHE_Page.click(Card.owner)
-  await page.locator("(//span[text()='ИНН']/following::input)[1]").scrollIntoViewIfNeeded()
+  await page.locator("(//span[text()='КПП']/following::input)[1]").scrollIntoViewIfNeeded()
   await expect(page.locator("(//span[text()='ИНН']/following::input)[1]")).toBeVisible()
 
   //----------------------------------------------------------------------------------------test3
@@ -136,11 +137,11 @@ test("Изменение типа учетной записи с ЮЛ на ФЛ.
 
   //4. Нажать кнопку «Изменить владельца на юридическое лицо».
   await CASHE_Page.click("(//button[contains(@class,'el-button btnChange')])[1]")
-
-  //5. Во всплывающем окне нажать "Да". (актуально только при смене владельца на ЮЛ)
-  await CASHE_Page.click("(//button[contains(@class,'el-button el-button--default')])[2]")
+  await page.waitForTimeout(1000)
   //5. Появится предупреждение, что при смене типа владельца на ЮЛ будут очищены все поля блока Владелец и Адрес регистрации.
   await expect(page.locator("//p[text()='Изменение типа собственника очистит все ранее введенные значения. Удалить введенные значения?']")).toBeVisible()
+  //5. Во всплывающем окне нажать "Да". (актуально только при смене владельца на ЮЛ)
+  await CASHE_Page.click("(//button[contains(@class,'el-button el-button--default')])[2]")
 
   //4. Все данные ФЛ / ИП будут удалены, при этом появятся новые поля, необходимые для ФЛ.
   await expect(page.locator("(//span[text()='ИНН']/following::input)[1]")).toBeVisible()
@@ -158,9 +159,13 @@ test("Изменение типа учетной записи с ЮЛ на ФЛ.
   await CASHE_Page.shutDown()
 })
 
+
+
 test("Изменения типа учетной записи с ФЛ на ИП. (test 17.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
 
   //----------------------------------------------------------------------------------------test1
 
@@ -168,6 +173,7 @@ test("Изменения типа учетной записи с ФЛ на ИП.
   await page.fill(MainPage.input_search, GRZ)
   await CASHE_Page.click(MainPage.BTN_SEARCH)
   await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
   //1. Требуемый ГРЗ был найден.
   await expect(page.locator(MainPage.table).getByText(CASHE_Page.getRegExp(GRZ)).nth(0)).toContainText(GRZ)
 
@@ -194,6 +200,7 @@ test("Изменения типа учетной записи с ФЛ на ИП.
   //- ИНН выдан (любой текст, цифра)
   //- ОГРН[ОГРНИП] (320385000018418 - для ИП)
   await page.fill("(//span[text()='ИНН']/following::input)[1]", INN_FOR_IP)
+  await page.click("(//span[text()='ИНН выдан']/following::input)[1]")
   await page.fill("(//span[text()='ИНН выдан']/following::input)[1]", 'ВЫДАН')
   await page.fill("(//span[text()='ОГРН']/following::input)[1]", OGRN_FOR_IP)
   //3. При редактировании соответствующих данных, под надписью «Владелец ФЛ» появится кнопка с надписью «Изменить владельца на индивидуального предпринимателя».
@@ -264,6 +271,7 @@ test("Изменения типа учетной записи с ФЛ на ИП(
   //- ИНН выдан (любой текст, цифра)
   //- ОГРН[ОГРНИП] (произвольное значение)
   await page.fill("(//span[text()='ИНН']/following::input)[1]", "1")
+  await page.click("(//span[text()='ИНН выдан']/following::input)[1]")
   await page.fill("(//span[text()='ИНН выдан']/following::input)[1]", "1")
   await page.fill("(//span[text()='ОГРН']/following::input)[1]", "1")
 
