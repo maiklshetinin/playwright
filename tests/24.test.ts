@@ -236,7 +236,6 @@ const SNILS_ARR = [
 test("ИП Контроль при вводе значений СНИЛС (test 24)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.
@@ -282,7 +281,6 @@ test("ИП Контроль при вводе значений СНИЛС (test 
 test("ИП Контроль при вводе значений СНИЛС (валидация) (test 24.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.
