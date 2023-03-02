@@ -45,7 +45,7 @@ test("Установка пароля для созданной учетной �
     await expect(inputPassword).toHaveValue("Asdf123$")
     // сгенерировать системой.
     await GENERATE_BTN.click()
-    await page.waitForTimeout(500)
+    await page.waitForTimeout(1000)
     const value = await inputGeneratedPassword.inputValue()
     // Если пароль сгенерирован системой, он отображается в поле ниже поля «новый пароль». 
     await expect(inputGeneratedPassword).toHaveValue(/[0-9][А-Я,а-я,A-Z, a-z]/)
@@ -54,7 +54,7 @@ test("Установка пароля для созданной учетной �
     await expect(USE_BTN).toBeVisible()
     // Если пароль устраивает, нажать на кнопку «Использовать».
     await USE_BTN.click()
-    await page.waitForTimeout(500)
+    await page.waitForTimeout(1000)
     // При нажатии кнопки «Использовать», новый пароль дублируется в поле «Повтора ввода нового пароля» 
     // и становится активной кнопка «Изменить», для сохранения измененного пароля.
     await expect(inputPassword).toHaveValue(value)
@@ -72,6 +72,7 @@ test("Установка пароля для созданной учетной �
 
   //закрытие сессии
   await OIB_Page.shutDown()
+  await page.waitForTimeout(1000)
   await OIB_Page.login("SHETININM", password)
   await OIB_Page.shutDown()
 })

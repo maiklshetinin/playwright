@@ -10,6 +10,7 @@ const inputLastName = "Ivanov111"
 
 
 test("Копирование карточки пользователя.(test 15)", async ({ page }) => {
+  test.slow()
   await page.setViewportSize({
     width: 1600,
     height: 1080,
@@ -19,7 +20,7 @@ test("Копирование карточки пользователя.(test 15)
 
   //1. Выделить нужную учетную запись.
   await OIB_Page.getUserCard(userLogin)
-  await page.waitForTimeout(2000)
+  await page.waitForTimeout(1000)
   await page.waitForLoadState('networkidle')
   //1. Справа появится карточка выделенного пользователя.
   expect(page.locator(DivLocators.userCard)).toBeVisible()

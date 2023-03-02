@@ -42,9 +42,9 @@ test("Connection Log (test 9.1, 9.2)", async ({ page }) => {
   await OIB_Page.click(ConnectionLog.BTN_TODAY)
   await page.waitForLoadState('networkidle')
   // 2. Соответствующая таблица с данными формируется, в зависимости от выставленных параметров периода.
-  await OIB_Page.getFirstRow(ConnectionLog.table).getByText(`${date}.`).highlight()
+  await OIB_Page.getFirstRow(ConnectionLog.table).getByText(/\d\d\.\d\d\.\d\d\d\d/).highlight()
   await page.waitForTimeout(1000)
-  expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(`${date}.`)).toContainText(date)
+  expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(/\d\d\.\d\d\.\d\d\d\d/)).toContainText(date)
 
   // - За сутки
   // - За неделю
