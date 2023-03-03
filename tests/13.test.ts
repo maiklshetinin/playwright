@@ -59,6 +59,7 @@ test("Проверка сохранения изменений в карточк
 
 
 test("Проверка сохранения изменений в карточке. (test 13.2)", async ({ page }) => {
+  test.slow()
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
 
@@ -83,9 +84,10 @@ test("Проверка сохранения изменений в карточк
   // //3. Внести изменения в любые поля в группе АМТС / Владелец / Адрес регистрации.
   // //3. Введенные значения сохранились в соответствующих полях. 
   await page.click("(//span[text()='Марка']/following::input)[1]")
+  await page.waitForLoadState("networkidle")
   await page.waitForTimeout(1000)
   await page.type("(//span[text()='Марка']/following::input)[1]", BRAND)
-  // await page.waitForLoadState("networkidle")
+  await page.waitForLoadState("networkidle")
   await page.waitForTimeout(1000)
   await page.getByText(CASHE_Page.getRegExp(BRAND)).click()
   await page.waitForTimeout(1000)
@@ -119,6 +121,7 @@ test("Проверка сохранения изменений в карточк
   await page.waitForLoadState("networkidle")
   await page.waitForTimeout(1000)
   await page.getByText(CASHE_Page.getRegExp(AREA)).click()
+  await page.waitForTimeout(1000)
 
   expect(await page.locator("(//span[text()='Регион']/following::input)[1]").inputValue()).toContain(REGION)
   await expect(page.locator("(//span[text()='Район']/following::input)[1]")).toHaveValue(AREA)

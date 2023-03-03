@@ -20,7 +20,6 @@ const INN_ARR = [
 test("ФЛ Контроль при вводе значений ИНН (test 20)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.
@@ -74,7 +73,6 @@ test("ФЛ Контроль при вводе значений ИНН (test 20)"
 test("ФЛ Контроль при вводе значений ИНН (валидация) (test 20.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
   //1. Авторизоваться в модуле Владельцев ТС. //1. Авторизация успешна.

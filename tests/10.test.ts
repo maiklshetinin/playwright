@@ -15,6 +15,7 @@ const LIST = [
 ]
 
 test("Источники (в логах). (test 10)", async ({ page }) => {
+  test.slow()
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState("networkidle")

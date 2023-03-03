@@ -114,7 +114,6 @@ test("Проверка поиска по ГРЗ ТС. (test 11.1)", async ({ pag
 test("Проверка поиска по ГРЗ ТС (часть2). (test 11.1)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
   //----------------------------------------------------------------------------------------test7
 
   //7. Не вводя ГРЗ в строку поиска, нажать на кнопку Искать.
@@ -132,7 +131,6 @@ test("Проверка поиска по ГРЗ ТС (часть2). (test 11.1)"
 test("Проверка поиска по ГРЗ ТС (при вводе некорректных данных). (test 11.2)", async ({ page }) => {
   const CASHE_Page = new CASHE(page)
   await CASHE_Page.login(LOGIN, PASSWORD)
-  await page.waitForLoadState("networkidle")
 
   //----------------------------------------------------------------------------------------test1
 

@@ -21,18 +21,20 @@ const config: PlaywrightTestConfig = {
 
    //-----------------------стабильные тесты при 4х воркерах
 
-    // "tests/11.test.ts",
-    // "tests/12.test.ts",
-    // "tests/13.test.ts",
-    // "tests/17.test.ts",
-    // "tests/18_19.test.ts",
-    // "tests/20.test.ts",
-    // "tests/21.test.ts",
+    "tests/11.test.ts",
+    "tests/12.test.ts",
+    "tests/13.test.ts",
+    "tests/17.test.ts",
+    "tests/18_19.test.ts",
+    "tests/20.test.ts",
+    "tests/21.test.ts",
     "tests/22.test.ts",
     "tests/23.test.ts",
     "tests/24.test.ts",
     "tests/25.test.ts",
     "tests/26.test.ts",
+    "tests/27.test.ts",
+    "tests/28.test.ts",
 
   ],
   use: {

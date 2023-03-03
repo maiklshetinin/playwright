@@ -29,6 +29,7 @@ export enum Card{
   card = "//div[contains(@class,'fc-face-edit-panel obs')]",
   table = "//table[@class='tab_act']",
   owner = "(//div[@role='button']//h4)[2]",
+  owner_type="(//div[contains(@class,'el-input el-input--small')]//input)[3]",
   address ="//h4[text()='Адрес регистрации']"
 }
 
