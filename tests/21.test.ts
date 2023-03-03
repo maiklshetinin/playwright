@@ -34,7 +34,7 @@ test("Редактирование роли (test 21)", async ({ page }) => {
   await page.locator("(//div[@aria-label='checkbox-group'])[1]").getByTitle("АРМ ВФ").click()
   await OIB_Page.click(UserCard.BTN_SAVE)
   await page.waitForLoadState('networkidle')
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(2000)
   //3. Внесенные изменения были применены к соответствующей карточке роли.
   await expect(page.locator(SpanLocators.role)).toContainText("test12345")
   await page.locator("//div[contains(@class,'arm-list flex-child')]").getByText(/^ВФ$/).click()

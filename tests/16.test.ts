@@ -5,6 +5,7 @@ const login = "SHETININM"
 const organization = '8Б2ПДПС МО'
 const subdivision = "ИАЗ"
 const job_title = "321"
+const organization_full = "Исполнение административного законодательства. 8 Б 2 П ДПС (южный) ГИБДД ГУ МВД России по Московской области"
 
 test("Создание Сотрудников для выбранных пользователей (test 16)", async ({ page }) => {
   await page.setViewportSize({
@@ -17,10 +18,13 @@ test("Создание Сотрудников для выбранных поль
   //------------------------------------------------------------------------------------------------------------test1
 
   //1. Найти и отметить чекбоксом, напротив каждой записи, необходимых пользователей.
-  await OIB_Page.findUser(login)
   //отключение чекбокса Активные
   await page.click("(//span[@class='el-checkbox__inner'])[1]")
+  await page.waitForLoadState("networkidle")
+
+  await OIB_Page.findUser(login)
   //TODO: заменить метод на загрузку или ответа от сервера бывают проблеммы при поиске
+  await page.waitForLoadState("networkidle")
   await page.waitForTimeout(1000)
   await OIB_Page.selectUserCheckbox(login)
 
@@ -33,7 +37,7 @@ test("Создание Сотрудников для выбранных поль
   await OIB_Page.click(Locators.BTN_CREATE_EMPLOYEES_FOR_SELECTED_USERS)
 
   //2. Откроется окно с добавлением информации по должности и подразделению сотрудника.
-  expect(page.locator("(//div[@class='modal-window']//div)[1]")).toBeVisible()
+  await expect(page.locator("(//div[@class='modal-window']//div)[1]")).toBeVisible()
 
   //------------------------------------------------------------------------------------------------------------test3
 
@@ -62,16 +66,13 @@ test("Создание Сотрудников для выбранных поль
 
   const firstName = await page.locator(SpanLocators.firstName).innerText()
   const lastName = await page.locator(SpanLocators.lastName).innerText()
-  
-  expect(page.locator("//h2[text()='Успех!']")).toContainText("Успех")
-  await OIB_Page.click(UserCard.BTN_EMPLOYER)
-  await OIB_Page.click(Locators.BTN_EMPLOYER_EDIT)
-  // await page.waitForTimeout(2000)
-  expect(page.locator(SpanLocators.firstName)).toHaveText(firstName)
-  expect(page.locator(SpanLocators.lastName)).toHaveText(lastName)
-  expect(page.locator(SpanLocators.organization_department)).toContainText(`${organization} / ${subdivision}`)
-  expect(await page.locator(InputLocators.job_title).inputValue()).toBe(job_title)
 
+  await expect(page.locator("//h2[text()='Успех!']")).toContainText("Успех")
+  await OIB_Page.click(UserCard.BTN_EMPLOYER)
+  await expect(page.locator(SpanLocators.firstName)).toHaveText(firstName)
+  await expect(page.locator(SpanLocators.lastName)).toHaveText(lastName)
+  await expect(page.getByText(organization_full).last()).toContainText(organization_full)
+  await expect(page.getByText(OIB_Page.getRegExp(job_title)).last()).toHaveText(job_title)
 
   //закрытие сессии
   await OIB_Page.shutDown()

@@ -3,7 +3,7 @@ import { test, expect, chromium } from "@playwright/test";
 
 const login = "SHETININM"
 const password = "Asdf123$"
-const newUserLogin = "IVANOVI77"
+const newUserLogin = "IVANOVI80"
 const newUserLastName = "Ivanov"
 
 
@@ -16,7 +16,7 @@ test("Создание новой учетной записи пользоват
   //Нажать «+» в правом верхнем углу.
   await OIB_Page.click(Locators.BTN_ADD_A_NEW_USER)
   //1. Создается пустая карточка для заполнения данными учетной записи.
-  expect(page.locator(UserCard.userCard)).toBeVisible()
+  await expect(page.locator(UserCard.userCard)).toBeVisible()
 
   //----------------------------------------------------------------------------------------test2
 
@@ -33,9 +33,8 @@ test("Создание новой учетной записи пользоват
   //Нажать кнопку Создать.
   await OIB_Page.click(UserCard.BTN_CREATE)
   //3. Пользователь создан.
-  expect(OIB_Page.getFirstRow(DivLocators.table_body).getByText(newUserLastName).nth(0)).toHaveText(newUserLastName)
+  await expect(OIB_Page.getFirstRow(DivLocators.table_body).getByText(newUserLastName).nth(0)).toHaveText(newUserLastName)
 
-  // await page.waitForTimeout(3000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })

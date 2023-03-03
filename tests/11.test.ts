@@ -8,7 +8,7 @@ const userLastName="Ivanov1"
 const userFirstName="Ivan"
 
 
-test("Редактирование учетной записи. (test 11)", async ({page}) => {
+test.only("Редактирование учетной записи. (test 11)", async ({page}) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
 
@@ -17,16 +17,16 @@ test("Редактирование учетной записи. (test 11)", asyn
   //1. Выделить нужную учетную запись.
   await OIB_Page.getUserCard(userLogin)
   //1. Справа появится карточка выделенного пользователя.
-  expect(page.locator(UserCard.userCard)).toBeVisible()
-  expect(page.locator(SpanLocators.lastName)).toHaveText(userLastName)
-  expect(page.locator(SpanLocators.login)).toHaveText(userLogin)
+  await expect(page.locator(UserCard.userCard)).toBeVisible()
+  await expect(page.locator(SpanLocators.lastName)).toHaveText(userLastName)
+  await expect(page.locator(SpanLocators.login)).toHaveText(userLogin)
 
   //----------------------------------------------------------------------------------------test2
   
   //2. В появившемся справа окне, нажать на изображение карандаша.
   await OIB_Page.click(UserCard.BTN_EDIT)
   //2. Появится возможность внесения данных в запись.
-  expect(page.locator(InputLocators.lastName)).toBeVisible()
+  await expect(page.locator(InputLocators.lastName)).toBeVisible()
 
   //----------------------------------------------------------------------------------------test3
 
@@ -34,7 +34,7 @@ test("Редактирование учетной записи. (test 11)", asyn
   await page.fill(InputLocators.firstName,userFirstName)
   await OIB_Page.click(UserCard.BTN_SAVE)
   //3. Изменения будут Сохранены.
-  expect(page.locator(SpanLocators.firstName)).toHaveText("Ivan")
+  await expect(page.locator(SpanLocators.firstName)).toHaveText("Ivan")
 
   //----------------------------------------------------------------------------------------test4
   
@@ -43,7 +43,7 @@ test("Редактирование учетной записи. (test 11)", asyn
   await page.fill(InputLocators.firstName,"I")
   await OIB_Page.click(UserCard.BTN_CANCEL)
    //3. Изменения не будут Сохранены.
-   expect(page.locator(SpanLocators.firstName)).not.toHaveText("I")
+  await expect(page.locator(SpanLocators.firstName)).not.toHaveText("I")
 
  //закрытие сессии
  await OIB_Page.shutDown()

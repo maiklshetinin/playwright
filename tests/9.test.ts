@@ -26,7 +26,7 @@ test("Connection Log (test 9.1, 9.2)", async ({ page }) => {
   await OIB_Page.click(Locators.BTN_CONNECTION_LOG)
   //1. Откроется окно, в текущей вкладке с выставленными подключениями за последний час.
   //Максимально допустимая выборка в таблице (в том числе и для выгрузки = 40.000 записей).
-  expect(page.locator(ConnectionLog.modal)).toBeVisible()
+  await expect(page.locator(ConnectionLog.modal)).toBeVisible()
 
   //----------------------------------------------------------------------------------------test2
   //   2. Проверить все кнопки с доступным периодом:
@@ -36,7 +36,7 @@ test("Connection Log (test 9.1, 9.2)", async ({ page }) => {
   // 2. Соответствующая таблица с данными формируется, в зависимости от выставленных параметров периода.
   await OIB_Page.getFirstRow(ConnectionLog.table).getByText(`${hour}:`).highlight()
   await page.waitForTimeout(1000)
-  expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(`${hour}:`)).toContainText(hour)
+  await expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(`${hour}:`)).toContainText(hour)
 
   // - Сегодня
   await OIB_Page.click(ConnectionLog.BTN_TODAY)
@@ -44,7 +44,7 @@ test("Connection Log (test 9.1, 9.2)", async ({ page }) => {
   // 2. Соответствующая таблица с данными формируется, в зависимости от выставленных параметров периода.
   await OIB_Page.getFirstRow(ConnectionLog.table).getByText(/\d\d\.\d\d\.\d\d\d\d/).highlight()
   await page.waitForTimeout(1000)
-  expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(/\d\d\.\d\d\.\d\d\d\d/)).toContainText(date)
+  await expect(OIB_Page.getFirstRow(ConnectionLog.table).getByText(/\d\d\.\d\d\.\d\d\d\d/)).toContainText(date)
 
   // - За сутки
   // - За неделю
@@ -70,22 +70,27 @@ test("Connection Log (test 9.3)", async ({ page }) => {
   await OIB_Page.click(Locators.BTN_CONNECTION_LOG)
   //1. Откроется окно, в текущей вкладке с выставленными подключениями за последний час.
   //Максимально допустимая выборка в таблице (в том числе и для выгрузки = 40.000 записей).
-  expect(page.locator(ConnectionLog.modal)).toBeVisible()
+  await expect(page.locator(ConnectionLog.modal)).toBeVisible()
 
   //----------------------------------------------------------------------------------------test3
   // 3. Задать период отображения в ручную, в соответствующем поле выбора интервала даты. Нажать Искать
-  await page.locator(ConnectionLog.inputFromDate).highlight()
-  await page.waitForTimeout(1000)
-
   await page.fill(ConnectionLog.inputFromDate, fromDate)
   await page.fill(ConnectionLog.inputBeforeDate, beforeDate)
   await page.click(ConnectionLog.BTN_SEARCH)
   await page.waitForLoadState('networkidle')
+  await page.waitForTimeout(3000)
 
-  // //обнуление инпута
-  // await page.type(ConnectionLog.inputFromDate, '')
-  // await page.type(ConnectionLog.inputBeforeDate, '')
+  //3. Формируется список данных, за выставленный период.
 
+  const period = await page.locator(ConnectionLog.table).getByRole("row").getByText(/\d\d\.\d\d\.\d\d\d\d/).all()
+  const from = OIB_Page.getNewDate(fromDate)
+  const before = OIB_Page.getNewDate(beforeDate)
+  for (let i = 0; i < period.length; i++) {
+    if (i === 0 || i === period.length - 1) {
+      const time = OIB_Page.getNewDate(await period[i].innerText())
+      expect(from < time && time < before).toBe(true)
+    }
+  }
 
   //закрытие сессии
   await OIB_Page.shutDown()
@@ -108,9 +113,8 @@ test("Connection Log (test 9.4)", async ({ page }) => {
   await page.waitForTimeout(1000)
   //1. Откроется окно, в текущей вкладке с выставленными подключениями за последний час.
   //Максимально допустимая выборка в таблице (в том числе и для выгрузки = 40.000 записей).
-  expect(page.locator(ConnectionLog.modal)).toBeVisible()
+  await expect(page.locator(ConnectionLog.modal)).toBeVisible()
 
-  //TODO:некорректно вводится значение в инпут
   //----------------------------------------------------------------------------------------test4
 
   // // 4. Выгрузить полученные значения в допустимых форматах и проверить визуально:

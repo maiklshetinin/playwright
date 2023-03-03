@@ -14,17 +14,17 @@ const config: PlaywrightTestConfig = {
     "tests/8.test.ts",
     "tests/9.test.ts",
 
-    // "tests/10.test.ts",
-    // "tests/11.test.ts",
+    "tests/10.test.ts",
 
+    "tests/11.test.ts",
     "tests/12.test.ts",
     "tests/13.test.ts",
     "tests/14.test.ts",
-    //--------------------стабильны при 3х воркерах
+    // //--------------------стабильны при 3х воркерах
     "tests/15.test.ts",
     //--------------------стабильны при 4х воркерах
 
-    // "tests/16.test.ts",
+    "tests/16.test.ts",
     // "tests/17.test.ts",
 
     //--------------------стабильны при 3х воркерах
@@ -36,7 +36,7 @@ const config: PlaywrightTestConfig = {
     "tests/22.test.ts",
   ],
   use: {
-    headless: true,
+    headless: false,
     screenshot: "on",
     video: "on",
     launchOptions: {

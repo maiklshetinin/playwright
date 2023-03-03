@@ -4,6 +4,7 @@ import OIB, {  Locators, UserCard } from "./OIB";
 const login = "SHETININM"
 const password = "Asdf123$"
 const userLogin="IVANOVAO"
+const department='321'
 
 test("Откомандировать в новый отдел (test 17)", async ({ page }) => {
   await page.setViewportSize({
@@ -22,21 +23,22 @@ test("Откомандировать в новый отдел (test 17)", async 
 
   //1. Откроется карточка сотрудника, с выделенными обязательными полями для заполнения.
   //- Организация / Подразделение
-  expect(page.locator("(//div[@class='auto-input required'])[1]")).toHaveClass("auto-input required")
+  await expect(page.locator("(//div[@class='auto-input required'])[1]")).toHaveClass("auto-input required")
   //- Должность
-  expect(page.locator("(//div[@class='auto-input required'])[2]")).toHaveClass("auto-input required")
+  await expect(page.locator("(//div[@class='auto-input required'])[2]")).toHaveClass("auto-input required")
+  
 
   //2. Заполнить обязательные поля. Нажать «Откомандировать».
   await OIB_Page.click("(//div[@class='auto-input required'])[1]")
   await page.getByRole("menuitem").filter({ hasText: 'КТ' }).click()
   await page.locator("div#pane-employee>div>div>div:nth-of-type(7)").click()
-  await page.getByTitle("Test1").click()
+  await page.getByTitle(department).click()
   await OIB_Page.click(Locators.BTN_EMPLOYER_SEND_ON_A_SECONDMENT)
+
 
   //2. Появится уведомление «Данные успешно сохранены».
   //В выпадающем списке «Текущий отдел», можно посмотреть все доступные подразделения, в которые был откомандирован сотрудник. 
   //Можно использовать этот список для повторного возвращения сотрудника в первоначальный отдел.
-
 
   await page.waitForTimeout(1000)
 

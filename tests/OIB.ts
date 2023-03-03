@@ -23,6 +23,7 @@ export enum SpanLocators {
   lastName = "(//span[@class='text-only multilinespan'])[2]",
   organization_department = "(//span[@class='el-cascader__label'])[2]",
   until_such_date = "(//span[text()='Временные ограничения']/following-sibling::span)[3]",
+
 }
 
 export enum InputLocators {
@@ -70,6 +71,7 @@ export enum UserCard {
 
   BTN_CBD = "//span[text()='ЦБД']",
   BTN_ARM = "//span[text()='АРМ']",
+  BTN_REFRESH = "//button[@title='Обновить данные']//i[1]"
 
 
 }
