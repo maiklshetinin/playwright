@@ -36,7 +36,7 @@ const config: PlaywrightTestConfig = {
     "tests/22.test.ts",
   ],
   use: {
-    headless: false,
+    headless: true,
     screenshot: "on",
     video: "on",
     launchOptions: {

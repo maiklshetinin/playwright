@@ -8,7 +8,7 @@ const userLastName="Ivanov1"
 const userFirstName="Ivan"
 
 
-test.only("Редактирование учетной записи. (test 11)", async ({page}) => {
+test("Редактирование учетной записи. (test 11)", async ({page}) => {
   const OIB_Page = new OIB(page)
   await OIB_Page.login(login, password)
 

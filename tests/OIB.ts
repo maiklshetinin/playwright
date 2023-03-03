@@ -71,8 +71,8 @@ export enum UserCard {
 
   BTN_CBD = "//span[text()='ЦБД']",
   BTN_ARM = "//span[text()='АРМ']",
-  BTN_REFRESH = "//button[@title='Обновить данные']//i[1]"
-
+  BTN_REFRESH = "//button[@title='Обновить данные']//i[1]",
+  BTN_GENERATE_LOGIN_BY_NAME = "//button[@title='Сформировать логин по ФИО']"
 
 }
 

@@ -78,14 +78,14 @@
   },
   "suites": [
     {
-      "title": "tests/11.test.ts",
-      "file": "tests/11.test.ts",
+      "title": "tests/10.test.ts",
+      "file": "tests/10.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Редактирование учетной записи. (test 11)",
-          "ok": false,
+          "title": "Создание новой учетной записи пользователя. (test 10)",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -97,51 +97,119 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 20544,
-                  "error": {
-                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: not \u001b[32m\"I\"\u001b[39m\nReceived string: \u001b[31m\"\u001b[7mI\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.not.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: not \u001b[32m\"I\"\u001b[39m\nReceived string: \u001b[31m\"\u001b[7mI\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.not.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\n    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/11.test.ts:46:58"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/11.test.ts",
-                        "column": 58,
-                        "line": 46
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: not \u001b[32m\"I\"\u001b[39m\nReceived string: \u001b[31m\"\u001b[7mI\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.not.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  - waiting for locator('xpath=(//span[@class=\\'text-only multilinespan\\'])[3]')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"text-only multilinespan\">I</span>\u001b[22m\n\u001b[2m  -   unexpected value \"I\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtests/11.test.ts:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mOIB_Page\u001b[39m\u001b[33m.\u001b[39mclick(\u001b[33mUserCard\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBTN_CANCEL\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m    \u001b[90m//3. Изменения не будут Сохранены.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[33mSpanLocators\u001b[39m\u001b[33m.\u001b[39mfirstName))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"I\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 48 |\u001b[39m  \u001b[90m//закрытие сессии\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m \u001b[33mOIB_Page\u001b[39m\u001b[33m.\u001b[39mshutDown()\u001b[0m\n\n\u001b[2m    at /home/shchetinin/Рабочий стол/projects/git/playwright/tests/11.test.ts:46:58\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 8184,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-03-03T12:22:04.948Z",
+                  "startTime": "2023-03-03T14:22:39.963Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Редактирование-учетной-записи-test-11-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-новой-учетной-записи-пользователя-test-10-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-11-Редактирование-учетной-записи-test-11-/test-failed-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-новой-учетной-записи-пользователя-test-10-/test-finished-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/shchetinin/Рабочий стол/projects/git/playwright/tests/11.test.ts",
-                    "column": 58,
-                    "line": 46
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "43a67cb79170ac912707-8ee4df59a388aab7d879",
-          "file": "tests/11.test.ts",
-          "line": 11,
+          "id": "ea99b3a3ac3414699dea-1a9da47fa210be7384de",
+          "file": "tests/10.test.ts",
+          "line": 16,
+          "column": 6
+        },
+        {
+          "title": "Создание Сотрудников для выбранных пользователей (test 16)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 9667,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-03T14:22:48.289Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-Сотрудников-для-выбранных-пользователей-test-16-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-Сотрудников-для-выбранных-пользователей-test-16-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea99b3a3ac3414699dea-4a3583caf2caa9f9de52",
+          "file": "tests/10.test.ts",
+          "line": 52,
+          "column": 6
+        },
+        {
+          "title": "Откомандировать в новый отдел (test 17)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 10266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-03T14:22:57.957Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Откомандировать-в-новый-отдел-test-17-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Откомандировать-в-новый-отдел-test-17-/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea99b3a3ac3414699dea-0166b00acf1668db095f",
+          "file": "tests/10.test.ts",
+          "line": 125,
           "column": 6
         }
       ]
