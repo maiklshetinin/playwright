@@ -29,13 +29,12 @@
           "tests/7.test.ts",
           "tests/8.test.ts",
           "tests/9.test.ts",
-          "tests/10.test.ts",
+          "tests/10_16_17.test.ts",
           "tests/11.test.ts",
           "tests/12.test.ts",
           "tests/13.test.ts",
           "tests/14.test.ts",
           "tests/15.test.ts",
-          "tests/16.test.ts",
           "tests/18.test.ts",
           "tests/19.test.ts",
           "tests/20.test.ts",
@@ -78,8 +77,8 @@
   },
   "suites": [
     {
-      "title": "tests/10.test.ts",
-      "file": "tests/10.test.ts",
+      "title": "tests/10_16_17.test.ts",
+      "file": "tests/10_16_17.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
@@ -98,22 +97,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 8184,
+                  "duration": 10675,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-03-03T14:22:39.963Z",
+                  "startTime": "2023-03-03T15:07:53.394Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-новой-учетной-записи-пользователя-test-10-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10_16_17-Создание-новой-учетной-записи-пользователя-test-10-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-новой-учетной-записи-пользователя-test-10-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10_16_17-Создание-новой-учетной-записи-пользователя-test-10-/test-finished-1.png"
                     }
                   ]
                 }
@@ -121,9 +120,9 @@
               "status": "expected"
             }
           ],
-          "id": "ea99b3a3ac3414699dea-1a9da47fa210be7384de",
-          "file": "tests/10.test.ts",
-          "line": 16,
+          "id": "32f644e8d01dfa8057a7-e06545d66282db86cd5a",
+          "file": "tests/10_16_17.test.ts",
+          "line": 19,
           "column": 6
         },
         {
@@ -141,22 +140,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 9667,
+                  "duration": 13193,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-03-03T14:22:48.289Z",
+                  "startTime": "2023-03-03T15:08:04.246Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-Сотрудников-для-выбранных-пользователей-test-16-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10_16_17-Создание-Сотрудников-для-выбранных-пользователей-test-16-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Создание-Сотрудников-для-выбранных-пользователей-test-16-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10_16_17-Создание-Сотрудников-для-выбранных-пользователей-test-16-/test-finished-1.png"
                     }
                   ]
                 }
@@ -164,9 +163,9 @@
               "status": "expected"
             }
           ],
-          "id": "ea99b3a3ac3414699dea-4a3583caf2caa9f9de52",
-          "file": "tests/10.test.ts",
-          "line": 52,
+          "id": "32f644e8d01dfa8057a7-4b09ae207537bbb39cdc",
+          "file": "tests/10_16_17.test.ts",
+          "line": 55,
           "column": 6
         },
         {
@@ -184,22 +183,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 10266,
+                  "duration": 14748,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-03-03T14:22:57.957Z",
+                  "startTime": "2023-03-03T15:08:17.440Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Откомандировать-в-новый-отдел-test-17-/video.webm"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10_16_17-Откомандировать-в-новый-отдел-test-17-/video.webm"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10-Откомандировать-в-новый-отдел-test-17-/test-finished-1.png"
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-10_16_17-Откомандировать-в-новый-отдел-test-17-/test-finished-1.png"
                     }
                   ]
                 }
@@ -207,9 +206,9 @@
               "status": "expected"
             }
           ],
-          "id": "ea99b3a3ac3414699dea-0166b00acf1668db095f",
-          "file": "tests/10.test.ts",
-          "line": 125,
+          "id": "32f644e8d01dfa8057a7-d13a217f643d85ea03a6",
+          "file": "tests/10_16_17.test.ts",
+          "line": 130,
           "column": 6
         }
       ]

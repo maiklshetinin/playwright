@@ -3,15 +3,18 @@ import { test, expect, chromium } from "@playwright/test";
 
 const LOGIN = "SHETININM"
 const PASSWORD = "Asdf123$"
-let newUserLogin = "IVANOVI20"
-const newUserLastName = "Иванов"
-const newUserFirstName = "Иван"
 
+let newUserLogin = ""
+const newUserLastName = "Иванова"
+const newUserFirstName = "Ира"
 const organization = '8Б2ПДПС МО'
 const subdivision = "ИАЗ"
 const job_title = "321"
 const organization_full = "Исполнение административного законодательства. 8 Б 2 П ДПС (южный) ГИБДД ГУ МВД России по Московской области"
-const department='321'
+const department = '321'
+const organization_full_job_title = 'Комитет по транспорту - 321'
+
+
 
 test.only("Создание новой учетной записи пользователя. (test 10)", async ({ page }) => {
   const OIB_Page = new OIB(page)
@@ -33,7 +36,7 @@ test.only("Создание новой учетной записи пользо�
   await page.click(UserCard.BTN_GENERATE_LOGIN_BY_NAME)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
-  newUserLogin = await page.locator(InputLocators.login).inputValue()  
+  newUserLogin = await page.locator(InputLocators.login).inputValue()
   //Кнопка Создать подсвечена.
   await expect(page.locator(UserCard.BTN_CREATE)).not.toHaveAttribute("disabled", "disabled")
 
@@ -65,7 +68,6 @@ test.only("Создание Сотрудников для выбранных п�
   await page.waitForLoadState("networkidle")
 
   await OIB_Page.findUser(newUserLogin)
-  //TODO: заменить метод на загрузку или ответа от сервера бывают проблеммы при поиске
   await page.waitForLoadState("networkidle")
   await page.waitForTimeout(1000)
   await OIB_Page.selectUserCheckbox(newUserLogin)
@@ -87,15 +89,18 @@ test.only("Создание Сотрудников для выбранных п�
   //- Организация/Подразделение
 
   await OIB_Page.click("(//span[@class='el-cascader el-cascader--mini']//span)[3]")
+  await page.waitForTimeout(1000)
   await page.locator("(//ul[@class='el-cascader-menu'])[1]").getByText(OIB_Page.getRegExp(organization)).click()
+  await page.waitForTimeout(1000)
   await page.locator("(//ul[@class='el-cascader-menu'])[2]").getByText(OIB_Page.getRegExp(subdivision)).click()
 
   //- Должность
   await OIB_Page.click("(//input[@placeholder='Значение'])[1]")
+  await page.waitForTimeout(1000)
   await page.locator("(//div[@x-placement='bottom-start']//div)[1]").getByText(OIB_Page.getRegExp(job_title)).nth(0).click()
 
   //3. В доступных формах выбраны требуемые значениями (достаточно заполнения обязательных форм).
-  expect(page.locator("(//span[@class='el-cascader el-cascader--mini']//span)[3]")).toContainText(`${organization} / ${subdivision}`)
+  await expect(page.locator("(//span[@class='el-cascader el-cascader--mini']//span)[3]")).toContainText(`${organization} / ${subdivision}`)
   expect(await page.locator("(//input[@placeholder='Значение'])[1]").inputValue()).toBe(job_title)
 
   //------------------------------------------------------------------------------------------------------------test4
@@ -144,7 +149,7 @@ test.only("Откомандировать в новый отдел (test 17)", a
   await expect(page.locator("(//div[@class='auto-input required'])[1]")).toHaveClass("auto-input required")
   //- Должность
   await expect(page.locator("(//div[@class='auto-input required'])[2]")).toHaveClass("auto-input required")
-  
+
   // 2. Заполнить обязательные поля. Нажать «Откомандировать».
 
   await page.waitForTimeout(1000)
@@ -157,9 +162,13 @@ test.only("Откомандировать в новый отдел (test 17)", a
 
 
   //2. Появится уведомление «Данные успешно сохранены».
+  await expect(page.locator("//div[@class='el-notification right']")).toContainText('Данные сохранили успешно')
   //В выпадающем списке «Текущий отдел», можно посмотреть все доступные подразделения, в которые был откомандирован сотрудник. 
   //Можно использовать этот список для повторного возвращения сотрудника в первоначальный отдел.
-
+  await page.click("(//span[text()='Текущий отдел']/following::input)[1]")
+  await page.waitForTimeout(1000)
+  await page.getByText(organization_full_job_title).highlight()
+  await expect(page.getByText(organization_full_job_title)).toContainText(organization_full_job_title)
 
   //закрытие сессии
   await OIB_Page.shutDown()
