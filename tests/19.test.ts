@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
+import OIB, {InputLocators, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
 test("Создание новой Роли. (test 19)", async ({ page }) => {
   await page.setViewportSize({
@@ -7,7 +7,7 @@ test("Создание новой Роли. (test 19)", async ({ page }) => {
     height: 1080,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login("SHETININM", PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   //1. Нажать « (+) » (Добавить новую роль).
   await OIB_Page.click(Locators.BTN_ADD_A_NEW_ROLE)

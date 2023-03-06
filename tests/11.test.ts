@@ -1,8 +1,6 @@
 import { test, expect, chromium } from "@playwright/test";
-import OIB, { InputLocators, LAST_NAME, LOGIN, SpanLocators, UserCard } from "./OIB";
+import OIB, { InputLocators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
-const login = "SHETININM"
-const password = "Asdf123$"
 const userLogin="IVANOV1"
 const userLastName="Ivanov1"
 const userFirstName="Ivan"
@@ -10,10 +8,10 @@ const userFirstName="Ivan"
 
 test("Редактирование учетной записи. (test 11)", async ({page}) => {
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
-  
+
   //1. Выделить нужную учетную запись.
   await OIB_Page.getUserCard(userLogin)
   //1. Справа появится карточка выделенного пользователя.
@@ -22,7 +20,7 @@ test("Редактирование учетной записи. (test 11)", asyn
   await expect(page.locator(SpanLocators.login)).toHaveText(userLogin)
 
   //----------------------------------------------------------------------------------------test2
-  
+
   //2. В появившемся справа окне, нажать на изображение карандаша.
   await OIB_Page.click(UserCard.BTN_EDIT)
   //2. Появится возможность внесения данных в запись.
@@ -37,7 +35,7 @@ test("Редактирование учетной записи. (test 11)", asyn
   await expect(page.locator(SpanLocators.firstName)).toHaveText("Ivan")
 
   //----------------------------------------------------------------------------------------test4
-  
+
   //3. Внести изменения в запись. Нажать Отмена.
   await OIB_Page.click(UserCard.BTN_EDIT)
   await page.fill(InputLocators.firstName,"I")

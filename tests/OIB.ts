@@ -1,8 +1,11 @@
 import { Locator, Page } from "@playwright/test";
 
-export const LAST_NAME = "Ivanov1"
-export const LOGIN = "IVANOV1"
+export const LOGIN = "SHETININM"
 export const PASSWORD = "Asdf123$"
+
+export const LAST_NAME = "Ivanov1"
+// export const LOGIN = "IVANOV1"
+// export const PASSWORD = "Asdf123$"
 
 export enum DivLocators {
   userCard = "div.pl18.pr12",
@@ -89,6 +92,7 @@ export enum Locators {
   BTN_DOWNLOAD_CSV = "//button[@title='Выгрузить в CSV-файл']",
   BTN_DOWNLOAD_XLSX = "//button[@title='Выгрузить в XLSX-файл']",
   BTN_DOWNLOAD_PDF = "//button[@title='Выгрузить в PDF-файл']",
+  td_ident ="(//th[@colspan='1'])[2]",
   //---------------------------------------------------------------------------------------------------------userCard
   // BTN_CANCEL = "(//button[contains(@class,'el-button el-button--text')])[3]",
 

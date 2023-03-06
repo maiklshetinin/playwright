@@ -1,9 +1,7 @@
 import { test, expect } from "@playwright/test";
-import OIB, { Locators, UserCard } from "./OIB";
+import OIB, { Locators, LOGIN, PASSWORD, UserCard } from "./OIB";
 
-const login = "SHETININM"
 const userLogin = "IVANOV111"
-const password = "Asdf123$"
 
 test("Установка временных ограничений пользователя (test 14.1, 14.2)", async ({ page }) => {
   await page.setViewportSize({
@@ -12,7 +10,7 @@ test("Установка временных ограничений пользо�
   });
 
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
 
@@ -61,7 +59,7 @@ test("Установка временных ограничений пользо�
   });
 
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
 
@@ -113,7 +111,7 @@ test("Установка временных ограничений пользо�
   });
 
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
 

@@ -1,13 +1,10 @@
 import { test, expect } from "@playwright/test";
-import OIB, { UserMenu } from "./OIB";
-
-const login = "SHETININM"
-const password = "Asdf123$"
+import OIB, { LOGIN, PASSWORD, UserMenu } from "./OIB";
 
 test("Выбор темы интерфейса. (test 3)", async ({ page }) => {
 
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
 

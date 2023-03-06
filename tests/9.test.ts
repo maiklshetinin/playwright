@@ -1,7 +1,6 @@
 import { test, expect } from "@playwright/test";
-import OIB, { CheckboxLocators, ConnectionLog, DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators } from "./OIB";
+import OIB, { ConnectionLog,  Locators, LOGIN, PASSWORD } from "./OIB";
 
-const login = "SHETININM"
 const hour = String(new Date().getHours())
 const date = String(new Date().getDate())
 const ms = new Date().getTime()
@@ -11,14 +10,13 @@ const division = "МАДИ"
 const userName = "GORSHKOVI"
 
 
-
 test("Connection Log (test 9.1, 9.2)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
 
@@ -62,7 +60,7 @@ test("Connection Log (test 9.3)", async ({ page }) => {
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
   //TODO: некорректный ввод в инпут
@@ -102,7 +100,7 @@ test("Connection Log (test 9.4)", async ({ page }) => {
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
 
   //----------------------------------------------------------------------------------------test1
@@ -153,7 +151,7 @@ test("Connection Log (test 9.5)", async ({ page }) => {
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
   //----------------------------------------------------------------------------------------test1
@@ -191,7 +189,7 @@ test("Журнал подключений (test 9.6)", async ({ page }) => {
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
   //----------------------------------------------------------------------------------------test1

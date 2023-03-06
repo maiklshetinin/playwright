@@ -1,7 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { InputLocators, Locators, SpanLocators, UserCard } from "./OIB";
-const LOGIN = "SHETININM"
-const PASSWORD = "Asdf123$"
+import OIB, { InputLocators, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
 test("Копирование Роли. (test 20)", async ({ page }) => {
   await page.setViewportSize({

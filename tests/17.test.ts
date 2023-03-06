@@ -1,8 +1,6 @@
 import { test, expect } from "@playwright/test";
-import OIB, {  Locators, UserCard } from "./OIB";
+import OIB, {  Locators, LOGIN, PASSWORD, UserCard } from "./OIB";
 
-const login = "SHETININM"
-const password = "Asdf123$"
 const userLogin="IVANOVAO"
 const department='321'
 
@@ -12,7 +10,7 @@ test("Откомандировать в новый отдел (test 17)", async 
     height: 1080,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //1. Зайти в карточку пользователя, перейти во вкладку «Сотрудник».
   //Нажать кнопку «Откомандировать в новый отдел».
@@ -26,7 +24,7 @@ test("Откомандировать в новый отдел (test 17)", async 
   await expect(page.locator("(//div[@class='auto-input required'])[1]")).toHaveClass("auto-input required")
   //- Должность
   await expect(page.locator("(//div[@class='auto-input required'])[2]")).toHaveClass("auto-input required")
-  
+
 
   //2. Заполнить обязательные поля. Нажать «Откомандировать».
   await OIB_Page.click("(//div[@class='auto-input required'])[1]")
@@ -37,7 +35,7 @@ test("Откомандировать в новый отдел (test 17)", async 
 
 
   //2. Появится уведомление «Данные успешно сохранены».
-  //В выпадающем списке «Текущий отдел», можно посмотреть все доступные подразделения, в которые был откомандирован сотрудник. 
+  //В выпадающем списке «Текущий отдел», можно посмотреть все доступные подразделения, в которые был откомандирован сотрудник.
   //Можно использовать этот список для повторного возвращения сотрудника в первоначальный отдел.
 
   await page.waitForTimeout(1000)

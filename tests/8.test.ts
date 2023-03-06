@@ -1,8 +1,6 @@
 import { test, expect } from "@playwright/test";
-import OIB, { CheckboxLocators, DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
+import OIB, { CheckboxLocators, DivLocators, InputLocators, Locators, LOGIN, PASSWORD, UserCard } from "./OIB";
 
-const login = "SHETININM"
-const password = "Asdf123$"
 const abc_search = ["А", "Б", "I", "S"]
 const today = new Date()
 const fromDate = "01.01.2021"
@@ -18,7 +16,7 @@ test("Поиск записей, фильтры поиска. (test 8.1, 8.2)", 
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
 
@@ -99,7 +97,7 @@ test("Поиск записей, фильтры поиска. (test 8.3, 8.4)", 
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test3
   //   3. В области ввода «Окончание доступа». Первое поле обозначает «От», второе поле даты – «До».
@@ -155,7 +153,7 @@ test("Поиск записей, фильтры поиска. (test 8.5, 8.6)", 
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test5
   // 5. В выпадающем списке поля «Список прав» прав доступа у пользователей в отображаемой таблице,
@@ -200,7 +198,7 @@ test("Поиск записей, фильтры поиска. (test 8.7, 8.8)", 
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
   //----------------------------------------------------------------------------------------test7
@@ -236,7 +234,10 @@ test("Поиск записей, фильтры поиска. (test 8.7, 8.8)", 
 
   // 8. В главном окне программы, при открытой таблице пользователей произвести сортировку записей,
   // нажав на соответствующее название поля столбца таблицы.
-
+  await page.click(CheckboxLocators.active)
+  await page.waitForLoadState('networkidle')
+  await page.click(Locators.td_ident)
+  await expect(page.locator(Locators.td_ident)).toHaveClass("sorting_asc")
 
 
   // 8. При сортировки записей таблицы (по возрастанию или по убыванию), соответственно меняется значок в виде стрелочки,

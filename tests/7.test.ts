@@ -1,12 +1,9 @@
 import { test, expect, chromium } from "@playwright/test";
-import OIB from "./OIB";
-
-const login = "SHETININM"
-const password = "Asdf123$"
+import OIB, { LOGIN, PASSWORD } from "./OIB";
 
 test("Отображение времени (test 7)", async ({ page }) => {
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   //----------------------------------------------------------------------------------------test1
 

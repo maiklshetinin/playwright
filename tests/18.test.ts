@@ -1,8 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { InputLocators, UserCard } from "./OIB";
-
-const login = "SHETININM"
-const password = "Asdf123$"
+import OIB, { InputLocators, LOGIN, PASSWORD, UserCard } from "./OIB";
 
 test("Просмотр логов (test 18)", async ({ page }) => {
   test.slow()
@@ -11,10 +8,10 @@ test("Просмотр логов (test 18)", async ({ page }) => {
     height: 1080,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //1. Открыть карточку пользователя. Перейти на вкладку «Лог».
-  await OIB_Page.getUserCard(login)
+  await OIB_Page.getUserCard(LOGIN)
   await OIB_Page.click(UserCard.BTN_LOG)
 
   //1. Откроется вклада с Логами карточки пользователя.

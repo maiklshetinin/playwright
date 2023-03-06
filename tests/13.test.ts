@@ -1,15 +1,12 @@
 import { test, expect, chromium } from "@playwright/test";
-import OIB, { InputLocators, SpanLocators, UserCard } from "./OIB";
+import OIB, { InputLocators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
-const login1 = "SHETININM"
-const password = "Asdf123$"
 const userLogin = "IVANOVAO"
 const userLastName = "Иванова"
 
-
 test("Удаление роли если она есть (test 13)", async ({ page }) => {
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login1, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
 
@@ -41,7 +38,7 @@ test("Удаление роли если она есть (test 13)", async ({ pa
 
 test("Назначение прав доступа учетной записи. (test 13.1)", async ({ page }) => {
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login1, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //----------------------------------------------------------------------------------------test1
 
@@ -79,7 +76,7 @@ test("Назначение прав доступа учетной записи. 
   await page.locator("//div[text()='НСИ']").click()
   // 4. Появится наименование прав для выбранного раздела, в котором два столбца для выставления чекбокса.
   // Левые — для активация права, непосредственно в самом АРМе.
-  // Правые — для активации права, для возможности делегировать доступные права другим пользователям. 
+  // Правые — для активации права, для возможности делегировать доступные права другим пользователям.
   // Можно не самому не иметь прав в этом АРМе, но иметь возможность давать эти права другим пользователям.
   await expect(page.locator("(//div[@aria-label='checkbox-group'])[1]")).toBeVisible()
   await expect(page.locator("(//div[@aria-label='checkbox-group'])[2]")).toBeVisible()

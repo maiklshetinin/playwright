@@ -1,8 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { InputLocators, SpanLocators, UserCard } from "./OIB";
-
-export const LOGIN = "SHETININM"
-export const PASSWORD = "Asdf123$"
+import OIB, { InputLocators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
 test("Редактирование роли (test 21)", async ({ page }) => {
   await page.setViewportSize({
@@ -28,7 +25,7 @@ test("Редактирование роли (test 21)", async ({ page }) => {
   await expect(page.locator("//div[contains(@class,'pl18 pr12')]")).toBeVisible()
 
   //3. Внести изменения в запись, например, изменить название, добавить или убрать какое-либо право.
-  //Нажать Сохранить 
+  //Нажать Сохранить
   await page.fill(InputLocators.role, "test12345")
   await page.locator("//div[contains(@class,'arm-list flex-child')]").getByText(/^ВФ$/).click()
   await page.locator("(//div[@aria-label='checkbox-group'])[1]").getByTitle("АРМ ВФ").click()

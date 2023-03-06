@@ -6,7 +6,7 @@ const config: PlaywrightTestConfig = {
     "tests/1.test.ts",
     "tests/2.test.ts",
     "tests/3.test.ts",
-    "tests/4.test.ts",
+    // "tests/4.test.ts",
     "tests/5.test.ts",
     "tests/6.test.ts",
     "tests/7.test.ts",

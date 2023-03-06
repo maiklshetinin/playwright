@@ -1,7 +1,5 @@
 import { chromium, expect, test } from "@playwright/test"
-
-const login = "SHETININM"
-const password = "Asdf123$"
+import { LOGIN, PASSWORD } from "./OIB"
 
 
 test("Авторизоваться под валидными данными пользователя.(test 2)", async () => {
@@ -12,8 +10,8 @@ test("Авторизоваться под валидными данными по
 
   //enter to OIB
   await page.goto("http://172.20.255.251:8080/authWeb/")
-  await page.fill("input[placeholder='Логин']", login)
-  await page.fill("input[type='password']", password)
+  await page.fill("input[placeholder='Логин']", LOGIN)
+  await page.fill("input[type='password']", PASSWORD)
   await page.click("//button[@type='button']//span[1]")
 
 

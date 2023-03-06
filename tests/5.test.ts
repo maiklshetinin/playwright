@@ -1,10 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { UserMenu } from "./OIB";
-
-const LOGIN = "SHETININM"
-const PASSWORD = "Asdf123$"
-
-
+import OIB, { LOGIN, PASSWORD, UserMenu } from "./OIB";
 
 test("Руководство пользователя. (test 5)", async ({ page }) => {
     const OIB_Page = new OIB(page)

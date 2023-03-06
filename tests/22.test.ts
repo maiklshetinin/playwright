@@ -1,7 +1,6 @@
 import { test, expect } from "@playwright/test";
-import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
+import OIB, { DivLocators, InputLocators, Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
-const login = "SHETININM"
 const search = "IV"
 const user1 = "IVANOVI"
 const user2 = "IVANOVAO"
@@ -13,7 +12,7 @@ test("Назначение Роли выбранным  (группе) поль�
     height: 800,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(1000)
 

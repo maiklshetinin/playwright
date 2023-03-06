@@ -1,9 +1,7 @@
 import { test, expect } from "@playwright/test";
-import OIB, { DivLocators, InputLocators, Locators, SpanLocators, UserCard } from "./OIB";
+import OIB, { DivLocators, InputLocators, Locators, LOGIN, PASSWORD } from "./OIB";
 
-const login = "SHETININM"
 const userLogin = "SHETININM"
-const password = "Asdf123$"
 const inputLogin = "IVANOV111"
 const inputFirstName = "Ivan111"
 const inputLastName = "Ivanov111"
@@ -16,7 +14,7 @@ test("Копирование карточки пользователя.(test 15)
     height: 1080,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, password)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //1. Выделить нужную учетную запись.
   await OIB_Page.getUserCard(userLogin)
@@ -36,7 +34,7 @@ test("Копирование карточки пользователя.(test 15)
   const container_checkboxes = "(//div[@class='flex-parent'])[2]"
 
   await page.click("//div[text()='Адм.практика']")
-  
+
   for (const checkbox of await page.locator(container_checkboxes).getByRole("checkbox").all())
     await expect(checkbox).toBeChecked()
 

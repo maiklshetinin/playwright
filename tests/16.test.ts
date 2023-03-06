@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import OIB, { DivLocators, InputLocators, LAST_NAME, Locators, LOGIN, PASSWORD, SpanLocators, UserCard, UserMenu } from "./OIB";
+import OIB, {  Locators, LOGIN, PASSWORD, SpanLocators, UserCard } from "./OIB";
 
 const login = "SHETININM"
 const organization = '8Б2ПДПС МО'
@@ -13,7 +13,7 @@ test("Создание Сотрудников для выбранных поль
     height: 1080,
   });
   const OIB_Page = new OIB(page)
-  await OIB_Page.login(login, PASSWORD)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
   //------------------------------------------------------------------------------------------------------------test1
 
@@ -29,7 +29,7 @@ test("Создание Сотрудников для выбранных поль
   await OIB_Page.selectUserCheckbox(login)
 
   //1. Отмеченные пользователи будут выделены синим контуром и чекбоксом.
-  expect(page.locator("//tr[contains(@class, 'current')]").getByText(OIB_Page.getRegExp(login))).toHaveText(login)
+  await expect(page.locator("//tr[contains(@class, 'current')]").getByText(OIB_Page.getRegExp(login))).toHaveText(login)
 
   //------------------------------------------------------------------------------------------------------------test2
 
@@ -61,7 +61,7 @@ test("Создание Сотрудников для выбранных поль
   //4. Нажать кнопку Создать(Cохранить).
   await OIB_Page.click(UserCard.BTN_SAVE)
   //4. У выбранного пользователя будет назначен Сотрудник, с заданными параметрами.
-  //Важно, чтобы у выбранных пользователей, во вкладке «Права» были указаны «Имя» и «Фамилия», 
+  //Важно, чтобы у выбранных пользователей, во вкладке «Права» были указаны «Имя» и «Фамилия»,
   //иначе будет получено сообщение об ошибке.
 
   const firstName = await page.locator(SpanLocators.firstName).innerText()
