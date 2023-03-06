@@ -22,13 +22,13 @@ test("Удаление роли если она есть (test 13)", async ({ pa
   //2. В появившемся справа окне, нажать на изображение карандаша.
   await OIB_Page.click(UserCard.BTN_EDIT)
   //2. Появится возможность внесения данных в запись.
-  expect(page.locator("(//span[text()='Фамилия']/following::input)[1]")).toBeVisible()
+  await expect(page.locator("(//span[text()='Фамилия']/following::input)[1]")).toBeVisible()
 
   //удаляем роль если она есть
   if (await page.locator(InputLocators.role).inputValue() !== '') {
     await page.locator("(//div[@class='el-select el-select--mini']//div)[1]").hover();
     await page.locator("(//div[@class='el-select el-select--mini']//div)[1]").locator('i').nth(1).highlight();
-    await page.waitForTimeout(300)
+    await page.waitForTimeout(1000)
     await page.locator("(//div[@class='el-select el-select--mini']//div)[1]").locator('i').nth(1).click();
     await OIB_Page.click(UserCard.BTN_SAVE)
     await OIB_Page.click(UserCard.BTN_EDIT)

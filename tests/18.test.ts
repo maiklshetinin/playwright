@@ -57,7 +57,7 @@ test("Просмотр логов (test 18)", async ({ page }) => {
   await page.fill(InputLocators.LOG_search, "17.01.2023")
   await page.click(InputLocators.LOG_search)
 
-  // await page.waitForTimeout(3000)
+  await page.waitForTimeout(3000)
   await page.waitForLoadState('networkidle')
 
   //5. Будут отображаться все возможные совпадения.
