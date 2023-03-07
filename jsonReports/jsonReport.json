@@ -12,15 +12,32 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright/test-results",
+        "outputDir": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
+        "testDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/4.test.ts"
+          "tests/1.test.ts",
+          "tests/2.test.ts",
+          "tests/3.test.ts",
+          "tests/5.test.ts",
+          "tests/6.test.ts",
+          "tests/7.test.ts",
+          "tests/8.test.ts",
+          "tests/9.test.ts",
+          "tests/11.test.ts",
+          "tests/12.test.ts",
+          "tests/13.test.ts",
+          "tests/14.test.ts",
+          "tests/15.test.ts",
+          "tests/18.test.ts",
+          "tests/19.test.ts",
+          "tests/20.test.ts",
+          "tests/21.test.ts",
+          "tests/22.test.ts"
         ],
         "timeout": 30000
       }
@@ -47,8 +64,8 @@
       "max": 5,
       "threshold": 15000
     },
-    "configFile": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/sh_ch/OneDrive/Рабочий стол/playwright",
+    "configFile": "/home/shchetinin/Рабочий стол/projects/git/playwright/playwright.config.ts",
+    "rootDir": "/home/shchetinin/Рабочий стол/projects/git/playwright",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -58,14 +75,14 @@
   },
   "suites": [
     {
-      "title": "tests\\4.test.ts",
-      "file": "tests/4.test.ts",
+      "title": "tests/8.test.ts",
+      "file": "tests/8.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Смена пароля пользователя. (test 4.1)",
-          "ok": false,
+          "title": "Поиск записей, фильтры поиска. (test 8.3)",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -77,129 +94,34 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30004,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\OIB.ts",
-                        "column": 35,
-                        "line": 183
-                      },
-                      "message": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for locator('div.el-dropdown')\n============================================================\n\n\u001b[90m   at \u001b[39mtests\\OIB.ts:183\n\n\u001b[0m \u001b[90m 181 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 182 |\u001b[39m   \u001b[36masync\u001b[39m click(path\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 183 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(path)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 184 |\u001b[39m   }\u001b[0m\n\u001b[0m \u001b[90m 185 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 186 |\u001b[39m\u001b[0m\n\n\u001b[2m    at OIB.click (C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\OIB.ts:183:35)\u001b[22m\n\u001b[2m    at C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\tests\\4.test.ts:16:18\u001b[22m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - locator.click at tests\\OIB.ts:183:35\n"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-03-06T18:31:01.653Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-4-Смена-пароля-пользователя-test-4-1-\\video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-4-Смена-пароля-пользователя-test-4-1-\\test-failed-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "db79d97400be9559def8-2a92363a1b952a9c902a",
-          "file": "tests/4.test.ts",
-          "line": 7,
-          "column": 5
-        },
-        {
-          "title": "Смена пароля пользователя. (test 4.2)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "interrupted",
-                  "duration": 2915,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-03-06T18:31:32.801Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\sh_ch\\OneDrive\\Рабочий стол\\playwright\\test-results\\tests-4-Смена-пароля-пользователя-test-4-2-\\test-failed-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "db79d97400be9559def8-a6fe9bd00d4d6fa937c4",
-          "file": "tests/4.test.ts",
-          "line": 48,
-          "column": 5
-        },
-        {
-          "title": "return old user password (test 4.3)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 0,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "status": "passed",
+                  "duration": 7783,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-03-06T18:31:35.790Z",
-                  "attachments": []
+                  "startTime": "2023-03-07T10:34:25.618Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Поиск-записей-фильтры-поиска-test-8-3-/video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/shchetinin/Рабочий стол/projects/git/playwright/test-results/tests-8-Поиск-записей-фильтры-поиска-test-8-3-/test-finished-1.png"
+                    }
+                  ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
-          "id": "db79d97400be9559def8-44ab9fe1e6ac50b38b50",
-          "file": "tests/4.test.ts",
-          "line": 76,
-          "column": 5
+          "id": "74aa678c9300ed675f73-6c12d0b77f495e015262",
+          "file": "tests/8.test.ts",
+          "line": 94,
+          "column": 6
         }
       ]
     }

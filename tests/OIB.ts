@@ -93,12 +93,19 @@ export enum Locators {
   BTN_DOWNLOAD_XLSX = "//button[@title='Выгрузить в XLSX-файл']",
   BTN_DOWNLOAD_PDF = "//button[@title='Выгрузить в PDF-файл']",
   td_ident ="(//th[@colspan='1'])[2]",
-  //---------------------------------------------------------------------------------------------------------userCard
-  // BTN_CANCEL = "(//button[contains(@class,'el-button el-button--text')])[3]",
-
-  //---------------------------------------------------------------------------------------------------------
-
   accessTime = "(//div[@class='flex-child flex-child--grown']//div)[1]",
+  //окончание доступа
+  end_of_access_from_input="(//span[text()='Окончание доступа']/following::input)[1]",
+  end_of_access_from_calendar="(//i[@class='el-input__icon el-icon-date'])[1]",
+  end_of_access_before_input="(//span[text()='Сотрудник']/following::input)[3]",
+  end_of_access_before_calendar="(//i[@class='el-input__icon el-icon-date'])[2]",
+  BTN_PREVIOUS_MONTH="//button[@aria-label='Предыдущий месяц']",
+  year="(//span[@class='el-date-picker__header-label'])[1]",
+  mounth="(//span[@class='el-date-picker__header-label'])[2]",
+  //---------------------------------------------------------------------------------------------------------userCard
+
+
+
   //---------------------------------------------------------------------------------------------------------
   BTN_EMPLOYER_EDIT = "//div[@id='pane-employee']/div[1]/div[1]/div[1]/div[1]/button[1]",
   BTN_EMPLOYER_SEND_ON_A_SECONDMENT = "//span[text()='Откомандировать']",

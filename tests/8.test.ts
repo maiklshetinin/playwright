@@ -3,8 +3,8 @@ import OIB, { CheckboxLocators, DivLocators, InputLocators, Locators, LOGIN, PAS
 
 const abc_search = ["А", "Б", "I", "S"]
 const today = new Date()
-const fromDate = "01.01.2021"
-const beforeDate = "01.01.2027"
+const fromDate = "01.01.2022"
+const beforeDate = "01.03.2022"
 const findUserBYLastName = "Иванов"
 const findUserByLogin = "IVANOVI"
 const right = "Ввод грубых статей"
@@ -91,7 +91,7 @@ test("Поиск записей, фильтры поиска. (test 8.1, 8.2)", 
 })
 
 
-test("Поиск записей, фильтры поиска. (test 8.3, 8.4)", async ({ page }) => {
+test("Поиск записей, фильтры поиска. (test 8.3)", async ({ page }) => {
   await page.setViewportSize({
     width: 1600,
     height: 800,
@@ -102,15 +102,75 @@ test("Поиск записей, фильтры поиска. (test 8.3, 8.4)", 
   //----------------------------------------------------------------------------------------test3
   //   3. В области ввода «Окончание доступа». Первое поле обозначает «От», второе поле даты – «До».
   // - Выбрать и проверить отображение ввода из календаря промежутка даты.
-  // - Проверить ввод и отображение данных, при установки промежутка даты вручную.
-  //TODO:уточнить как работает и что проверять
   // await page.locator(CheckboxLocators.employer).click()
   // await page.fill(InputLocators.end_of_access_from, fromDate)
   // await page.fill(InputLocators.end_of_access_before, beforeDate)
 
+  await page.click(CheckboxLocators.active)
+  await page.click(Locators.end_of_access_from_calendar)
+  while (await page.locator(Locators.mounth).innerText() !== 'Январь') {
+    await page.click(Locators.BTN_PREVIOUS_MONTH)
+    if (await page.locator(Locators.mounth).innerText() === 'Январь') {
+      await page.locator("//table[@class='el-date-table']").getByText("1").nth(1).click()
+      break
+    }
+  }
+
+  await page.click(Locators.end_of_access_before_calendar)
+  while (await page.locator(Locators.mounth).innerText() !== 'Февраль') {
+    await page.click(Locators.BTN_PREVIOUS_MONTH)
+    if (await page.locator(Locators.mounth).innerText() === 'Февраль') {
+      await page.locator("//table[@class='el-date-table']").getByText("1").nth(1).click()
+      break
+    }
+  }
+
+  const timeBefore = OIB_Page.getNewDate(await page.locator(Locators.end_of_access_before_input).inputValue())
+
+  await page.locator(CheckboxLocators.employer).click()
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
+
+
+  for (const time of await OIB_Page.getAllRowsInTable().all()) {
+    await time.getByText(/^\d\d\.\d\d.\d\d\d\d$/).last().highlight()
+    const timeRow = OIB_Page.getNewDate(await time.getByText(/^\d\d\.\d\d.\d\d\d\d$/).last().innerText())
+    expect(timeRow < timeBefore).toBe(true)
+  }
+
+  // - Проверить ввод и отображение данных, при установки промежутка даты вручную.
+  // await page.waitForTimeout(2000)
+  await page.click(InputLocators.end_of_access_from)
+  await page.fill(InputLocators.end_of_access_from, fromDate)
+  await page.click(InputLocators.end_of_access_before)
+  await page.fill(InputLocators.end_of_access_before, beforeDate)
+
+  // await page.waitForTimeout(1000)
+  await page.click(Locators.BTN_SEARCH)
+  await page.waitForLoadState("networkidle")
+  await page.waitForTimeout(1000)
+
+
+  for (const time of await OIB_Page.getAllRowsInTable().all()) {
+    await time.getByText(/^\d\d\.\d\d.\d\d\d\d$/).last().highlight()
+    const timeRow = OIB_Page.getNewDate(await time.getByText(/^\d\d\.\d\d.\d\d\d\d$/).last().innerText())
+    expect(timeRow < OIB_Page.getNewDate(beforeDate)).toBe(true)
+  }
+
   // 3. Отображает записи за выбранный период времени, у которых ОКАНЧИВАЕТСЯ доступ к ресурсу.
   // При этом, при отсутствии установленной даты в первом поле поиск осуществляется по маске «От текущей даты До установленной
   // или От установленной, До текущей.
+  //закрытие сессии
+  await OIB_Page.shutDown()
+})
+
+test("Поиск записей, фильтры поиска. (test 8.4)", async ({ page }) => {
+  await page.setViewportSize({
+    width: 1600,
+    height: 800,
+  });
+  const OIB_Page = new OIB(page)
+  await OIB_Page.login(LOGIN, PASSWORD)
 
 
   //----------------------------------------------------------------------------------------test4
@@ -141,7 +201,6 @@ test("Поиск записей, фильтры поиска. (test 8.3, 8.4)", 
   expect(OIB_Page.getAllRowsInTable().getByText(OIB_Page.getRegExp(findUserByLogin))).toContainText(findUserByLogin)
   // await page.fill(InputLocators.search_user, '')
 
-  // await page.waitForTimeout(1000)
   //закрытие сессии
   await OIB_Page.shutDown()
 })

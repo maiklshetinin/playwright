@@ -76,7 +76,7 @@ test("Connection Log (test 9.3)", async ({ page }) => {
   await page.fill(ConnectionLog.inputBeforeDate, beforeDate)
   await page.click(ConnectionLog.BTN_SEARCH)
   await page.waitForLoadState('networkidle')
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(5000)
 
   //3. Формируется список данных, за выставленный период.
 
