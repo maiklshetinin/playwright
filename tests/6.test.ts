@@ -3,7 +3,7 @@ import { LOGIN, PASSWORD } from "./OIB";
 
 test("Завершение работы. (test 6)", async () => {
   const browser = await chromium.launch({
-    headless: false//режим визуального отображения
+    // headless: false//режим визуального отображения
   })
   const context = await browser.newContext()
   const page = await context.newPage()
